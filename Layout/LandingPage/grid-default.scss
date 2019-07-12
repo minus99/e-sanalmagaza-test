@@ -1,0 +1,16 @@
+.site-pages-landing{
+    .mt-70{
+        @include mt-50;
+    }
+    .mt-50{
+        @include mt-40;
+    }
+    .grid-banner-box-column3{
+        .mt-10{
+            @include mt-20;
+        }
+    }
+    .ems-tab-cat{
+        @include mt-30;
+    }
+}

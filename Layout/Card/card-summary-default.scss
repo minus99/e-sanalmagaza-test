@@ -1,0 +1,157 @@
+.pnlDipToplamTable {
+    border-collapse: collapse;
+
+    tbody {
+        tr {
+            width: 100%;
+            display: table;
+            &.emos_invisible{display: none;}
+            th,
+            td {
+                @include space(padding, all, $xs $small);
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            th {
+                text-align: left;
+                font-weight: normal;
+                font-size: $small-15;
+            }
+
+            td {
+                text-align: right;
+                font-size: $small-15;
+
+                .pb1 {
+                    display: inline-block;
+                    padding-left: $small-5;
+                }
+            }
+            &.pnlDipToplam_kdvToplam,
+            &.pnlDipToplam_bankaKomisyon,
+            &.pnlDipToplam_kulBankaBonus{
+                display: none;
+            }
+        }
+
+        .pnlDipToplam_sipToplam {
+            border-top: 1px solid $color-6;
+            margin-top: $small-20;
+            th,
+            td {
+                vertical-align: bottom;
+                font-size: $small-20;
+                font-family: $bold;
+                padding-top: $small-15;
+            }
+            td{
+                padding-left: $reset;
+            }
+            span.ib-el{
+                margin-right: $small-5;
+            }
+            small {
+                font-family: $regular;
+                font-size: $small-13;
+                color: $color-26;
+            }
+        }
+    }
+}
+.ems-cart-summary{
+    padding: $small-20 $small-20 90px $small-20;
+    background: $color-17;
+    margin-top: $small-30;
+}
+
+.ems-cart-summary-title{
+    span{
+        display: block;
+        padding: $reset $small-10 $small-10 $small-10;
+        font-family: $medium;
+        font-size: 18px;
+        color: $color-1;
+    }
+}
+
+.ems-cart-summary-coupon {
+    >span {
+        font-size: $small-18;
+        color: $color-26;
+        cursor: pointer;
+        display: block;
+        @include space(padding, all, $small);
+    }
+}
+
+/*.ems-cart-cancel-coupon{
+    text-align: right;
+    a.btnHediyeCekiIptal{
+        margin-top: $small-10;
+        width: 100%;
+    }
+}*/
+a.btnHediyeCekiIptal{
+    width: 25%;
+}
+
+.ems-cart-summary-coupon-body {
+    position: relative;
+    display: none;
+    input {
+        width: 72% !important;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3%;
+    }
+
+    table {
+        display: inline-block !important;
+        vertical-align: middle;
+        width: 25%;
+        tbody{
+            width: 100%;
+            display: table;
+        }
+        th{
+            font-weight: normal;
+        }
+    }
+
+    .btnHediyeCekiKullan {
+        display: block;
+    }
+    span[id$="lblHCK_HATA"]{
+        &:empty{display: none;}
+        .ems-message{
+            margin-bottom: $small-5;
+        }
+    }
+}
+.ems-cart-summary-coupon.opened {
+    .ems-cart-summary-coupon-body{display: block;}
+}
+
+.ems-cart-summarybottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    z-index: 5;
+    background: $color-17;
+    a.btnDefault {
+        display: block;
+        @include space(padding, top, $small-14);
+        @include space(padding, bottom, $small-14);
+        border-radius: 5px;
+    }
+    .ems-message {
+        padding-left: $reset;
+        &:before{
+            display: none;
+        }
+    }
+}
+

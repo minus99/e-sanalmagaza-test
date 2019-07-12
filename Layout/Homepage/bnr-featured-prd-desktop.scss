@@ -1,0 +1,100 @@
+.widget-featured-holder {
+    max-width: 910px;
+    @include space(margin, left, $reset);
+    @include space(margin, right, auto);
+}
+
+.banner-featured {
+    border-top: 2px solid $very-light-gray;
+    border-bottom: 2px solid $very-light-gray;
+    @include grid;
+    grid-template-columns: 1fr minmax(auto, 280px) minmax(auto, 930px) 1fr;
+    grid-template-areas:
+        ". CMP FTD FTD";
+    background: $color-5;
+    @include space(margin, top, 60px);
+
+    .star-big {
+        background: url(/images/frontend/star.svg) no-repeat;
+        width: 50px;
+        height: 59px;
+        display: inline-block;
+        @include space(margin, bottom, 30px);
+    }
+}
+
+.widget-campaign {
+    grid-area: CMP;
+    background: $color-5;
+    position: relative;
+    z-index: 2;
+    min-height: 375px;
+    .hp-img,
+    .hp-img-inner {
+        height: 100%;
+
+        >div {
+            height: 100%;
+        }
+    }
+
+    .hp-img-inner {
+        >a {
+            height: 100%;
+        }
+
+        @include marginTop0;
+    }
+
+    .grid-banner-box-text {
+        width: 95%;
+        bottom: 90px;
+        left: 0;
+        height: auto;
+    }
+
+    .btnBannerDefault {
+        max-width: 215px;
+    }
+}
+
+.banner-featured-inner {
+    grid-area: FTD;
+    background: $white;
+    overflow: hidden;
+    @include space(padding, left, $large);
+    @include space(padding, top, $large);
+    @include space(padding, bottom, $small);
+
+    .swiper-slide {
+        width: 230px;
+        opacity: .3;
+        @include transition(opacity .2s ease);
+    }
+
+    .swiper-slide.active-slide {
+        opacity: 1;
+    }
+
+    .ems-prd {
+        .ems-prd-list-cart-add {
+            display: none;
+        }
+        .urunListe_pnlIndirimOran > span{
+            @include space(padding, left, $xSmall);
+            @include space(padding, left, $xSmall);
+            @include space(margin, right, $xs);
+        }
+    }
+
+    .ems-prd:hover {
+        .ems-prd-inner {
+            box-shadow: none;
+            margin-bottom: 0;
+        }
+
+        .ems-prd-content-mask {
+            margin-bottom: 0;
+        }
+    }
+}

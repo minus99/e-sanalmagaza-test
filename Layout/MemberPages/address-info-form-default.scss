@@ -1,0 +1,38 @@
+/*
+    Member Info Default  Space
+*/
+.ems-page-default-info{
+    padding-top:$small-25;
+    padding-left:$small-20;
+    padding-right:$small-20;
+}
+
+/*Desktop Form Layout*/
+.ems-form-member{
+    .ems-field{
+        .cepTelAlan{
+            width: 20% !important; 
+            padding: $small-5;
+            margin-right: 5%;
+            text-align: center;
+        }
+        .cepTelNo{
+            width: 75% !important;
+        }
+        .obj-check{
+            margin-top: $reset;
+        }
+        &.button{
+            text-align: center;
+            .btnUyeBilgi{
+                width: 100%;
+                max-width: 230px;
+                margin-top: $small-20;
+            }
+            .btnMesajGonder{
+                width: 100%;
+                max-width: 220px;
+            }
+        }
+    } 
+}

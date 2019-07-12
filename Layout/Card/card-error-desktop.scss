@@ -1,0 +1,70 @@
+.ems-page-default-order-success{
+    padding-top: 70px;
+    padding-left: $reset;
+    padding-right: $reset;
+    padding-bottom: $reset;
+}
+.pageSiparisSonuc_lbfSiparisKaydedilmedi{
+    > span{
+        @include grid;
+        grid-template-columns:1fr minmax(0,480px) 100px minmax(0,480px) 1fr;
+        grid-template-rows: minmax(0,auto);
+        grid-template-areas:
+         ". CVR . TXT .";
+    }
+}
+
+.ems-page-success-grid{
+    @include grid;
+        grid-template-columns:1fr minmax(0,480px) 100px minmax(0,480px) 1fr;
+        grid-template-rows: minmax(0,auto);
+        grid-template-areas:
+         ". CVR . TXT .";
+}
+
+.pageSiparisSonuc_lbfOdemeAlinamadi{
+    > span{
+        @include grid;
+        grid-template-columns:1fr minmax(0,480px) 100px minmax(0,480px) 1fr;
+        grid-template-rows: minmax(0,auto);
+        grid-template-areas: ". CVR . TXT .";
+    }
+}
+
+.ems-page-success-cover{
+    grid-area:CVR;
+    margin-left: $reset;
+    margin-right: $reset;
+}
+.ems-page-success-text{
+    grid-area:TXT;
+    padding-top: 80px;
+    text-align: left;
+    margin-top: $reset;
+}
+
+.ems-page-success-back-buttons{
+    max-width: 355px;
+    text-align: left;
+    a.btnDefault {
+        width: 50%;
+        max-width: 170px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0;
+        margin-right: 0;
+        &:first-child{
+            margin-right: $small-15;
+        }
+    }
+    a.btnOdemeBilgiDon{
+        margin-top: $reset;
+    }
+}
+
+a.btnSiparisSonucSepeteDon{
+    &:hover{
+        background: none;
+        border-color: $color-8;
+    }
+}

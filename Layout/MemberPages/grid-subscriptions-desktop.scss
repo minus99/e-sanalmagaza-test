@@ -1,0 +1,62 @@
+/*===========================
+Description: Grid Subscriptions Desktop
+===========================*/
+.site-pages-member {
+    
+    /*Page Layout Space Reset*/
+    .ems-page-default-abonelik{
+        padding: $reset;
+    }
+
+    .ems-grid-default-subscriptions{
+        .ems-grid-header{
+            background: none;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius:0;
+            > div{
+               padding: $reset;
+               border-top: none;
+           }
+        }
+        .ems-grid-header:first-child {
+            @include grid;
+            grid-template-columns:2fr 1fr 1fr .5fr 2fr .5fr;
+            grid-template-rows: minmax(0, auto);
+            .ems-grid-use{
+                span{display: none;}
+            }
+        }
+        .ems-grid-row{
+            @include grid;
+            grid-template-columns:2fr 1fr 1fr .5fr 2fr 0.5fr;
+            min-height: 55px;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius:0; 
+            > div{
+                border-top: none;
+                padding: $reset;
+                white-space: inherit;
+                width: auto;max-height: inherit;
+                overflow: visible;
+                text-overflow: inherit;
+            }
+            .ems-grid-use{
+                a{
+                @include transition(all .2s ease);
+                    font-size: $small-12;
+                    &:hover{
+                        color: $color-8;
+                    }
+                }
+            }
+        }
+    }
+}

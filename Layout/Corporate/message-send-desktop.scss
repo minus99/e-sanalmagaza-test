@@ -1,0 +1,11 @@
+.site-pages-member{
+    .message-call-center-list{
+        li{
+            display: table-cell;
+            vertical-align: top;
+            width: 33.333%;
+            padding-left: $small-30;
+            &:first-child{padding-left: 0;}
+        }
+    }
+}

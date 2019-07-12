@@ -1,0 +1,43 @@
+.markaLogolar{
+    @include space(margin, top, $reset);
+    @include space(margin, right, $reset);
+    ul{
+        @include space(padding, left, $xs);
+        @include space(padding, right, $xs);
+        li{
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            text-align: center;
+            @include space(margin, top, 25px);
+            @include space(padding, left, $small);
+            @include space(padding, right, $small);
+            a{display: table-cell; vertical-align: middle;}
+            img{
+                width: auto;
+            }
+        }
+        .hp-img{
+            display: table;
+            height: 80px;
+            table-layout: fixed;
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            @include transition(all .2s ease-out);
+            &:hover{
+                border-color: $color-8;
+            }
+        }
+    }
+    &.selected{
+        ul {
+            li{display: none;}
+            li.selected{display: inline-block;}
+        }   
+    }
+}
+
+.markaAlfabeBaslik{
+    display: none;
+}

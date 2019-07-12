@@ -1,0 +1,57 @@
+/*
+=========================================
+    Swiper
+*/
+.swiper-container-card {
+    max-width: 850px;
+    padding: $reset $small-5 50px $small-5;
+    margin-top: $reset;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-top: none;
+
+    .widget-header span {
+        font-size: $small-22;
+        margin-left: $reset;
+    }
+
+    .swiper-slide {
+        width: 33.333%;
+    }
+
+    .ems-prd-list-cart-add{
+        margin-top: $reset;
+        .urunListe_adet{display: table-cell;}
+    }
+    .urunListe_sepetGrup,
+    .urunListe_stokHaberci{
+        .btnSepeteAt{
+            border-radius: 0 3px 3px 0;
+        }
+        .btnSepeteAt,
+        .btnStokHaberci{
+            background: $color-8;
+            border-color: transparent;
+            color: $white;
+        }
+    }
+}
+
+/*
+=========================================
+    Swiper Kargo ve BDDK
+*/
+.swiper-container-bddk{
+    padding-right: $reset;
+    padding-left: $reset;
+    .swiper-slide{
+        width: 50%;
+        > div{
+            padding-left: $small-15;
+            padding-right: $small-15;
+        }
+        &:first-child{
+            padding-left: $reset;
+        }
+    }
+}

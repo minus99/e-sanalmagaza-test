@@ -1,0 +1,87 @@
+.ems-page-default-message-detail{
+    padding-top: $small-20;
+    padding-left: $small-20;
+    padding-right: $small-20;
+    .page-top-title{
+        display: none;
+    }
+    .msgDtList{
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        border-radius: 3px;
+        > div{
+            display: table-cell;
+            vertical-align: top;
+            min-width: 50%;
+        }
+        .msgDtHeader{ 
+            border: 1px solid #E7E7E7;
+            border-right: none;
+        }
+        .msgDtContent{
+            border: 1px solid #E7E7E7;
+            border-left: none;
+        }
+        ul {
+            li{
+                border-top: 1px solid #E7E7E7;
+                &:first-child{border-top: none;}
+                padding: $small-10;
+            }
+        }
+    }
+    .msgDtListBtn{
+        margin-top: 30px;
+        text-align: center;
+        &:empty{display: none;}
+        .btnDefault {
+            width: 100%;
+            max-width: 240px;
+        }
+        .btnMesajCozuldu{
+            margin-top: $small-20;
+            display: none;
+        }
+    }
+    .site_textarea{
+        height: 80px;
+    }
+    #imgCaptcha{max-width: 200px; margin-bottom: $small-10;}
+    table tbody{
+        tr.sepetListe{
+            td.urunResmi{
+                width: 70px !important;
+                img{
+                    width: 70px !important;
+                }
+            }
+        }
+    }
+}
+.ems-message-detail-form{
+    table{
+        width: 100%;
+        line-height: 24px;
+    }   
+}
+
+/*
+Message Send
+===============================
+*/
+.pageMesajGonder{
+    .ems-form-inner{
+        padding-left: $small-20;
+        padding-right: $small-20;
+    }
+    .msgCaptcha {
+        #imgCaptcha{
+            max-width: 200px;
+            margin-bottom: $small-20;
+        }
+    }
+    textarea{
+        height: 70px;
+    }
+}

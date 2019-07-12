@@ -1,0 +1,32 @@
+.site-pages-member{
+    .message-call-center{
+        .icon-32x32{
+            margin-right: $small-10;
+        }
+        .icon-call{
+            line-height: 32px;
+            &:before{
+                font-size: $small-24;
+                color: $color-8;
+            }
+        }
+        .ib-el{
+            vertical-align: middle;
+        }
+    }
+    .message-call-center-list{
+        margin-top: $small-30;
+        margin-bottom: $small-30;
+        li{
+            span, p{
+                font-size: $small-15;
+            }
+            span{
+                font-family: $medium;
+            }
+            p{
+                margin-top: $small-5;
+            }
+        }
+    }
+}

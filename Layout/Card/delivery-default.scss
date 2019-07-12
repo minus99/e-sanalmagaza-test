@@ -1,0 +1,36 @@
+/*
+=========================================
+    Description: Teslimat Mobile Layout
+*/
+.ems-page-default-order-delivery {
+    .page-top-title {
+        width: 50%;
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .bottom-step {
+        display: none;
+    }
+
+    .cart-section-left {
+        display: none;
+    }
+    .ems-cart-summary{
+        margin-top: $small-5;
+    }
+    .ems-cart-summarybottom {
+        .bottom-step {
+            display: block;
+        }
+    }
+}
+
+.ems-page-delivery-left {
+    padding: $small-20;
+}
+
+.ems-page-delivery-right {
+    background: $color-17;
+}

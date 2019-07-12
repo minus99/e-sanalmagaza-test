@@ -1,0 +1,108 @@
+/*
+ * Default
+ ========================================== */
+.site-pages-member {
+    .ems-page-default-coupon {
+        padding: $small-20;
+
+        .btn-holder-1 {
+            display: none;
+            .btnDefault {
+                width: 48%;
+                max-width: 48%;
+                display: inline-block;
+                vertical-align: top;
+                font-size: 14px;
+                font-family:$regular;
+                text-align: center;
+                padding: 8px 10px;
+                border-radius: 5px;
+                border: 1px solid #dddddd;
+                background: none;
+                border-width:1px;
+                border-radius: 5px;
+                color: $color-1;
+                margin-bottom: $small-20;
+                &.btnKuponAcikKuponlar{
+                    margin-right: 2%;
+                }
+                &.btnKuponKapanan{
+                    margin-left: 2%;
+                }
+            }
+        }
+    }
+
+    .ems-page-default-coupon{
+        .ems-grid-header {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background: $color-17;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 5px 0 0 5px;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                color: $color-22;
+                &:first-child{
+                    border-top: none;
+                }
+                > span{
+                    &:empty{
+                        &:before{
+                            content: "-";
+                        }
+                    }
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+        }
+
+        .ems-grid-row{
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 0 5px 5px 0;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                max-height: 47px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:first-child{
+                    border-top: none;
+                }
+                > span{
+                    &:empty{
+                        &:before{
+                            content: "-";
+                        }
+                    }
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+            .ems-grid-status{
+                color: #3c5dff;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.swiper-container-member {
+    overflow: visible;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border-bottom: none;
+    >h1 {
+        background: $color-17;
+        font-family: $medium;
+        font-size: $small-18;
+        color: #5A5A5A;
+        padding: $small-11 $small-12;
+        border-radius: 3px;
+    }
+
+    .swiper-wrapper {
+        flex-direction: column;
+        padding-top: $small-10;
+        padding-bottom: $small-10;
+    }
+
+    .swiper-slide {
+        width: 100%;
+
+        >a {
+            position: relative;
+            padding: $small-7 $small-35 $small-7 $small-12;
+            text-align: left;
+            color: $color-1;
+            font-family: $medium;
+            font-size: $small-16;
+            @include transition(all .2s ease);
+            &:hover {
+                color: $color-8;
+            }
+        }
+        &.selected{
+            > a{
+                font-family: $medium;
+                color: $color-8;
+                &:before {
+                    font-family: 'icomoon';
+                    content: '\e929';
+                    width: 32px;
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 10px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -16px;
+                    text-align: center;
+                    color: $color-8;
+                    @include setTransform(rotate(90deg));
+                }
+                &:after{display: none;}
+            }
+        }
+    }
+}
+
+
+/* =====================
+Description: Message Page Message Tab Menu
+===================== */
+.swiper-container-member.swiper-container-message-menu{
+    margin-left: $reset;
+    .swiper-wrapper{
+        flex-direction: row;
+        padding-top: $reset;
+        padding-bottom: $reset;
+    }
+    .swiper-slide{
+        width: auto;
+        a{
+            padding-top: $small-11;
+            padding-bottom: $small-11;
+            &:hover{
+                border-color: $color-8;
+                color: $color-8;
+            }
+        }
+    }
+}

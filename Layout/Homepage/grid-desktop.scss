@@ -1,0 +1,50 @@
+.site-pages {
+    @include space(padding, bottom, 60px);
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-rows: minmax(0, auto);
+    grid-template-areas:
+        ". A ."
+        ". B ."
+        ". C ."
+        "D D D"
+        ". E ."
+        ". F ."
+        ". G ."
+        "H H H"
+    ;
+
+    .grid-colmn-a {
+        grid-area: A;
+    }
+
+    .grid-colmn-b {
+        grid-area: B;
+    }
+
+    .grid-colmn-c {
+        grid-area: C;
+    }
+
+    .grid-colmn-d {
+        grid-area: D;
+    }
+
+    .grid-colmn-e {
+        grid-area: E;
+    }
+
+    .grid-colmn-f {
+        grid-area: F;
+    }
+
+    .grid-colmn-g {
+        grid-area: G;
+    }
+
+    .grid-colmn-h {
+        grid-area: H;
+    }
+}
+.mt-30 {
+    @include mt-30;
+}

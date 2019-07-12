@@ -1,0 +1,88 @@
+/*====================
+    Grid Layout
+====================*/
+.pageFavoriGrupListemWrp{
+    padding: $reset;
+    .uk-container{
+        @include grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: minmax(0,auto);
+        grid-template-areas:
+        "ONE TWO"
+        "TRE TRE"
+        "NON NON";
+    }
+    .page-top-title{
+        grid-area: ONE;
+    }
+    .ems-new-favorite-group{
+        grid-area: TWO;
+    }
+    .report-holder.favoriteGroup-report{
+        grid-area: TRE;
+    }
+    .ems-none{
+        grid-area: NON;
+    }
+    /*List Add Button*/
+    .ems-new-favorite-group{
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/*====================
+    Grid Row Layout
+====================*/
+
+.ems-grid-default-favorite-group{
+    > div{
+        border-width:1px 0 0 0;
+        border-radius: 0;
+        margin-bottom: $reset;
+        &:first-child{
+            border-top: none;
+        }
+    }
+    .uk-accordion-title{
+        @include grid;
+        grid-template-columns:65% 35%;
+        grid-template-rows: minmax(0,auto);
+        align-items: center;
+        min-height: 50px;
+        grid-gap: $small-5;
+        padding: $small-5 $small-20;
+        .ems-grid-name{
+            @include space(padding, all, $reset);
+        }
+        .ems-grid-links{
+            text-align: right;
+            @include grid;
+            grid-template-columns: minmax(0,120px) minmax(0,120px);
+            justify-items: flex-end;
+            border-top:none;
+            > span{
+                @include column-reset;
+                text-align: left;
+                @include space(padding, all, $reset);
+            }
+            a{
+                @include transition(all .2s ease);
+                font-size: $small-12;
+                &:hover{
+                    color: $color-8;
+                }
+            }
+        }
+    }
+    .uk-accordion-content{
+        border-top: 1px solid #E7E7E7;
+        .emosInfinite{ 
+            .ems-prd{
+                width: 33.333%;
+            }
+        }
+    }
+}

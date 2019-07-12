@@ -1,0 +1,177 @@
+.urunDetay{
+    .pnlSepetGrup,
+    .urunDetay_btnStokHaberci{
+        @include space(padding, top, $reset);
+        @include space(padding, left, $reset);
+        @include space(padding, right, $reset);
+    }
+}
+.urunDetay_KazancOran {
+    min-width: 50px;
+    @include space(padding, left, $xMedium);
+    @include space(padding, right, $xMedium);
+    @include space(margin, right, $large);
+}
+
+.urunDetay_satisFiyatIkFiyat {
+    font-size: $small-18;
+}
+
+.urunDetay_satisFiyat {
+    font-size: $small-22;
+}
+
+.urunDetay_urunAdet {
+    width: 20%;
+    margin-right: 2%;
+
+    input:not([type="checkbox"]):not([type="radio"]) {
+        height: 60px;
+        font-size: $small-17;
+        border-radius: 3px;
+    }
+}
+
+.urunDetay_btnSepeteAt, .urunDetay_btnStokHaberci {
+    a.btnsepeteAt,
+    a.btnStokHaberci{
+        display: block;
+        font-size: $small-20;
+        @include space(padding, top, $small-16);
+        @include space(padding, bottom, $small-16);
+    }
+}
+
+.urunDetay_btnSepeteAt{
+    a.btnsepeteAt{
+        border-radius: 3px;
+    }
+}
+
+.urunDetay_urunAdet .counter-btn {
+    right: 15px;
+}
+
+.urunDetay_urunAdet .counter-btn.top-btn {
+    top: 15px;
+}
+
+.urunDetay_urunAdet .counter-btn.bottom-btn {
+    bottom: 15px;
+}
+
+.grid-triple-bts {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(0, auto);
+    grid-template-areas:
+        "LFT RGT";
+    align-items: center;
+    grid-gap: 10px;
+    @include space(margin, top, 20px);
+    @include space(padding, left, $reset);
+    @include space(padding, right, $reset);
+}
+.ems-prd-desc-wrapper{
+    @include space(padding, all, $reset);
+}
+.ems-detail-desc{
+    display: block;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    table{
+        tbody tr{
+            @include grid;
+            grid-template-columns: minmax(0,160px) 1fr;
+            @include space(margin, top, $reset);
+            border-radius: 0;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-bottom-width: 0;
+            &:first-child{border-top: 0; }
+            td{
+                display: inherit;
+                @include space(padding, left $small-15 right $small-15);
+                &:first-child{
+                    border-right: 1px solid #dddddd;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.ems-prd-detail-label {
+    @include space(margin, top, 60px);
+    display: inline-block;
+    &:after{
+        display: none;
+    }
+}
+
+.ems-detail-favorites {
+    grid-area: RGT;
+    text-align: right;
+    .btnFavoriEkle{
+        @include space(margin, bottom, $reset);
+        &:before{
+            @include transition(all .2s ease);
+        }
+        &:hover{
+            background: none;
+            color: $color-8;
+            &:before{
+                content:'\e933';
+                color: $color-8;
+            }
+        }
+    }
+    .btnFavoriEkleAbone{
+        &:hover{
+            color: $color-18;
+            &:before{
+                color: $color-18;
+            }
+        }
+    }
+}
+
+.grid-triple-left {
+    grid-area: LFT;
+}
+.ems-detail-subscriber-lbl{
+    font-size: $small-18;
+}
+.ems-detail-subscriber-price-normal{
+    font-size: $small-18;
+}
+.ems-detail-subscriber-price{
+    font-size: $small-22;
+}
+.abonelikSureItem a{
+    @include transition(all .2s ease);
+    &:hover{
+        border-color: $color-18;
+        color:$color-18;
+    }
+}
+.abonelikPeriyotItem span{
+    @include transition(all .2s ease);
+}
+
+.abonelikPeriyotItem{
+    @include transition(all .2s ease);
+    &:hover{
+        border-color: $color-18;
+        span{
+            color: $color-18;
+        }
+    }
+}
+
+.btnAbonelikSepeteAt{
+    @include space(padding, top, $small-16);
+    @include space(padding, bottom, $small-16);
+    font-size: $small-20;
+    &:hover{
+        background: $color-29 !important;
+    }
+}

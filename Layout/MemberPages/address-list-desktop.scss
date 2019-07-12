@@ -1,0 +1,30 @@
+/* Description : Form List
+ ===================================== */
+.site-pages-member{
+    /*Add New Button*/
+    .add-new-address{
+        @include Position(absolute, top $small-7 right 0);
+        width: auto;
+        padding: $reset;
+    }
+    /*Grid Row*/
+    .ems-grid-default-address{
+        border: none;
+        border-radius: 0;
+        max-height: 100%;
+        .ems-grid-adress-row{
+            margin-left: $reset;
+            margin-right: $reset;
+        }
+    }
+    /*Add New Address*/
+    .ems-page-new-address{
+        max-width: 680px;
+        .back-to-card{
+            display: inline-block;
+            @include Position(relative, top inherit left inherit);
+            z-index: 1;
+            width: auto;
+        }
+    }
+}

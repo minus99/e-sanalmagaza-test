@@ -1,0 +1,123 @@
+.tableTitleBagliUrun{display: block;}
+.tableBagliUrun{
+    display: block;
+    background: #fff;
+    @include space(margin, top, $xMedium);
+    @include space(padding, all, $large $large $reset $large);
+    
+    > tbody > tr{
+        min-height: 110px;
+        @include space(padding, all, $large 140px $large 100px);
+        border-top: 1px solid $color-6;
+        &:first-child{border-top: none;}
+    }
+    .resim{
+        max-width: 70px;
+        margin-top: -35px;
+    }
+    .adet{
+        top: 25px;
+        right: 10px;
+    }
+    .urunBilgi{
+        font-size: $small-15;
+        a{
+            max-height: 36px;
+        }
+    }
+    .secim{
+        right: 10px;
+        bottom: 15px;
+    }
+    .sStylerWrp_checkbox{
+        .cStyler{
+            width: 120px;
+            @include space(padding, top, 9px);
+            @include space(padding, bottom, 9px);
+            &:before{
+                @include transition(all .2s ease);
+            }
+            &:hover{
+                border-color:$color-9;
+                &:before{
+                    color: $color-9;
+                }
+            }
+        }
+    }
+}
+
+.buy-together-btn{
+    &:hover{
+        background: none !important;
+        border-color: $color-9;
+        color: $color-9;
+    }
+}
+
+
+/*Popup*/
+.custom-popup{
+    top: 100px;
+    bottom: inherit;
+    .emosInfinitePopup{
+        max-height: 410px;
+    }
+}
+.widget-opp-header span {
+    font-size: $small-18;
+}
+
+.custom-popup-header{
+    @include space(margin, top, $large);
+}
+.custom-popup-header-left {
+    width: 27.2%;
+    position: relative;
+    top: inherit;
+    left: inherit;
+    img{
+        max-width: 146px;
+    }
+}
+
+.custom-popup-header-right {
+    width: 70%;
+    @include space(padding, left, $xlarge);
+    .text{
+        span{
+            @include space(margin, left, $reset);
+        }
+    }
+}
+.miss-opp-widget {
+    @include space(padding, all, $large);
+    @include space(margin, top, $xxlarge);
+}
+
+.emosInfinitePopup {
+    .ems-prd-inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 90px;
+    }
+    .ems-prd-price{
+        width: auto;
+    }
+    .urunListe_sepet {
+        width: 70%;
+        .btnSepeteAt {
+            background: none;
+            border-color: $color-8;
+            color: $color-8;
+            display: inline-block;
+            width: 100%;
+            max-width: 120px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+    }
+}
+.suggestions-popup-ready{
+    @include mobi-body-reset;
+}

@@ -1,0 +1,53 @@
+.scroll-top-btn{
+    background:$very-dark-gray;
+    @include space(padding, all, 16px $xs);
+    i{
+        &:before{
+            font-size: $small-18;
+            color: $white;
+        }
+    }
+}
+
+.site-footer{
+    background: url(/images/frontend/footer-background.svg) center center no-repeat;
+    background-size: cover;
+    &-logo{
+        @include space(padding, left, $large);
+    }
+    &-copyright{
+        text-align: center;
+        color: $very-dark-g;
+        font-size: $small-13;
+        @include space(padding, top, $xxlarge);
+        @include space(padding, bottom, $xxlarge);
+    }
+    &-support{
+        font-family: $medium;
+        font-size: $small-13;
+        i, span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{ line-height: 1; margin-top: -2px; color: $color-1; }
+        i{
+            width: 40px;
+            height: 40px;
+            line-height: 40px; 
+            margin-right: 5px;
+            text-align: left;
+        }
+        i,i:before{
+            font-size: 29px;
+            color: $vivid-orange;
+        }
+    }
+    .grid-row-a{
+        @include space(margin, bottom, 45px);
+    }
+    .grid-row-c,
+    .grid-row-e{
+        @include column-double;
+        text-align: left;
+    }
+}

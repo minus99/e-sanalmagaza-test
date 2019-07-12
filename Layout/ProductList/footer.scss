@@ -1,0 +1,36 @@
+.ems-prd-list-footer{
+    .loadmore-btn{
+        display: block;
+        @extend .btn-primary-light;
+        width: 100%;
+        max-width: 230px;
+        @include space(margin, top, $large);
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+    }
+}
+.progress-header{
+    text-align: center;
+    @include space(margin, top, 80px);
+    .progress-desc{
+        font-size: $small-14;
+        color: $color-22;
+    }
+    .progress{
+        width: 100%;
+        height: 3px;
+        display: block;
+        border-radius: 4px;
+        background: $color-23;
+        max-width: 250px;
+        @include space(margin, all, $xMedium auto 0 auto);
+        position: relative;
+        i{
+            @include Position(absolute, top left 0);
+            z-index: 1;
+            height: 3px;
+            border-radius: 4px;
+            background: $color-1;
+        }
+    }
+}

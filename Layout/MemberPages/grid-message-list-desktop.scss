@@ -1,0 +1,81 @@
+/* =====================
+Description: Grid Desktop
+===================== */
+
+.site-pages-member {
+    .ems-page-default-message {
+        padding: $reset;
+    }
+
+    .add-new-message {
+        a{
+            padding:2px 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /*Title Message*/
+    .page-top-title.page-top-title-2 {
+        display: block;
+        padding: $small-12 $reset;
+        text-align: left;
+    }
+
+    .page-top-title.page-top-title-2>span {
+        display: inline-block;
+    }
+}
+
+/*====================
+Grid Row Layout Desktop
+====================*/
+
+.site-pages-member {
+    .ems-grid-default-message {
+        padding: $reset;
+    }
+
+    .ems-grid-default-message {
+        .ems-grid-header {
+            background: none;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+
+            >div {
+                padding: $reset;
+                border-top: none;
+            }
+        }
+
+        .ems-grid-header:first-child {
+            @include grid;
+            grid-template-columns: 1fr 1fr 1fr .5fr;
+            grid-template-rows: minmax(0, auto);
+            grid-gap: 10px;
+        }
+
+        .ems-grid-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr .5fr;
+            grid-gap: 10px;
+            min-height: 55px;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+
+            >div {
+                border-top: none;
+                padding: $reset;
+            }
+        }
+    }
+}

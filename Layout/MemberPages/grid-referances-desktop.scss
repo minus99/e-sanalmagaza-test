@@ -1,0 +1,95 @@
+ /*Referances Page Title Margin  Reset*/
+ .site-pages-member {
+     .ems-page-default-referances {
+         padding-top: $reset;
+         padding-left: $reset;
+         padding-right: $reset;
+
+         .page-top-title {
+             span.title {
+                margin-top: $reset;
+                margin-bottom: $reset;
+             }
+         }
+         .page-top-title-ref{
+            span.title {
+                margin-top: $small-20;
+             }
+         }
+     }
+ }
+
+/*====================
+ Grid Layout Desktop
+====================*/
+ .site-pages-member {
+     .ems-grid-default-referances {
+        border:1px solid $color-6;
+         border-radius: 3px;
+         .ems-grid-header {
+             grid-template-columns: 1fr 1fr 1fr 1fr;
+             background: none;
+             width: 100%;
+             margin-bottom: $reset;
+             border-top: none;
+             border-left: none;
+             border-right: none;
+             border-radius:0;
+             > div{
+                padding: $reset;
+                border-top: none;
+            }
+            .ems-grid-use{
+                > span {
+                    display: none;
+                }
+            }
+         }
+
+         .ems-grid-row {
+             grid-template-columns: 1fr 1fr 1fr 1fr;
+             width: 100%;
+             margin-bottom: $reset;
+             border-top: none;
+             border-left: none;
+             border-right: none;
+             border-radius:0; 
+             > div{
+                 border-top: none;
+                 padding: $reset;
+             }
+             .ems-grid-use {
+                 text-align: right;
+             }
+         }
+
+         .ems-grid-use {
+            text-align: right;
+            i {
+               margin-right: $small-10;
+            }
+            a.btnDefault {
+                &:hover {
+                    background: none;
+                }
+                
+                i.icon-close-1:before {
+                    font-size: $small-14;
+                }
+            }
+
+             a.btnUyeRefOnayla {
+                 margin-right: $small-10;
+             }
+         }
+     }
+
+     .ems-grid-default-referances-success {
+
+         .ems-grid-row {
+             .ems-grid-use {
+                 text-align: left;
+             }
+         }
+     }
+ }

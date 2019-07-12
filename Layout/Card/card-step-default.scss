@@ -1,0 +1,77 @@
+.tabloTabBtnAdimSiparis{
+    width: 100%;
+    a{
+        font-family: $regular;
+        font-size: $small-18;
+        display: block;
+        background: $color-17;
+        padding: $small-17 $small-10;
+        border-bottom: 5px solid $color-6;
+        position: relative;
+    }
+    tbody tr td{
+        display: block;
+        position: relative;
+    }
+    tbody tr td > span{
+        &.tabBtnAdimDefault {
+            display: none;   
+        }
+        &.tabBtnSelectedDefault {
+            display: block;
+            a{
+                &:after{
+                    content:'';
+                    height: 5px;
+                    background: $color-8;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    z-index: 1;
+                }
+            }
+        }
+        &.tabBtnAdimDefault.prevBack{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 55px;
+            text-align: center;
+            display: block;
+            z-index: 2;
+            a{
+                border-bottom:none;
+                padding:5px;  
+                height: 100%;
+                line-height: 47px;
+                &:before{
+                    font-family:'icomoon';
+                    content:'\e903';
+                    font-size: 16px;
+                    color: $color-1;
+                }
+            }
+            .icon-mb-card,
+            .hide-prev{display: none;}
+        }
+        &.tabBtnSelectedSepet{
+            a:after{
+                width: 33.333%;
+            }
+        }
+        &.tabBtnSelectedTeslimat{
+            a:after{
+                width: 66.666%;
+            }
+        }
+        &.tabBtnSelectedOdeme{
+            a:after{
+                width: 100%;
+            }
+        }
+        .icon-mb-hide{
+            display: none;
+        }
+    }
+}

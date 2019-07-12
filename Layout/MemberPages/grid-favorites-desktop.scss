@@ -1,0 +1,138 @@
+.ems-page-default-favorites {
+    .select-cfg{
+        @include grid;
+        grid-template-areas:
+        "AA . CC BB";
+        grid-template-columns: minmax(0,190px) 1fr minmax(0,190px) minmax(0,190px);
+        grid-gap: 15px;
+        align-items: center;
+        margin-top: $small-25;
+        text-align: inherit;
+
+        > div{
+            a.btnDefault{
+                display: inline-block;
+                width: 100%;
+                max-width: inherit;
+                margin-top: $reset;
+            }
+        }
+        > .all-selected{
+            a.btnDefault{
+                width: auto;
+            }
+        }
+    }
+    
+    .all-selected{grid-area:AA;}
+    .add-selected{grid-area:BB;}
+    .remove-selected{grid-area:CC;}
+    .all-selected{
+        a{
+            text-align: left;
+            padding: $reset;
+            width: auto;
+        }
+        a:hover{
+            color: $color-8;
+        }
+    }
+    .remove-selected{
+        a:hover{
+            border-color: $color-8;
+        }
+    }
+}
+
+.site-pages-member{
+    .ems-grid-default-favorites {
+        border: none;
+        border-radius: 0;
+        .ems-grid-header:first-child{display: none;}
+        .ems-grid-row {
+            grid-template-columns: 20px minmax(0, 70px) 1fr minmax(auto, 120px) minmax(auto, 80px) minmax(auto, 120px) 40px;
+            padding: 10px 0;
+            grid-gap: 10px;
+            min-height: inherit;
+    
+            .ems-grid-select {
+                width: auto;
+                position: inherit;
+                bottom: inherit;
+                left: inherit;
+                margin-top: 0;
+                max-width: inherit;
+                .sStylerWrp_checkbox{
+                    margin-right: $small-10;
+                    display: inline-flex;
+                    .cStyler{
+                        width: 17px;
+                        height: 17px;
+                        padding: $reset;
+                        min-height: inherit;
+                        max-height: inherit;
+                        &:before{
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 10px;
+                            letter-spacing: inherit;
+                        }
+                        &.checked{
+                            border: none;
+                            background: $color-8;
+                            &:before{
+                                font-family: 'icomoon';
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .ems-grid-img {
+                position: inherit;
+                top: inherit;
+                left: inherit;
+                margin-top: inherit;
+                width: inherit;
+                height: inherit;
+            }
+    
+            .ems-grid-name {
+                a {
+                    margin-right: $small-40;
+                }
+            }
+            .ems-grid-piece{
+                text-align: center;
+                input{
+                    text-align: center;
+                }
+            }
+            .ems-grid-addCart{
+                position: inherit;
+                bottom: inherit;
+                right: inherit;
+                width: auto;
+                max-width: inherit;
+            }
+            .ems-grid-remove {
+                position: inherit;
+                top: inherit;
+                right: inherit;
+                a.btnDefault{
+                    i:before{
+                        font-size: $small-10;
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: 1px solid $color-6;
+            }
+        }
+    }
+}

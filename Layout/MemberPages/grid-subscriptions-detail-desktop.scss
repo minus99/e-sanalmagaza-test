@@ -1,0 +1,99 @@
+/*
+    Description: Grid Desktop
+*/
+.site-pages-member {
+    .ems-grid-default-subscriptions-detail{
+        .ems-grid-header{
+            background: none;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius:0;
+            > div{
+            padding: $reset;
+            border-top: none;
+        }
+        }
+        .ems-grid-header:first-child {
+            @include grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: minmax(0, auto);
+            >div {
+                &.ems-grid-img,
+                &.ems-grid-remove {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .ems-grid-row{
+            display: grid; 
+            grid-template-columns: repeat(5,1fr);
+            min-height: 55px;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius:0; 
+            > div{
+                border-top: none;
+                padding: $reset;
+            }
+        }
+        
+    }
+
+    /*Grid Layout*/
+    .ems-page-default-subscriptions-detail{
+        padding: $reset;
+        .order-detail-info{
+            padding-top: $small-20;
+            padding-bottom: $small-20;
+        }
+        .border-line {
+            margin-top: $small-30;
+        }
+        .order-address-wrap{
+            @include grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: minmax(0,auto);
+            grid-gap: 20px;
+            margin-top: $small-35;
+        }
+        .dvAbonelikGuncelle{
+            .btnAbuGuncelle{
+                max-width: 220px;
+            }
+        }
+        .dvAbonelikGuncelleWrp{
+            @include grid;
+            grid-template-columns: minmax(0,150px) minmax(0,250px)  minmax(0,150px) minmax(0,250px);
+            grid-template-rows: minmax(0,auto);
+            grid-gap: 20px;   
+            align-items: center;
+            padding-top: $small-30;
+            .title{
+                font-size: $small-14;
+                color: $color-1;
+                margin-top: $reset;
+                margin-bottom: $reset;
+            }
+        }
+        .bottom-step {
+            @include grid;
+            grid-template-columns: minmax(0,260px) minmax(0,260px);
+            grid-gap: 20px;
+            .btnDefault {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .btnAbuIptalEt:hover{
+                border-color: $color-8;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+/*
+===================================
+Grid Desktop Product Row
+*/
+.site-pages-member{
+    .ems-page-default-order-cancel{
+        padding: $small-20; 
+        .ems-grid-default-order-products {
+            max-height: inherit;
+            overflow-x: inherit;
+            overflow-y: inherit;
+            padding-right: 0;
+            .ems-grid-row{
+                display: block;
+                position: relative;
+                padding: $small-10 $small-5 $small-10 100px;
+                min-height: 110px;
+            }
+            .ems-grid-img{
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                width: 70px;
+                height: 70px;
+                margin-top: -35px;
+            }
+            .ems-grid-status{
+                margin-top: $small-10;
+                margin-bottom: $small-10;
+            }
+            .ems-grid-piece0{
+                .sStylerWrp_select{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 50%;
+                    &:first-child{width: 80px; margin-right: $small-10;}
+                }
+            }
+        }
+        .bottom-step{
+            border-top: 1px solid $color-6;
+            margin-top: $small-10;
+            .btnDefault{
+                margin-top: $small-20;
+                display: block;
+                max-width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .btnSipariseDon{
+            background: none;   
+            border-color: $color-6;
+            color: $color-1;
+        }
+        .order-detail-info-payment{display: none;}
+        .ems-message-info{
+            margin-top: $small-20;
+        }
+        .tumunuIptalEtContainer{
+            max-width: 260px;
+            margin: $small-20 auto 0 auto;
+        }
+        .dvTumunuIptalBtn{
+            > span[id$="lbfSIP_TUMUNUIPTAL_DEC"]{
+                .ems-message{
+                    margin: $reset !important;
+                    padding: $small-7;
+                    line-height: 1;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .iadeRefNo {
+        text-align: center;
+        margin: 20px 0 40px 0;
+       .textKyt {
+           font-size: 16px;
+           font-family: $medium;
+           display: block;
+           margin-bottom: 10px;
+           span {
+            margin-bottom: 10px;
+            display: block;
+           }
+       } 
+       .underline {
+           font-size: 20px;
+           font-family: $medium;
+       }
+       .tkpText span {display: block; margin-bottom: 10px;}
+       .tkpText a {text-decoration: underline;}
+    }
+}

@@ -1,0 +1,22 @@
+.site-footer-menu {
+    @include grid;
+    grid-template-columns: 1fr;
+    @include space(margin, top, 80px);
+    @include space(margin, bottom, 80px);
+
+    >ul {
+        @include grid;
+        grid-template-columns: .6fr .8fr 1fr;
+        grid-column-gap: 10px;
+        @include space(margin, left, inherit);
+        width: inherit;
+
+        >li>ul>li>a {
+            font-size: $small-16;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

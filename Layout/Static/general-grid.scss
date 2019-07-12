@@ -1,0 +1,54 @@
+.main-wrapper>* {
+    grid-area: NNN;
+}
+
+/* Header */
+header {
+    grid-area: HDR !important;
+}
+
+/* Aside Left Menü */
+aside {
+    grid-area: ASD !important;
+}
+
+/* Main */
+main {
+    grid-area: MAI !important;
+}
+
+/* Footer */
+footer {
+    grid-area: FTR !important;
+}
+
+/* Defalut Double Box */
+.double-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: $width50;
+}
+
+.grid-wrapper,
+.grid-box,
+.grid-column {
+    @include grid;
+}
+
+/* Defalut Double Box */
+.double-box {
+    display: inherit;
+    vertical-align: inherit;
+    width: inherit;
+}
+
+.main-wrapper {
+    @include grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-rows:minmax(0, auto);
+    grid-template-areas:
+        "HDR HDR HDR"
+        "ASD ASD ASD"
+        "MAI MAI MAI"
+        "FTR FTR FTR";
+}

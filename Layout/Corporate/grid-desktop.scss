@@ -1,0 +1,45 @@
+.site-pages-corporate{
+    grid-template-columns: 1fr minmax(0, 220px) 60px minmax(0, 920px) 1fr;
+    grid-template-areas:
+    ". LFT . RGH .";
+    @include space(padding, top, 50px);
+}
+
+.user-info{
+    display: none;
+}
+
+.ems-member-page-left {
+    grid-area: LFT;
+}
+
+.ems-member-page-right {
+    grid-area: RGH;
+}
+
+.ems-content-wrapper{
+    max-width: 810px;
+    @include space(margin, left, 0);
+    @include space(margin, right, auto);
+    .title{
+        @include space(padding, top, 12px);
+        @include space(padding, bottom, 12px);
+    }
+    .hp-img{
+        @include space(margin, top, $small);
+        @include space(margin, bottom, $xlarge);
+    }
+    .content-text{
+        font-size: $small-15;
+        line-height: 18px;
+        @include space(padding, right, 50px);
+    }
+}
+
+.site-pages-corporate{
+    
+    .ems-content-wrapper{
+        .title{display: block;}
+        padding: $reset;
+    }
+}

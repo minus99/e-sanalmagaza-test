@@ -1,0 +1,20 @@
+.card-error-img{
+    width: 300px;
+    height: 300px;
+    @include space(margin, left, 0);
+    @include space(margin, right, 0);
+    display: inline-block;
+    vertical-align: middle;
+}
+.card-error-text{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 30px;
+    p{
+        font-size: $small-24;
+        text-align: left;
+    }
+    a.btnDefault {
+        display: block;
+    }
+}

@@ -1,0 +1,111 @@
+/*
+=========================================
+    Description: Teslimat Adres
+*/
+
+.add-new-address {
+    width: 40%;
+}
+.ems-grid-default-address {
+    @include grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(0, auto);
+    grid-gap: $small-30;
+    .ems-grid-adress-row {
+        margin-top: $reset;
+    }
+    max-height: inherit;
+    overflow: inherit;
+}
+.ems-grid-address-name{
+    width: calc(100% - 150px);
+}
+.ems-grid-address-select {
+    a.btnDefault {
+        &:hover {
+            background: rgba(0, 149, 15, 0.1);
+            border-color: $color-31;
+            color: $color-31;
+        }
+    }
+}
+
+.ems-address-buttons {
+    a.btnDefault {
+        &:hover {
+            color: $color-8;
+        }
+    }
+}
+
+
+.ems-message-error-address{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+a.btnAdresEkle:hover{
+    text-decoration: underline;
+}
+
+/* =======================
+    New Adress
+==========================
+*/
+.ems-page-new-address {
+    max-width: 680px;
+    margin: 50px auto;
+    .adresTip {
+        grid-column-start: span 2;    
+    }
+    
+    .back-to-card{
+        background: none;   
+        padding: $reset;
+        font-family: $medium;
+        margin-bottom: $small-15;
+        text-align: left;
+        .icon-arrow-left{
+            position: inherit;
+            left: inherit;
+            top: inherit;
+            margin-top: inherit;
+            &:before{
+                font-size: 13px;
+                color: $color-10;
+            }
+        }
+    }
+
+    .ems-form-inner {
+        @include grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-gap: $small-20;
+        padding: $reset;
+
+        .ems-field.button{
+            text-align: left;
+            a.btnDefault{
+                max-width: 215px;
+            }
+            a.btnAdresIptal{
+                margin-right: $small-20;
+            }
+        }
+    }
+
+    .ems-field-col-span {
+        grid-column-start: span 2;
+    }
+    .ems-form-inner .ems-field + .ems-field{
+        margin-top: 0;
+    }
+    .ems-field.button{
+        a.btnAdresIptal{
+            &:hover{
+                border-color: $color-8;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/*
+    Member Info Default  Space Reset
+*/
+.ems-page-default-info{
+    padding-top:$reset;
+    padding-left:$reset;
+    padding-right:$reset;
+    .ems-message {
+        max-width: 680px;
+    }
+}
+
+/*Desktop Form Layout*/
+.ems-form-member{
+    .ems-form-inner{
+        @include grid;
+        grid-template-columns:repeat(2, minmax(0,330px));
+        grid-template-rows: minmax(0,auto);
+        grid-gap: 20px;
+        .ems-field + .ems-field{margin-top: $reset;}
+
+    }
+    .ems-field{
+        .obj-check{
+            margin-top: $small-10;
+        }
+        &.bulletin {
+            grid-column-end: span 2;
+        }
+        &.span-2{
+            grid-column-end: span 2;
+            textarea{height: 75px;}
+        }
+        #imgCaptcha{
+            max-width:200px;
+        }
+        &.msgCaptcha {
+            input{max-width: 330px;}
+            span[id$="lbfUYE_KONTROLKODU"]{
+                color: $color-26;
+                font-size: $small-13;
+                display: block;
+                margin-top: $small-20;
+            }
+        }
+        &.button{
+            text-align: left;
+            grid-column-end: span 2;
+            .btnUyeBilgi{
+                max-width: 215px;
+                margin-top: $reset;
+            }
+        }
+    } 
+}

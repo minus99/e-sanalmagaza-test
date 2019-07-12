@@ -1,0 +1,120 @@
+
+.site-pages-member {
+    /*Title Reset Spacing*/
+    .ems-page-default-follow-list{
+        .page-top-desc{
+            padding-top: $reset;
+            padding-left: $reset;
+            padding-right: $reset;
+        }
+        .select-cfg{
+            @include grid;
+            grid-template-areas:
+            "BB AA";
+
+            grid-template-columns: minmax(0,190px) minmax(0,190px);
+            grid-gap: 15px;
+            align-items: center;
+            margin-top: $small-25;
+            text-align: inherit;
+            justify-content: flex-end;
+    
+            > div{
+                a.btnDefault{
+                    display: inline-block;
+                    width: 100%;
+                    max-width: inherit;
+                    margin-top: $reset;
+                }
+            }
+            > .all-selected{
+                a.btnDefault{
+                    width: auto;
+                }
+            }
+        }
+        
+        .add-selected{grid-area:AA;}
+        .remove-selected{grid-area:BB;}
+        .remove-selected{
+            a:hover{
+                border-color: $color-8;
+            }
+        }
+    }
+    
+    .ems-grid-default-stock {
+        border: none;
+        border-radius: 0;
+        .ems-grid-header:first-child{
+            display: none;
+        }
+        .ems-grid-row {
+            grid-template-columns:minmax(0, 70px) 1fr minmax(auto, 120px) minmax(auto, 120px) minmax(auto, 120px) 40px;
+            grid-gap: 10px;
+            padding: 10px 10px;
+            min-height: inherit;    
+
+            .ems-grid-img {
+                position: inherit;
+                top: inherit;
+                left: inherit;
+                margin-top: inherit;
+                width: inherit;
+                height: inherit;
+            }
+
+            .ems-grid-name {
+                a {
+                    margin-right: $small-40;
+                }
+            }
+            .ems-grid-addCart{
+                position: inherit;
+                bottom: inherit;
+                right: inherit;
+                width: auto;
+                max-width: inherit;
+            }
+            
+            .ems-grid-remove {
+                position: inherit;
+                top: inherit;
+                right: inherit;
+                a.btnDefault{
+                    i:before{
+                        font-size: $small-10;
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: 1px solid $color-6;
+            }
+        }
+    }
+}
+
+.ems-page-default-follow-list{
+    
+    .select-cfg{
+        @include grid;
+        grid-template-areas:
+        "AA . CC BB";
+        grid-template-columns: minmax(0,190px) 1fr minmax(0,190px) minmax(0,190px);
+        grid-gap: 15px;
+        align-items: center;
+    }
+    .all-selected{grid-area:AA;}
+    .add-selected{grid-area:BB;}
+    .remove-selected{grid-area:CC;}
+    .all-selected{
+        a:hover{
+            color: $color-8;
+        }
+    }
+    .remove-selected{
+        a:hover{
+            border-color: $color-8;
+        }
+    }
+}

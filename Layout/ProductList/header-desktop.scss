@@ -1,0 +1,10 @@
+.pnlUrunKiyasSecim{
+    text-align: left;
+}
+.urunKiyaslamaOzellik_secimler{
+    a{
+        max-width: initial;
+        @include space(margin, left, $reset);
+        @include space(margin, right, $small);
+    }
+}

@@ -1,0 +1,394 @@
+/* Static: Mini Search
+=================================== */
+.mod-mini-search{
+    &-header{
+        @include space(padding, all, $xSmall);
+        background: $white;
+        @include box-shadow(0, 2px, 2px, rgba(155, 155, 155, 0.3));
+        display: none;
+        > span{
+            @extend .b-el;
+            border-radius: $alternate-border-radius;
+            background: $white;
+            @include space(padding, all, $xMedium);
+            position: relative;
+            height: 46px;
+            line-height: $small-15;
+            font-size: $small-15;
+            color: $dark-gray;
+            border:2px solid rgba(155, 155, 155, 0.30);
+            cursor: pointer;
+        }
+        .btnSearch{
+            @extend .b-el;
+            @include Position(absolute, top 5px right 10px);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            i:before{color: $very-dark-gray;}
+        }
+    }
+    &-body{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: $white;
+        z-index: 20;
+        .ems-search-header{
+            background: $very-light-gray;
+        }
+        .ems-form{
+            position: relative;
+        }
+    }
+    .ems-search-prev{
+        @include Position(absolute, top 15px left 15px);
+        z-index: 1;
+        i:before{color:$dark-gray; font-size:$small-13;}
+    }
+    .ems-form-inner{
+        position: relative;
+        @include space(padding, left, 60px);
+    }
+    .ems-field{
+        @include space(padding, all, $xSmall $xSmall $xSmall $reset);
+        input{
+            font-size: $small-15;
+            color: $dark-gray;
+            border-color: rgba(155, 155, 155,0.30);
+        }
+    }
+    .ems-field.submit{
+        @include Position(absolute, top 15px right 15px);
+        @include marginTop0;
+        @include space(padding, all, $reset);
+    }
+    .btnArama{
+        @extend .btn-secondary;
+        border: none;
+        i, i:before{
+            font-size: $small-18;
+        }
+        i{
+            @include marginLeft0;
+            &:before{
+                color: $very-dark-gray;
+            }
+        }
+    }
+    .clear-search{
+        right: 0;
+        z-index: -1;
+        background: #fff;
+        @include space(padding, all, 6px);
+        .xs-icons{
+            background: #5A5A5A;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 100%;
+            &:before{
+                font-size: 7px;
+            }
+        }
+    }
+    .ems-search-body{
+        background: $white;
+        width: $width100;
+        @include Position(absolute, top 58px left 0);
+        @include space(padding, all, $large $small);
+        display: none;
+
+        > div{
+            &:empty{display: none;}
+        }
+    }
+    .ems-search-title{
+        @include space(padding, bottom, $xs);
+        @include space(margin, left, $small);
+    }
+    .last-search ul{
+        @include space(margin, bottom, $xxlarge);
+        &:empty{display: none;}
+    }
+    .populer-words-list, .last-search ul{
+        @include table-row;
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            @include space(margin, left, $small);
+            a{
+                border-radius: 15px;
+                font-size: $small-12;
+                border: 1px solid $color-6;
+                @include space(padding, all, 7px 20px);
+                @include space(margin, top, $small);
+            }
+        }
+    }
+}
+
+.ems-page-home{
+    .mod-mini-search-header{ display: block; }
+    .navbar-item-mbsearch{ display: none; }
+}
+
+/* Search Suggest
+=================================== */
+.searchSuggestDiv{
+    position: fixed !important;
+    width: 100% !important;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: $white;
+    overflow-y: auto;
+    padding-bottom: 70px;
+}
+.searchSuggestDivHolder{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    h3{
+        font-weight: normal;
+        font-family: $medium;
+        font-size: $small-16;
+        color: $black;
+        @include space(padding, all, $small-20 $small-30);
+        background: $very-light-gray;
+    }
+    .brand{
+        display: block;
+        &:empty{display: none;}
+        .spnBrand > a{
+            display: block;
+            font-size: $small-15;
+            color: $very-dark-gray-two;
+            @include space(padding, all, $xMedium $xxlarge);
+            border-top: 1px solid #eaeaea;
+        }
+    }
+    .prd{
+        h3{
+            display: none;
+        }
+    }
+    .cat{
+        .suggest_link{
+            .fullCatImage,
+            .fullCatLink {display: none;}
+        }
+    }
+    .sHolder{
+        .suggest_link{
+            cursor: pointer;
+            > a{
+                display: block;
+                font-size: $small-15;
+                color: $very-dark-gray-two;
+                @include space(padding, all, $xMedium $xxlarge);
+                border-top: 1px solid #eaeaea;
+            }
+            &:first-child{
+                border-top: none;
+            }
+        }
+        table{
+            width: 100%;
+            tr{
+                @include grid;
+                grid-template-columns: 80px minmax(0,auto) 1fr 1fr;
+                grid-template-areas:
+                "THI TD2 TD2 TD2"
+                "THI TD4 TD5 TD8"
+                "THI TD4 TD6 TD8";
+                border-bottom: 1px solid $pinkish-grey;
+                @include space(padding, all, $small-10);
+                position: relative;
+                min-height: auto;
+                th{
+                    grid-area: THI;
+                }
+                td{
+                    .suggest_urnprice{
+                        font-family: $bold;
+                        font-size: $small-16;
+                    }
+                    .suggest_urnnormalprice{
+                        font-size: $small-12;
+                        text-decoration: line-through;
+                    }
+                    .suggest_urnprice,
+                    .suggest_urnnormalprice{
+                        display: inline-block;
+                        
+                        &:before{
+                            content:'₺';
+                        }
+                        &:empty{display: none;}
+                    }
+                    .suggest_urnsubscriptionprice {
+                        display: inline-block;
+                        @include space(padding, all, $small-5);
+                        border-radius: 3px;
+                        border: 1px solid $color-18;
+                        @include Position(absolute, bottom 15px right 20px);
+                        &:empty{display: none;}
+                        > span{
+                            display: block;
+                            color: $color-18;
+                            &:first-child{
+                                font-size: $small-12;
+                            }
+                            &:last-child{
+                                font-family: $bold;
+                                font-size: 16px;
+                                &:before{
+                                    content:'₺';
+                                }
+                            }
+                        }
+                    }
+                    span.suggest_urndiscountrate.emos_invisible{
+                        display: block;
+                        span{
+                            display: block;
+                            background: $color-8;
+                            border-radius: 3px;
+                            color: $white;
+                            text-align: left;
+                            width: 24px;
+                            padding: 3px;
+                            font-family: $bold;
+                            font-size: $small-14;
+                            margin-right: $small-10;
+                            &:before{
+                                content:'%';
+                                display: block;
+                            }
+                            &:empty{
+                                display: none;
+                            }    
+                        }
+                        &:empty{
+                            display: none;
+                        }
+                    }
+                    &:empty{display: none;}
+                }
+                td.suggest_urnsname_con{
+                    grid-area: TD2;
+                    span{
+                        font-size: $small-14;
+                        display: block;
+                        @include space(margin, bottom, $small right 80px);
+                        min-height: 37px;
+                        max-height: 37px;
+                        overflow: hidden;
+                    }
+                    span b{font-weight: normal;}
+                }
+                td.suggest_urndiscountrate_con{
+                    grid-area: TD4;
+                }
+                td.suggest_urnnormalprice_con{
+                    grid-area: TD5;
+                    align-self: flex-end;
+                    display: inline-block;
+                }
+                td.suggest_urnprice_con{
+                    grid-area: TD6;
+                    align-self: flex-start;
+                }
+                td.suggest_urnsubscriptionprice_con{
+                    grid-area: TD8;
+                }
+
+                td.suggest_urnsmallimg_con,
+                td.suggest_urnurunkod_con,
+                td.suggest_urnsubscriptiondiscountrate_con{display: none;}
+            }
+        }
+    }
+    .prdCount{
+        background: #fff;
+        display: block; 
+        padding-left: $small-30;
+        padding-top: $small-15;
+        padding-bottom: $small-15;
+        border-top: 2px solid $color-6;
+        h3{
+            font-family: $regular;
+            font-size: $small-15;
+            margin-bottom: $reset;
+            padding: $reset;
+            background: none;
+            font-size: black;
+        }
+        h3, .sHolder{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .sHolder{
+            margin-left: $small-5;
+            &:before{
+                content:'(';
+            }
+            &:after{
+                content:')';
+            }
+        }
+    }
+    .btnArama{
+        display: block;
+        @extend .btn-primary-light;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        max-width: 230px;
+        border-radius: 3px;
+    }
+    .suggest_link,
+    .suggest_link_over{
+        img{max-width: 70px;}
+    }
+    .wordSearch{display: none;}
+    .dvTumunuGoster{
+        display: block !important;
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
+        .btnArama{
+            @include space(padding, all, 12px $xs);
+            border:2px solid $color-6;
+        }
+    }
+}
+
+body{
+    &.search-keyup{
+        .mod-mini-search .clear-search{
+            z-index: 2;
+        }
+    }
+    &.search-result{
+        .mod-mini-search{
+            .ems-search-body{
+                display: none;
+            }
+        }
+    }
+    &.search-ready{
+        @include mobi-body-render;
+        .mod-mini-search-body,
+        .ems-search-body{display: block;}
+    }
+}

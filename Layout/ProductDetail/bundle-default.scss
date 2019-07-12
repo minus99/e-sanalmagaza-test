@@ -1,0 +1,436 @@
+.ems-detail-bundle {
+    &:empty {
+        display: none;
+    }
+}
+
+.tableTitleBagliUrun {
+    display: none;
+}
+
+.tableBagliUrun {
+    width: 100%;
+    border-collapse: collapse;
+    @include space(margin, top, $large);
+
+    >tbody {
+        width: 100%;
+        display: table;
+        >tr{
+            display: block;
+            background: $white;
+            position: relative;
+            min-height: 80px;
+            @include space(padding, all, $small 100px $small 80px);
+        }
+    }
+
+    .resim {
+        max-width: 60px;
+        @include Position(absolute, top 50% left 10px);
+        margin-top: -30px;
+    }
+
+    .urunBilgi {
+        font-size: $small-13;
+
+        a {
+            max-height: 45px;
+            overflow: hidden;
+            color: $black;
+        }
+    }
+
+    .adet {
+        @include Position(absolute, top $small right $small);
+        font-size: $small-13;
+        color: $black;
+    }
+
+    .secim {
+        @include Position(absolute, bottom $small right $small);
+    }
+
+    .fiyat {
+        @include space(padding, top, $xs);
+
+        >span {
+            display: inline-block;
+            font-size: $small-15;
+            color: $black;
+
+            &:empty {
+                display: none;
+            }
+
+            &:before {
+                content: '₺';
+            }
+        }
+
+        .ilkFiyat {
+            text-decoration: line-through;
+            margin-right: 5px;
+        }
+
+        .sonFiyat {
+            font-family: $bold;
+            color: $color-8;
+        }
+
+        .sonFiyat:before {
+            margin-right: -3px;
+        }
+    }
+
+    .sStylerWrp_checkbox {
+        margin-right: 0;
+
+        .cStyler {
+            cursor: pointer;
+            border-width: 2px;
+            border-color: $color-8;
+            width: auto;
+            height: auto;
+            @include space(padding, all, 4px $xs);
+            width: 85px;
+            text-align: center;
+
+            &:before {
+                transform: none;
+                transition: none;
+                position: relative;
+                top: inherit;
+                left: inherit;
+                width: auto;
+                height: auto;
+                font-family: $bold;
+                font-size: $small-15;
+                color: $color-8;
+            }
+
+            &.checked {
+                &:before {
+                    color: $white;
+                }
+
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+/*Birlikte al*/
+.tableBagliUrun.tableBagliUrunGroup {
+    @include space(padding, all, $reset);
+
+    >tbody>tr {
+        @include space(padding, all, $reset $reset $reset 80px);
+        border-top: none;
+        min-height: 80px;
+    }
+
+    .secim,
+    .adet {
+        display: none;
+    }
+
+    .urunBilgi,
+    .fiyat {
+        display: block;
+        width: 100%;
+    }
+
+    .fiyat {
+        .urunDetay_satisFiyatIkFiyat {
+            display: inline-block;
+            @include space(margin, right, 5px);
+        }
+
+        .ems-prd-last {
+            display: inline-block !important;
+        }
+    }
+
+    .ems-detail-discount,
+    .ems-detail-price-right:before {
+        display: none;
+    }
+
+    .urunDetay_satisFiyatIkFiyat {
+        font-size: $small-15;
+    }
+
+    .urunDetay_satisFiyat {
+        font-size: $small-15;
+        color: $color-8;
+    }
+}
+
+.ems-detail-bundle-group {
+    display: none;
+    width: 100%;
+    background: #fff;
+    @include space(margin, top, $large);
+    @include space(padding, all, $xMedium $small);
+
+    &.ems-show {
+        display: table;
+    }
+}
+
+.bundle-list,
+.bundle-buy-together {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.bundle-list {
+    width: 70%;
+}
+
+.bundle-buy-together {
+    width: 30%;
+    @include space(padding, left, $large);
+    @include space(padding, right, $small);
+    border-left: 1px solid $color-28;
+
+    .last-prc {
+        font-size: 23px;
+        font-family: $bold;
+        color: $color-8;
+
+        &:before {
+            content: '₺';
+        }
+
+        &:empty {
+            display: none;
+        }
+    }
+}
+
+.buy-together-btn {
+    display: block;
+    background: $white;
+    border-color: $color-8;
+    color: $color-8;
+    @include space(margin, top, $small-10);
+}
+
+/*Popup*/
+.custom-popup {
+    display: none;
+    @include Position(fixed, top inherit right 0 bottom 0 left 0);
+    @include space(margin, all, auto);
+    width: 100%;
+    max-width: 580px;
+    z-index: 22;
+    background: $white;
+    padding: 20px;
+
+    .btn-absolute {
+        top: 20px;
+        right: 10px;
+        margin-top: 0;
+    }
+
+    .icon-close-1 {
+        &:before {
+            font-size: $small-13;
+            color: $color-10;
+        }
+    }
+
+    .ems-list {
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: $pinkish-grey;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: $very-dark-gray;
+        }
+
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: $very-dark-gray;
+        }
+    }
+
+    .emosInfinitePopup {
+        max-height: 285px;
+        overflow-y: auto;
+        margin-top: $small-10;
+        &:empty {
+            display: none;
+        }
+    }
+
+    .widget .swiper-slide {
+        width: 100%;
+        margin-top: $small-10;
+        &:first-child{margin-top: $reset;}
+    }
+
+    .widget .ems-prd-content {
+        border-bottom: none;
+    }
+}
+
+.custom-popup-header {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    >div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+
+.custom-popup-header-left {
+    @include Position(absolute, top 20px left 20px);
+    width: 80px;
+}
+
+.custom-popup-header-right {
+    width: 100%;
+}
+
+.custom-popup-header-right {
+
+    .text {
+        span {
+            display: block;
+            margin-left: 90px;
+
+            &:first-child {
+                font-family: $bold;
+                font-size: $small-22;
+            }
+
+            &:last-child {
+                font-size: $small-15;
+                @include space(margin, top, $xs);
+            }
+        }
+    }
+
+    .btnDefault {
+        width: 50%;
+        @include space(margin, top, $xxlarge);
+        @include space(margin, left, $reset);
+        @include space(margin, left, $reset);
+    }
+
+    .suggAddedFirst {
+        background: none;
+        color: $color-1;
+        font-family: $regular;
+
+        &:hover {
+            background: none;
+            text-decoration: underline;
+        }
+    }
+}
+
+.miss-opp-widget {
+    border-radius: 3px;
+    background: $color-17;
+    border: 1px solid $color-4;
+    @include space(padding, all, 15px $small 10px $small);
+    @include space(margin, top, $xlarge);
+}
+
+.widget-opp-header span {
+    font-family: $medium;
+    font-size: $small-13;
+    display: block;
+}
+
+.emosInfinitePopup {
+
+    .ems-prd-inner {
+        padding-left: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: $white;
+    }
+
+    .ems-prd-mask {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        margin-top: -35px;
+    }
+
+    .ems-prd-image {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .ems-prd-content-mask {
+        min-height: auto;
+        max-height: inherit;
+    }
+
+    .ems-prd-price {
+        width: 45%;
+        display: inline-block;
+        vertical-align: middle;
+
+        >div {
+            min-width: auto;
+        }
+    }
+
+    .urunListe_sepet {
+        width: 50%;
+        min-width: auto;
+        text-align: right;
+        vertical-align: middle;
+
+        .btnSepeteAt {
+            background: none;
+            border-color: $color-8;
+            color: $color-8;
+            display: inline-block;
+            width: 100%;
+            max-width: 85px;
+            padding: 4px 2px;
+        }
+    }
+
+    .ems-prd:hover .ems-prd-inner {
+        box-shadow: none;
+    }
+
+    .ems-prd:hover .ems-prd-inner,
+    .ems-prd:hover .ems-prd-content-mask {
+        margin-bottom: 0;
+    }
+}
+
+.vailProductPp {
+    z-index: 21;
+}
+
+.suggestions-popup-ready {
+    .suggestions-popup {
+        display: block;
+    }
+
+    @include mobi-body-render;
+
+    .vailProductPp {
+        opacity: 1;
+        visibility: visible;
+    }
+}

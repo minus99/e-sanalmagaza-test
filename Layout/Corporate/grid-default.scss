@@ -1,0 +1,40 @@
+.user-info{
+    background: $color-17;
+    @include space(padding, all, 21px 20px);
+    span{
+        color: $very-dark-g;
+        font-size: $small-15;
+        strong{
+            font-family: $medium;
+            font-weight: normal;
+        }
+    }
+    a{
+        display: block;
+        font-size: 13px;
+        color: #5a5a5a;
+        float: right;
+    }
+}
+
+.site-pages-corporate{
+    .ems-content-wrapper{
+        .title{display: none;}
+        padding: $reset $small-10 $small-10 $small-10;
+    }
+    .mapPopup{
+        font-family: $regular;
+        margin-top: $small-10;
+        img, span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            text-decoration: underline;
+        }
+        img{
+            margin-right: $small-5;
+            max-width: 30px;
+        }
+    }
+}

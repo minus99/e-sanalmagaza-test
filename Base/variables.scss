@@ -1,0 +1,224 @@
+// Component:       Variables
+// ========================================================================
+
+
+// Breakpoints
+// ========================================================================
+$breakpoint-small:                              640px !default;  // Phone landscape
+$breakpoint-medium:                             1025px !default;  // Tablet Landscape
+$breakpoint-large:                              1200px !default; // Desktop
+$breakpoint-xlarge:                             1600px !default; // Large Screens
+
+$breakpoint-xsmall-max:                         ($breakpoint-small - 1) !default;
+$breakpoint-small-max:                          ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max:                         ($breakpoint-large - 1) !default;
+$breakpoint-large-max:                          ($breakpoint-xlarge - 1) !default;
+
+// Test Url
+// ========================================================================
+$baseHref: '';
+
+
+// Default Fonts
+// ========================================================================
+$roboto:                                          'roboto' ;
+
+
+// Layout
+// ========================================================================
+$defaultMaxWidth:                               1150px;
+$siteContainerSmallWidth:                       1175px;
+$containerWidth:                                1200px;
+$siteContainerWidthFull:                        1024px;
+
+
+
+// Backgrounds
+// ========================================================================
+$global-background:                              #fff !default;
+
+$global-success-background:                      #32d296 !default;
+$global-warning-background:                      #faa05a !default;
+$global-danger-background:                       #f0506e !default;
+
+
+// Reguler Font-size
+// ========================================================================
+$global-regular:                                  22px !default;
+$global-small-regular:                            15px !default;
+$global-medium-regular:                           24px !default;
+$global-large-regular:                            38px !default;
+
+
+/*
+* Font size default!
+========================================================================== */
+$small-5:                                         5px;
+$small-6:                                         6px;
+$small-7:                                         7px;
+$small-8:                                         8px;
+$small-9:                                         9px;
+$small-10:                                        10px;
+$small-11:                                        11px;
+$small-12:                                        12px;
+$small-13:                                        13px;
+$small-14:                                        14px;
+$small-15:                                        15px;
+$small-16:                                        16px;
+$small-17:                                        17px;
+$small-18:                                        18px;
+$small-19:                                        19px;
+$small-20:                                        20px;
+$small-21:                                        21px;
+$small-22:                                        22px;
+$small-23:                                        23px;
+$small-24:                                        24px;
+$small-25:                                        25px;
+$small-26:                                        26px;
+$small-27:                                        27px;
+$small-28:                                        28px;
+$small-29:                                        29px;
+$small-30:                                        30px;
+$small-31:                                        31px;
+$small-32:                                        32px;
+$small-34:                                        34px;
+$small-35:                                        35px;
+$small-36:                                        36px;
+$small-37:                                        37px;
+$small-38:                                        38px;
+$small-39:                                        39px;
+$small-40:                                        40px;
+$small-50:                                        50px;
+
+
+// Cursor
+// ========================================================================
+$cursor-pointer:                                 pointer;
+
+
+/*
+* Width default!
+========================================================================== */
+$width25:                                         25%;
+$width50:                                         50%;
+$width75:                                         75%;
+$width100:                                        100%;
+
+// Global Font theme
+// ========================================================================
+.fs-10 {
+    font-size: $small-10;
+}
+
+.fs-12 {
+    font-size: $small-12;
+}
+
+.fs-13 {
+    font-size: $small-13;
+}
+
+.fs-14 {
+    font-size: $small-14;
+}
+
+.fs-15 {
+    font-size: $small-15;
+}
+
+.fs-16 {
+    font-size: $small-16;
+}
+
+.fs-17 {
+    font-size: $small-17;
+}
+
+.fs-18 {
+    font-size: $small-18;
+}
+
+.fs-20 {
+    font-size: $small-20;
+}
+
+.fs-22 {
+    font-size: $small-22;
+}
+
+.fs-24 {
+    font-size: $small-24;
+}
+.fs-26 {
+    font-size: $small-26;
+}
+
+.fs-27 {
+    font-size: $small-27;
+}
+
+.fs-34 {
+    font-size: $small-34;
+}
+
+.fs-38 {
+    font-size: $small-38;
+}
+
+.fm-24-32{
+    font-size: $small-24;
+}
+
+.m-t-5{
+    margin-top: $small-5;
+}
+
+.m-t-10{
+    margin-top: $small-10;
+}
+
+.m-t-20{
+    margin-top: $small-20;
+}
+
+.m-t-30{
+    margin-top: $small-30;
+}
+
+.m-l-15{
+    margin-left: $small-15;
+}
+
+.m-r-15{
+    margin-right: $small-15;
+}
+
+.algn-rght{
+    text-align: right;
+}
+.algn-lft{
+    text-align: left;
+}
+.algn-cntr{
+    text-align: center;
+}
+
+.fw-n{
+    font-weight: normal;
+}
+
+.relative-el{
+    position: relative;
+}
+.padding-5{
+    padding: $small-5;
+}
+.padding-10{
+    padding: $small-10;
+}
+.padding-20{
+    padding: $small-20;
+}
+.padding-10-0{
+    padding: $small-10 0;
+}

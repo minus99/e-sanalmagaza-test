@@ -1,0 +1,130 @@
+ .ems-logoff {
+
+    .sub.login,
+    [id$="lbfKUTU_HESABIM"],
+    .mod-mini-login-header,
+    .navbar-item-member{
+        display: none !important;
+    }
+}
+
+.ems-login {
+
+    .sub.logoff,
+    [id$="lbfkutuUyeGiris1"] {
+        display: none !important;
+    }
+}
+
+.mod-mini-login {
+    .sub.logoff {
+        display: none;
+    }
+}
+
+.mod-mini-login {
+    &-header {
+        @include transition(all .2s ease);
+        display: none;
+        >span[id$="lbfKUTU_HESABIM"],
+        >span[id$="lbfkutuUyeGiris1"] {
+            display: block;
+
+            &:empty {
+                display: none;
+            }
+        }
+    }
+
+    &-body {
+        @include Position(fixed, top 0 right 0);
+        @include transition(transform .2s ease);
+        @include setTransform(translateX(425px));
+        width: 90%;
+        z-index: 20;
+        height: 100%;
+        max-width: 325px;
+        background: $white;
+    }
+
+    &-footer {
+        display: none;
+    }
+
+    .ems-user-pages {
+        @include space(padding, bottom, 10px);
+        .scroll-control{
+            @include Position(absolute, top 77px left 0);
+            width: 100%;
+            height: calc(100% - 77px);
+            overflow-y: auto;
+        }
+        .info {
+            background: $very-light-gray;
+            @include space(padding, all, 24px 20px);
+            margin-bottom: 10px;
+            text-align: left;
+            position: relative;
+        }
+        .icon-mini-login-close{
+            &:before{
+                color: $dark-gray;
+                font-size: $small-16;
+            }
+        }
+
+        .ems-col {
+            a {
+                display: block;
+                @include space(padding, all, 15px 30px 16px 30px);
+                font-size: $small-15;
+                color: $very-dark-gray-two;
+                text-align: left;
+                border-bottom: 1px solid #eaeaea;
+            }
+            .btnKutuLogout {
+                @extend .btn-secondary;
+                font-size: $small-15;
+                color: $vivid-pink;
+                font-family: $regular;
+                text-decoration: underline;
+                @include space(padding, all, 15px 30px 16px 30px);
+            }
+        }
+    }
+    .mod-mini-login-name{
+        width: 85%;
+        font-family: $medium;
+        font-size: $small-16;
+    }
+
+    &.opened {
+        .mod-mini-login-body {
+            @include setTransform(translateX(0));
+        }
+    }
+}
+
+.vailLogin {
+    z-index: 10;
+}
+
+body {
+
+    &.mini-login-ready,
+    &.mobi-login-ready {
+        .vailLogin {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+body{
+    &.mobi-login-ready{
+        @include mobi-body-render;
+        .mod-mini-login-body{
+            @include setTransform(translateX(0));
+        }
+    }
+}

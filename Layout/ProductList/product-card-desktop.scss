@@ -1,0 +1,172 @@
+.ems-prd-list {
+    .emosInfinite {
+        @include grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-gap: $large;
+        border-top: none;
+    }
+}
+
+.ems-prd {
+    &-inner{
+        overflow: hidden;
+        position: relative;
+        background: $white;
+        border-radius: 3px;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0);
+        @include space(padding, bottom, $small);
+
+    }
+    &-name {
+        >a {
+            font-size: $small-15;
+            min-height: 38px;
+            max-height: 38px;
+        }
+    }
+    &-image {
+        @include space(padding, top, $xlarge);
+        @include space(padding, bottom, $xxlarge);
+    }
+    &-price-subscriber{
+        @include space(padding, all, 5px);
+    }
+    &-content-mask{
+        min-height: 160px;
+        max-height: 160px;
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+        z-index: 1;
+    }
+    &-list-cart-add{
+        @include Position(absolute, bottom 0 left 0);
+        width: 100%;
+        height: auto;
+        @include transition(margin-bottom .2s ease);
+        transition-delay: .2s;
+        padding-left: $small-10;
+        padding-right: $small-10;
+        padding-bottom: $small-10;
+        margin-bottom: -55px;
+        display: inherit;
+    }
+}
+
+.ems-prd-inner{
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.ems-prd-inner,
+.ems-prd-content-mask{
+    @include transition(all .2s ease);
+    transition-delay: .2s;
+}
+
+.urunListe_pnlIndirimOran{
+    > span{
+        @include space(padding, left, $small);
+        @include space(padding, right, $small);
+        font-size: $small-18;
+    }
+}
+
+.urunListe_brutFiyat{
+    font-size: $small-16;                
+}
+.urunListe_satisFiyat{
+    font-size: $small-18;
+}
+.urunListe_sepetGrup{
+    .btnSepeteAt {
+        border-radius: 0 3px 3px 0;
+    }
+}
+.urunListe_aboneFiyat.emos_invisible {
+    font-size: $small-18;
+}
+.urunListe_urunAboneOl {
+
+    .btnDefault {
+        &:hover{
+            background: $color-29;
+        }
+    }
+}
+.urunListe_aboneFiyatLabel {
+    font-size: $small-13;
+}
+.urunListe_adet{
+    width: 25%;
+    display: table-cell !important;
+}
+.urunListe_sepet {
+    min-width: 33.333%;
+}
+
+
+/*Product Cart Hover*/
+.ems-prd:hover{
+    .ems-prd-inner{
+        z-index: 2;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.16);
+        margin-bottom: -45px;
+    }
+    .ems-prd-content-mask{
+        margin-bottom: 45px;
+        overflow: visible;
+    }
+    .ems-prd-list-cart-add {
+        margin-bottom: 0;
+    }
+}
+
+/*Product Cart single Product List Page Settings*/
+.ems-prd-list{
+    .ems-prd {
+        width: 100%;
+        border-bottom: none;
+        &:nth-child(odd){
+            border-right: none;
+        }
+        &:nth-child(even){
+            border-left: none;
+        }
+    }
+}
+.dortlu{
+    .ems-prd-list{
+        .emosInfinite{
+            grid-template-columns:repeat(4, 1fr);
+        }
+        .ems-prd-content-mask{
+            min-height:140px;
+            max-height:140px;
+        }
+        .ems-prd-name > a{
+            font-size: $small-13;
+            min-height: 30px;
+            max-height: 30px
+        }
+        .urunListe_pnlIndirimOran > span{
+            padding-left: $small-5;
+            padding-right: $small-5;
+            font-size: $small-12;
+        }
+        .urunListe_aboneFiyatLabel{
+            font-size: $small-11;
+        }
+        .urunListe_aboneFiyat.emos_invisible{
+            font-size: $small-14;
+        }
+        .urunListe_brutFiyat{
+            font-size: $small-11;
+        }
+        .urunListe_satisFiyat{
+            font-size: $small-14;
+        }
+        .ems-prd-types > div{
+            font-size: $small-14;
+        }
+    }
+}

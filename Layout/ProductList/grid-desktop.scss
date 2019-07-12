@@ -1,0 +1,194 @@
+.site-pages-listpage {
+    .urnList {
+        @include space(padding, top, $xxlarge);
+    }
+
+    grid-template-columns: 1fr 220px 60px minmax(auto, 920px) 1fr;
+    grid-template-areas:
+    "CVR CVR CVR CVR CVR"
+    "FLW FLW FLW FLW FLW"
+    ". FFT FFT FFT ."
+    ". CAT . LST ."
+    ". FTR FTR FTR ."
+    ". NON NON NON .";
+}
+
+.ems-prd-list-sort-products {
+
+    >span {
+        cursor: pointer;
+        border-bottom: none;
+        @include space(padding, left, $xMedium);
+        @include space(padding, right, 50px);
+        color: $color-1;
+        &:before {
+            content: '';
+            @include Position(absolute, top 9px right 0);
+            width: 1px;
+            height: 32px;
+            background: #d5d6dc;
+        }
+        &:after{
+            right: 20px;
+        }
+    }
+    ul{
+        @include Position(absolute, top 50px left 0);
+        @include space(padding, left, $xMedium);
+        @include space(padding, right, $xMedium);
+        background: $white;
+    }
+    &.activeted {
+        >span {
+            background: $white;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.grid-colmn {
+    &-cover {
+        grid-area: CVR;
+    }
+
+    &-filter-wrapper {
+        /*Reset Default*/
+        position: relative;
+        z-index: 3;
+        left: inherit;
+        top: inherit;
+        right: inherit;
+        width: inherit;
+        height: inherit;
+        background: none;
+        transform: none;
+        display: block;
+        /*Reset Default*/
+
+        grid-area: FLW;
+        background: $very-light-gray;
+        min-height: 50px;
+    }
+
+    &-feature-filter {
+        grid-area: FFT;
+    }
+
+    &-filter {
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        height: inherit;
+        overflow-y: inherit;
+        width: inherit;
+
+        @include grid;
+        grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1fr 100px;
+        grid-template-areas:
+            "FEA FEA SRL . VIW";
+        max-width: $containerWidth;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+    }
+
+    &-feature {
+        grid-area: FEA;
+    }
+
+    &-sortlist {
+        grid-area: SRL;
+    }
+
+    &-view {
+        grid-area: VIW;
+    }
+
+    &-categori {
+        grid-area: CAT;
+    }
+
+    &-list {
+        grid-area: LST;
+    }
+
+    &-footer {
+        grid-area: FTR;
+    }
+
+    &-none {
+        grid-area: NON;
+        display: none;
+    }
+}
+
+.ems-prd-list-view{
+    border-bottom: none;
+    > span{display: none;}
+    ul{
+        display: table !important;
+        text-align: right;
+        height: 50px !important;
+        @include space(padding, all, 9px 0 !important);
+        .dortlu{
+            @include space(margin, left, $large);
+        }
+        li{
+            width: auto;
+            border: none;
+            height: auto;
+            line-height: normal;
+            border-radius: 0;
+        }
+        li.uclu,
+        li.dortlu{
+            
+            a{
+                display: block;
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                @include space(padding, all, $reset);
+                i{
+                    line-height: $small-32;
+                    display: block;
+                    &:before{
+                        color: $gray;
+                    }
+                }
+                i.icon-view-3:before{
+                    font-size:$small-19; 
+                }
+                i.icon-view-4:before{
+                    font-size:$small-26;
+                }
+            }
+            &.selected{
+                a{
+                    i:before{
+                        color: #152b3c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.number-records{
+    display: block;
+}
+
+.vailFilter{z-index: 2;}
+
+.filter-popup-ready{
+    @include mobi-body-reset;
+}
+
+.filter-menu-opened{
+    .vailFilter{
+        opacity: 1;
+        visibility: visible;
+    }
+}

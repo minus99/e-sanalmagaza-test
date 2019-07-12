@@ -1,0 +1,60 @@
+.site-header{
+    background: $vivid-orange;
+    width: 100%;    
+    position: -webkit-sticky;
+    @include Position(sticky, top 0);
+    z-index: 20;
+    .medium-small{
+        font-family: $medium;
+        font-size: $small-15;
+        color: $white;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .xs-icons{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        &:before{
+            color: $white;
+            font-size: $small-20;
+        }
+        &.icon-mini-bag:before{
+            content:'\e918';
+        }
+    }
+    .icon-mb-card{
+        position: relative;
+        small{
+            @include Position(absolute, top 0 right 0);
+            color: $color-8;
+            font-family: $regular;
+            font-size: $small-10;
+            width: $small-17;
+            height: $small-17;
+            line-height: $small-17;
+            text-align: center;
+            border-radius: $small-17;
+            background: $white;
+        }
+    }
+    .navbar-item-logo{
+        width: 45%;
+        @include space(padding, all, $xMedium $xs $xMedium $xs);
+        vertical-align: middle;
+        h1{vertical-align: middle;}
+        h1 img{height:30px;}
+        .ems-back-to-site {display: none;}
+    }
+    
+    .navbar-item-mini-member{
+        width: 55%;
+        vertical-align: middle;
+        @include space(padding, all, $xMedium $small $xMedium $reset);
+    }
+}

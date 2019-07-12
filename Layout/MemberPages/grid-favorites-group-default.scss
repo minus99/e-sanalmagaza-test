@@ -1,0 +1,119 @@
+.pageFavoriGrupListemWrp{
+    padding: $small-20;
+    .ems-new-favorite-group{
+        text-align: right;
+        a{
+            display: inline-block;
+            font-size: $small-15;
+            padding-top:$small-12;
+            padding-bottom:$small-12;
+            &:before{
+                font-family: 'icomoon';
+                content: '\e90c';
+                font-weight: normal;
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                font-size: $small-10;
+                color: $color-10;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: $small-5;
+            }
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+/*====================
+    Grid Row Layout
+====================*/
+.ems-grid-default-favorite-group{
+    
+    .uk-accordion-title{
+        > span{
+            &.ems-grid-icon{display: none;}
+        }
+        .ems-grid-name{
+            display: block;
+            @include space(padding, all, $small-14 $small-20);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .ems-grid-links{
+            border-top: 1px solid $color-6;
+            > span{
+                @include column-double;
+                text-align: center;
+                @include space(padding, all, $small-14 $small-5);
+            }
+            a{
+                color: $color-36;
+                font-size: $small-14;
+                text-decoration: underline;
+            }
+        }
+    }
+    .uk-accordion-content{
+        padding-left: $small-10;
+        padding-right: $small-10;
+        display: none;
+        .emosInfinite{
+            .ems-prd{
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                &:hover{
+                    .ems-prd-inner{
+                        z-index: 0;
+                        box-shadow: none;
+                        margin-bottom: $reset;
+                    }
+                    .ems-prd-content-mask{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .ems-prd-image{
+                padding-top: 0;
+                padding-bottom: 20px;
+                margin-bottom: 10px;
+                border-bottom:1px solid #E7E7E7;
+            }
+            .ems-prd-cnt{
+                position: absolute;
+                top: 0;
+                right: 10px;
+                >a{
+                    display: inline-block;
+                    padding: 5px;
+                    color: $color-8;
+                }
+            }
+            .ems-prd-content-bottom{
+                padding-left: 10px;
+                padding-right: 50px;
+                padding-bottom: 10px;
+                position: relative;
+            }
+            .ems-prd-content-mask{
+                min-height: auto;
+                max-height: inherit;
+                overflow: visible;       
+            }
+        }
+    }
+    > div{
+        border:1px solid $color-6;
+        border-radius: 5px;
+        margin-bottom: $small-20;
+        &.selected{
+            .uk-accordion-content{
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.aside-menu {
+    background: $very-light-gray;
+
+    /*Reset Mobile*/
+    position: -webkit-sticky;
+    @include Position(sticky, top 70px right inherit);
+    z-index: 19;
+    display: inherit;
+    max-width: inherit;
+    transition: none;
+    transform: none;
+}

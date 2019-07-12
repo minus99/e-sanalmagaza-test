@@ -1,0 +1,260 @@
+/*
+* Font-face
+========================================================================== */
+@mixin fontFace($family, $url, $fontWeight: normal, $fontStyle: normal) {
+	@font-face {
+		font-family: $family;
+		src: url(#{$baseHref + $url + '.eot'});
+		src: url(#{$baseHref + $url + '.eot?#iefix'}) format('embedded-opentype'),
+		url(#{$baseHref + $url + '.woff'}) format('woff'),
+		url(#{$baseHref + $url + '.ttf'}) format('truetype');
+		font-weight: $fontWeight;
+		font-style: $fontStyle;
+	}
+}
+
+/*
+* Hover color
+========================================================================== */
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}
+
+/*
+* Set transform
+========================================================================== */
+
+@mixin setTransform($value) {
+	-webkit-transform: $value;
+	-ms-transform: $value;
+	transform: $value;
+}
+
+/* Set Box-Shadow
+========================================================================== */
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow: inset $top $left $blur $color;
+		-moz-box-shadow: inset $top $left $blur $color;
+		box-shadow: inset $top $left $blur $color;
+	}
+
+	@else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+/* Set Valign
+========================================================================== */
+@mixin vAlign {
+	position: relative;
+	top: 50%;
+	@include setTransform(translateY(-50%));
+}
+
+/*
+* Set Position
+========================================================================== */
+@mixin Position($position, $args) {
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+
+		@if $i and $i+1 <=length($args) and type-of(nth($args, $i + 1))==number {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+
+	position: $position;
+}
+
+// Positioning helpers
+@mixin absolute($args: '') {
+	@include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+	@include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+	@include position(relative, $args);
+}
+@mixin sticky($args: '') {
+	@include position(sticky, $args);
+}
+
+/*
+* Transition
+========================================================================== */
+@mixin transition($transition: all 333ms ease-in-out) {
+	transition: #{$transition};
+	-webkit-transition: #{$transition};
+	-o-transition: #{$transition};
+}
+
+/*
+* margin and padding
+========================================================================== */
+
+$reset: 0px;
+$xs: 5px;
+$xSmall: 7px;
+$small: 10px;
+$xMedium: 15px;
+$large: 20px;
+$xlarge: 25px;
+$xxlarge: 30px;
+
+@mixin space($type:margin, $direction:all, $amount:$medium) {
+	@if $type==padding {
+		@if $direction==all {
+			padding: $amount;
+		}
+
+		@else if $direction==top {
+			padding-top: $amount
+		}
+
+		@else if $direction==left {
+			padding-left: $amount
+		}
+
+		@else if $direction==right {
+			padding-right: $amount
+		}
+
+		@else {
+			padding-bottom: $amount
+		}
+	}
+
+	@else {
+		@if $direction==all {
+			margin: $amount;
+		}
+
+		@else if $direction==top {
+			margin-top: $amount
+		}
+
+		@else if $direction==left {
+			margin-left: $amount
+		}
+
+		@else if $direction==right {
+			margin-right: $amount
+		}
+
+		@else {
+			margin-bottom: $amount
+		}
+	}
+}
+
+@mixin marginTop0 {
+	margin-top: 0;
+}
+
+@mixin marginLeft0 {
+	margin-left: 0;
+}
+
+@mixin mt-10 {
+	margin-top: 10px;
+}
+
+@mixin mt-15 {
+	margin-top: 15px;
+}
+
+@mixin mt-20 {
+	margin-top: 20px;
+}
+
+@mixin mt-30 {
+	margin-top: 30px;
+}
+@mixin mt-40 {
+	margin-top: 40px;
+}
+@mixin mt-70 {
+	margin-top: 70px;
+}
+
+@mixin m-auto {
+	margin: 0 auto;
+}
+
+@mixin mt-50 {
+	margin-top: 50px;
+}
+
+@mixin mt-100 {
+	margin-top: 100px;
+}
+
+@mixin grid {
+	display: -ms-grid;
+	display: grid;
+}
+
+@mixin column-double {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
+
+@mixin column-reset {
+	display: inherit;
+	vertical-align: inherit;
+	width: inherit;
+}
+
+@mixin table-row {
+	display: table;
+	width: 100%;
+	position: relative;
+}
+
+@mixin table-cell {
+	display: table;
+	width: 100%;
+	> *{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+@mixin mobi-body-render {
+	position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin mobi-body-reset {
+	position: inherit;
+    overflow: inherit;
+    top: inherit;
+    left: inherit;
+    width: inherit;
+    height: inherit;
+}
+
+@mixin btnReset{
+	background: none;
+	padding: $reset;
+	border: none;
+	border-radius: 0;
+	&:hover{
+		background: none !important;
+	}
+}

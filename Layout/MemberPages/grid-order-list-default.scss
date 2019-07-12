@@ -1,0 +1,106 @@
+.site-pages-member {
+    .ems-page-default-member-order {
+        padding: $small-20;
+
+        >.page-top-title>span {
+            border-bottom: 0;
+        }
+    }
+
+    .ems-grid-default-order{
+        .ems-grid-header {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background: $color-17;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 5px 0 0 5px;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                color: $color-22;
+                &:first-child{
+                    border-top: none;
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+        }
+
+        .ems-grid-row{
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 0 5px 5px 0;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                max-height: 47px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:first-child{
+                    border-top: none;
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+            .ems-grid-order-no{
+                > a{
+                    text-decoration: underline;
+                }
+            }
+            .ems-grid-status{
+                color: $frenchRose;
+            }
+            .ems-grid-cargo-no{
+                a{
+                    display: block;
+                    &:last-child{margin-top: 10px;}
+                }
+            }
+            .ems-grid-add-to-cart{
+                a{
+                    display: block;
+                    color: $color-36;
+                    font-size: $small-14;
+                    span{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .ems-grid-refund{
+        padding: $small-20;
+        .ems-grid-row{
+            .ems-grid-detail{
+                padding: 8px;
+            }   
+            .btnIadeDetay{
+                cursor: pointer;
+                width: 100%;
+                font-size: 13px;
+                padding: 6px 5px;
+            }
+        }
+    }
+}
+
+.popup_iadeDetay .jconfirm-box-container{
+    max-width: 680px !important;
+}

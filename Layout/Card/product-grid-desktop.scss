@@ -1,0 +1,90 @@
+.ems-grid-default-cart{
+    border-top: none;
+    .ems-grid-header{
+        &:first-child{
+            @include grid;
+            grid-template-columns:70px 1fr .5fr minmax(0,80px) .5fr .5fr 30px;
+            grid-template-rows: minmax(0, auto);
+            align-items: center;
+            grid-template-areas:
+            "IMG NNM PRC ADT PRT ABN CLS";
+            grid-gap: 10px;
+            border-bottom: 1px solid #E7E7E7;
+            padding: 10px;
+            > div span{
+                font-family: "regular";
+                font-size: 12px;
+                color: #999999;
+            }
+        }
+        .ems-grid-img span,
+        .ems-grid-delete span{display: none;}
+    }
+    .ems-grid-row {
+        @include grid;
+        grid-template-columns:70px 1fr .5fr minmax(0,80px) .5fr .5fr 30px;
+        grid-template-rows: minmax(0, auto);
+        align-items: center;
+        grid-template-areas:
+        "IMG NNM PRC ADT PRT ABN CLS";
+        grid-gap: 10px;
+        @include space(padding, all, $small-10);
+    }
+
+    .ems-grid-img {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        width: inherit;
+        height: inherit;
+        margin-top: inherit;
+        grid-area: IMG;
+    }
+    .ems-grid-name{
+        grid-area: NNM;
+    }
+    .ems-grid-price,
+    .ems-grid-price-total{
+        display: block;
+        vertical-align: inherit;
+    }
+    .ems-grid-price{
+        grid-area: PRC;
+        margin-right: $reset;
+    }
+    .ems-grid-price-total {
+        grid-area: PRT;
+        width: auto;
+    }
+    .ems-grid-subscriptions {
+        margin-top: $reset;
+        grid-area: ABN;
+        &:empty{
+            display: inherit;
+        }
+    }
+    .ems-grid-delete{
+        position: relative;
+        top: inherit;
+        right: inherit;
+        grid-area: CLS;
+    }
+    .ems-grid-piece-wrapper {
+        margin-top: $reset;
+        margin-bottom: $reset;
+        .sStylerMainWrp {
+            display: none;
+        }
+        input{
+            display: block;
+        }
+    }
+    .netFiyat{
+        font-size: $small-16;
+    }
+}
+
+.page-card-title{
+    @include space(padding, top, $reset);
+    @include space(padding, left, $reset);
+}

@@ -1,0 +1,279 @@
+.site-pages-member {
+    .ems-page-default-order-detail {
+        padding-left: $small-20;
+        padding-right: $small-20;
+        .page-top-desc{
+            display: inherit;
+            .lnkSipTekrarla{
+                text-align: center;
+                padding:$small-19 $small-5;
+                display: block;
+                span{
+                    font-size: 15px;
+                    color: $color-1;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .order-cancel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: $color-17;
+            z-index: 35;
+            width: 100%;
+            >a {
+                display: block;
+                padding: $small-19 $small-40 $small-19 $small-40;
+                background: none;
+                font-size: $small-18;
+                font-family: $regular;
+                color: $color-1;
+                border: none;
+                border-radius: 0;
+                position: relative;
+                &:before {
+                    font-family: 'icomoon';
+                    content: '\e903';
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: $small-13;
+                    color: $color-1;
+                    @include Position(absolute, top 50% left $small-10);
+                    margin-top: -15px;
+                }
+            }
+        }
+        .inner-title {
+            margin-bottom: $small-20;
+            line-height: 1;
+        }
+        .inner-title-payment{
+            border-top: 2px solid $color-38;
+            padding-top: $small-20;
+        }
+        .border-line{
+            display: none;
+            border-top: 2px solid $color-38;
+            margin-bottom: $small-30;
+        }
+        .border-line-2{
+            display: none;    
+        }
+        .order-address {
+            padding-top: $small-20;
+            padding-bottom: $small-20;
+            .text {
+                font-size: $small-20;
+                font-family: $bold;
+                margin-bottom: $small-20;
+                line-height: 1;
+            }
+    
+            .value {
+                border-radius: 3px;
+                border: 1px solid $color-4;
+                padding: $small-20;
+                >span {
+                    font-size: $small-15; 
+                }
+            }
+        }
+        .order-address-billing{
+            padding-top: $reset;
+        }
+        .bottom-step {
+            text-align: center;
+           .btnSipIptal,
+           .btnSipIade{
+            width: 100%;
+            max-width: 240px;
+            margin-top: 30px
+           }
+        }
+    }
+
+    /*Webkit scrolling*/
+    .ems-order-detail-grid-md{
+        
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+        ::-webkit-scrollbar-track {
+            background: $pinkish-grey;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: $very-dark-gray;
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: $very-dark-gray;
+        }
+    }
+
+    .ems-grid-default-order-products {
+        border-radius: none;
+        border: 0;
+        max-height: 330px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-right: $small-10;
+
+        .ems-grid-header{display: none;}
+
+        .ems-grid-row {
+            min-height: 110px;
+            padding: $small-10 $small-5 $small-10 100px;
+            position: relative;
+
+            .ems-grid-img {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                margin-top: -40px;
+                width: 80px;
+                height: 80px;
+
+                a img {
+                    width: 80px;
+                }
+            }
+
+            .ems-grid-name {
+                >a {
+                    font-size: $small-15;
+                    br{display: none;}
+                    strong{display: none;}
+                    display: none;
+                    &:first-child{
+                        display: block;
+                    }
+                }
+            }
+
+            .ems-grid-price-total {
+                padding-top: $small-10;
+
+                >span {
+
+                    .netFiyat,
+                    .topFiyat,
+                    .satBrFiyat {
+                        font-family: $bold;
+                        font-size: $small-16;
+                        color: $black;
+                    }
+
+                    .netFiyatVrg,
+                    .topFiyatVrg,
+                    .satBrFiyatVrg {
+                        font-size: $small-12;
+                        text-decoration: line-through;
+                        color: $black;
+                    }
+
+                    .satBrFiyatVrg,
+                    .satBrFiyat {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+    .order-detail-info {
+        border-top: 1px solid $color-38;
+        border-bottom: 1px solid $color-38;
+        padding-top:$small-15;
+        padding-bottom:$small-15;
+        >div {
+
+            &:empty {
+                display: none;
+            }
+
+            >div {
+                display: inline-block;
+                width: 50%;
+                vertical-align: middle;
+                padding-top: $small-5;
+                padding-bottom: $small-5;
+                &:empty {
+                    display: none;
+                }
+            }
+
+            .text {
+                font-family: $medium;
+                font-size: $small-14;
+                color: black;
+            }
+
+            .value {
+                span[id$="lblSSM_KARGOBILGI"] {
+                    img {
+                        display: none;
+                    }
+
+                    >a {
+                        display: block;
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .order-detail-info-payment {
+        >div {
+            >div {
+                &:empty {
+                    display: none;
+                }
+
+                display: inline-block;
+                vertical-align: middle;
+                padding-top: 7px;
+                padding-bottom: 7px;
+
+            }
+
+            .text {
+                text-align: left;
+                width: 60%;
+                >* {
+                    color: $color-1;
+                    font-size: $small-15;
+                    font-weight: normal;
+                }
+            }
+
+            .value {
+                text-align: right;
+                width: 40%;
+                >* {
+                    color: $color-1;
+                    font-size: $small-15;
+                    font-weight: normal;
+                }
+            }
+        }
+        .total{
+            border-top: 1px solid $color-38;
+            margin-top: 10px;
+            padding-top: 10px;
+            .fs-15{
+                margin-right: $small-5;
+            }
+            .fs-13{
+                color: $color-26;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.ems-custom-error{
+    > span{
+        width: 100vw;
+        height: 100vh;
+        display: table;
+        table-layout: fixed;
+    }
+    &-wrapper{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    h1{
+        position: absolute;
+        top:25px;
+        left: 0;
+        right: 0;
+        max-width: 1220px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        img{
+            max-width: 100px;
+        }
+    }
+    h2{
+        font-family: $medium;
+        font-size: $small-17;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    .images-404 img{
+        max-width: 493px;
+    }
+    .btnDefault {
+        display: block;
+        max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        &:nth-child(2){margin-top: 10%;}
+    }
+}

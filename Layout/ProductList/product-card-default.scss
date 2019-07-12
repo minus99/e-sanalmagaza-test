@@ -1,0 +1,424 @@
+.ems-prd-list {
+    .emosInfinite {
+        border-top: 1px solid $color-6;
+    }
+}
+
+.ems-prd {
+    &-inner {
+        position: relative;
+        z-index: 1;
+        @include space(padding, all, $small $small $xs $small);
+        @include transition(all .2s ease);
+    }
+
+    &-mask {
+        @include Position(relative, null);
+    }
+
+    &-types {
+        > div{
+            color: $dark-lime-green;
+            font-size: $small-15;
+            margin-top: $small-8;
+            position: relative;
+            height: $small-18;
+            overflow: hidden;
+        }
+        > div > span{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background: #fff;
+        }
+    }
+
+    &-image {
+        max-width: 220px;
+        @include space(padding, top, $small);
+        @include space(padding, bottom, $large);
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+    }
+
+    &-name {
+        >a {
+            font-size: $small-13;
+            min-height: 45px;
+            max-height: 45px;
+            overflow: hidden;
+        }
+    }
+
+    &-price {
+        width: 100%;
+        display: table;
+        @include space(margin, top, $xSmall);
+
+        >div {
+            min-width: 50%;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    &-price-left {
+        >div {
+            @include column-double;
+            width: auto;
+
+            &:empty {
+                display: none;
+            }
+        }
+    }
+
+    &-price-right {
+        text-align: right;
+    }
+
+    &-content-mask {
+        min-height: 95px;
+        max-height: 95px;
+    }
+
+    &-price-subscriber {
+        border: 1px solid $color-18;
+        border-radius: 3px;
+        text-align: left;
+        display: inline-block;
+        @include space(padding, all, 1px);
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &-promo {
+        &:empty {
+            display: none;
+        }
+    }
+}
+
+.urunListe_brutFiyat,
+.urunListe_satisFiyat,
+.urunListe_aboneFiyat.emos_invisible {
+    &:before {
+        content: '₺';
+        margin-right: -3px;
+    }
+
+    &:empty {
+        display: none;
+    }
+}
+
+.urunListe_brutFiyat {
+    font-family: $regular;
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
+.urunListe_satisFiyat {
+    font-family: $bold;
+    font-size: $small-13;
+}
+
+.urunListe_aboneFiyat.emos_invisible {
+    display: block !important;
+    font-size: $small-13;
+    font-family: $bold;
+    color: $color-18;
+
+    &:empty {
+        display: none !important;
+    }
+}
+
+.urunListe_aboneFiyatLabel {
+    display: block !important;
+    font-size: 10px;
+    color: $color-18;
+
+    &:empty {
+        display: none !important;
+    }
+}
+
+.urunListe_sonKacUrun{
+    display: inline-block !important;
+    > span{
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: #fff;
+        z-index: 3;
+        color: $dark-lime-green;
+        font-size: $small-15;
+        &:empty{
+            display: none;
+        }
+    }
+    &:empty{
+        display: none !important;
+    }
+}
+
+.urunListe_yeniUrun {
+    display: inline-block !important;
+    @include Position(absolute, top 0 left 0);
+    z-index: 1;
+
+    >span {
+        display: block;
+        background: $color-15;
+        @include space(padding, all, $xs);
+        font-size: $small-13;
+        letter-spacing: 0.5px;
+        border-radius: 3px;
+
+        &:empty {
+            display: none;
+        }
+    }
+}
+
+.urunListe_pnlIndirimOran {
+    display: block !important;
+
+    >span {
+        display: block;
+        background: $vivid-pink;
+        color: $white;
+        border-radius: $alternate-border-radius;
+        padding: 4px 2px;
+        font-family: $bold;
+        font-size: $small-12;
+        text-align: left;
+        @include space(margin, right, $xs);
+
+        &:empty {
+            display: none;
+        }
+    }
+}
+
+.urunListe_adet {
+    display: none !important;
+    width: 35%;
+    position: relative;
+
+    input:not([type="checkbox"]):not([type="radio"]) {
+        background: $white;
+        border-color: $vivid-orange;
+        border-radius: 3px 0 0 3px;
+        @include space(padding, top, $xs);
+        @include space(padding, left, $xs);
+        @include space(padding, right, $large);
+        @include space(padding, bottom, $xs);
+        line-height: 34px;
+        text-align: center;
+        color: $color-8;
+        border-width: 1px;
+    }
+
+    span[id$="lblURN_ADET"] {
+        display: none;
+    }
+}
+
+.promosyonBilgi {
+    &:empty {
+        display: none;
+    }
+
+    span.promo {
+        display: block;
+        color: $dark-lime-green;
+        font-size: $small-15;
+        max-height: 26px;
+        overflow: hidden;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+.urunListe_sepetGrup {
+    width: 100%;
+    display: table;
+
+    >div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .btnSepeteAt {
+        display: block;
+        border-radius:3px;
+    }
+}
+
+.urunListe_urunAboneOl {
+    >table {
+        display: table !important;
+        width: 100%;
+    }
+
+    .btnDefault {
+        @include space(margin, left, 5%);
+        display: block;
+        background: $color-18;
+        padding-left: $reset;
+        padding-right: $reset;
+    }
+}
+
+.urunListe_sepet,
+.urunListe_stokHaberci{
+    
+    >table {
+        display: table !important;
+        width: 100%;
+    }
+}
+
+.urunListe_sepet {
+    min-width: 65%;
+}
+
+.urunListe_stokHaberci{
+    .btnStokHaberci {
+        display: block;
+        border-radius:3px;
+        background: #5a5a5a;
+    }
+}
+
+/*Product Cart single Grid Border Settings*/
+.ems-prd-list {
+    .ems-prd {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        border-bottom: 1px solid $pinkish-grey;
+
+        &:nth-child(odd) {
+            border-right: 1px solid $pinkish-grey;
+        }
+
+        &:nth-child(even) {
+            border-left: 1px solid transparent;
+        }
+    }
+}
+
+/*=========================
+Product Types
+=========================*/
+.ems-prd{
+    &.spr38{
+        span.spr38{
+            display: block;
+            z-index: 1;
+        }
+    }
+    &.spr39{
+        span.spr39{
+            display: block;
+            z-index: 2;
+        }
+    }
+    &.spr40, &.spr41{
+        span.spr40, span.spr41{
+            display: block;
+            z-index: 2;
+        }
+    }
+    &.spr42, &.spr43, &.spr44, &.spr45{
+        span.spr42, span.spr43, span.spr44, span.spr45{
+            display: block;
+            z-index: 1;
+        }
+    }
+    &.spr46{
+        .ems-prd-new{display: none;}
+        span.spr46{
+            display: inline-block;
+        }
+    }
+    
+    span.spr46{
+        @include Position(absolute, top 0 left 0);
+        z-index: 1;
+        background: $color-15;
+        @include space(padding, all, $xs);
+        font-size: $small-13;
+        letter-spacing: 0.5px;
+        border-radius: 3px;
+        display: none;
+    }
+}
+
+
+.tekli {
+    .ems-prd-list {
+        .ems-prd {
+            width: 100%;
+
+            &-inner {
+                @include space(padding, left, $small-8);
+                @include space(padding, right, $small-8);
+            }
+        }
+
+        .ems-prd-content-mask {
+            min-height: 105px;
+            max-height: 105px;
+        }
+
+        .ems-prd-name>a {
+            font-size: $small-15;
+        }
+
+        .urunListe_brutFiyat {
+            font-size: $small-16;
+        }
+
+        .urunListe_satisFiyat {
+            font-size: $small-18;
+        }
+
+        .urunListe_aboneFiyatLabel {
+            font-size: $small-13;
+        }
+
+        .urunListe_aboneFiyat.emos_invisible {
+            font-size: $small-18;
+        }
+
+        .urunListe_pnlIndirimOran>span {
+            font-size: $small-18;
+            @include space(padding, left, $small);
+            @include space(padding, right, $small);
+        }
+        .ems-prd-list-cart-add{
+            display: block !important;
+        }
+        .urunListe_stokHaberci,
+        .urunListe_sepetGrup{
+            @include space(margin, top, $small);
+        }
+        .ems-prd-content-mask{
+            min-height: 165px;
+            max-height: 165px;
+        }
+    }
+}

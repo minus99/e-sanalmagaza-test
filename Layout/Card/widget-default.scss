@@ -1,0 +1,94 @@
+/*
+=========================================
+    Swiper
+*/
+.swiper-container-card{
+    overflow: hidden;
+    padding-left: $reset;
+    padding-right: $reset;
+    padding-top: $small-30;
+    margin-top: $small-40;
+    border-top:1px solid $color-6;
+    .widget-header span{
+        margin-left:$small-20;
+    }
+    .swiper-inner{
+        overflow: visible;
+    }
+    .swiper-slide{
+        width: 200px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        margin-top: 22px;
+        display: none;
+    }
+    .ems-prd-list-cart-add{
+        display: block;
+        margin-top: $small-10;
+        .urunListe_adet{display: none;}
+    }
+
+    .urunListe_sepetGrup,
+    .urunListe_stokHaberci{
+        .btnSepeteAt{
+            border-radius:3px;
+        }
+        .btnSepeteAt,
+        .btnStokHaberci{
+            background: none;
+            border-color: $color-8;
+            color: $color-8;
+        }
+    }
+}
+
+/*
+=========================================
+    Swiper Kargo ve BDDK
+*/
+.swiper-container-bddk{
+    margin-bottom: $small-30;
+    overflow: hidden;
+    padding-right: $small-5;
+    padding-left: $small-5;
+    .swiper-inner{
+        overflow: visible;
+    }
+    .swiper-slide{
+        width: 98%;
+        padding-right: $small-5;
+        padding-left: $small-5;
+        > div{
+            padding: $small-15 $small-10 $small-15 $small-10;
+            background: $color-17;
+            position: relative;
+            width: 100%;
+            display: table;
+        }
+        strong{
+            font-family: $medium;
+            font-weight: normal;
+            &:before{
+                content:'₺';
+            }
+        }
+        i{
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            &:before{
+                font-size: $small-30;
+                color: $color-8;
+            }   
+        }
+        span{
+            display: table-cell;
+            vertical-align: middle;
+            font-size: $small-15;
+        }
+    }
+}

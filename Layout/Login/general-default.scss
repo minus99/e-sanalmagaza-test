@@ -1,0 +1,144 @@
+.site-pages-login{
+    @include space(padding, top, $xlarge);
+    @include space(padding, bottom, 70px);
+    background: #fef0eb;
+    background: linear-gradient(rgba(254,240,235,0) 1% ,rgba(254,240,235,1) 50%);
+    .login-title{
+        @include space(padding, left, $small);
+        @include space(padding, right, $small);
+        h2,h3{
+            font-weight: normal;
+        }
+        h2{
+            font-size:$small-17;
+            @include space(margin, bottom, $small);
+            @include space(margin, top, $small);
+        }
+        h3{
+            font-size:$small-12;
+        }
+    }
+    .member-login-body{
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        @include space(padding, left, $large);
+        @include space(padding, right, $large);
+        max-width: 350px;
+    }
+    .ems-form-inner{
+        .sign-or{
+            > span{
+                cursor: pointer;
+                display: block;
+                @include space(margin, top, 30px);
+                &:empty{display: none;}
+            }
+        }
+        .ems-field-double{
+            @include table-cell;
+            table-layout: fixed;
+        }    
+        #lnkSifremiUnuttum{
+            font-size: 13px;
+            color: #8E8E8E;
+        }
+    }
+    .obj-forget{
+        text-align: right;
+    }
+    .ems-form-obj{
+        position: relative;
+        .password-change-btn{
+            @include Position(absolute, top 8px right 7px);
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            i{
+                line-height:30px; 
+            }
+            i:before{
+                color: $gray;
+                font-size: 20px;
+            }
+        }
+    }
+    .logo{
+        text-align: center;
+        img{
+            max-width: 100px;
+        }
+    }
+    .column-double{
+        @include column-double;
+    }
+    .loginKvkkSozlesme,
+    .loginSozlesme,
+    .ems-field-check,
+    .loginSozlesmeBilgi{
+        margin-top: 20px;
+    }
+    .loginKvkkSozlesme,
+    .loginSozlesme {
+        a{
+            text-decoration: underline;
+        }
+    }
+    .loginSozlesmeBilgi {
+        background: url(/images/frontend/kvk_uyari.png) top left no-repeat;
+        padding-left: 35px;
+        font-family: $medium;
+        font-size: 14px;
+    }
+}
+
+.member-login-header{
+    border-top: 1px solid $pinkish-grey;
+    > span{
+        @extend .fm-b;
+        font-size: 24px;
+        display: block;
+        @include space(padding, top, $large);
+        @include space(padding, bottom, $xxlarge);
+        @include space(padding, left, $large);
+        @include space(padding, right, $large);
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        max-width: 350px;
+    }
+}
+
+.ems-signup-header{
+    .btn-login-page{
+        @extend .btn-inactive;
+    }
+}
+
+.member-login-box{
+    @include space(padding, top, $xxlarge);
+    @include space(padding, bottom, $xxlarge);
+    .btnLogin,
+    .btn-primary-light,
+    .btnYeniUyeKaydet{
+        @extend .btn-big;
+        @extend .b-el;
+    }
+    &.ems-signup{
+        display: none;
+    }
+}
+
+body.ems-signup-body{
+    .member-login-box{
+        &.ems-signup{
+            display: block;
+        }
+        &.ems-login{
+            display: none;
+        }
+    }
+}
+
+.swiper-container-login{
+    display: none;
+}

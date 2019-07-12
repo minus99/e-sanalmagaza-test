@@ -1,0 +1,26 @@
+/*=======================
+Description : Ödeme seçenek tab sekmesi
+=======================*/
+.ems-cart-pay-tab{
+    ul{
+        li{
+            margin-right: $small-10;
+            a{
+                @include transition(all .2s ease);
+                padding: $small-20 $small-20 $small-20 60px;
+                font-size: $small-15;
+                &:before{
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    left: 20px;
+                    margin-top: -12px;
+                    font-size: 24px;
+                }
+                &:hover{
+                    border-color: $color-19;
+                }
+            }
+        }
+    }
+}

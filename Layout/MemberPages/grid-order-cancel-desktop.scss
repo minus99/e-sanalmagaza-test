@@ -1,0 +1,75 @@
+/*
+===================================
+Grid Desktop Product Row
+*/
+.site-pages-member{
+    .ems-page-default-order-cancel{
+        padding: $reset;
+        .ems-grid-default-order-products {
+            .ems-grid-row{
+                @include grid;
+                grid-template-columns: 70px 1fr .5fr 1fr;
+                grid-template-rows: minmax(0, auto);
+                align-items: center;
+                grid-gap: 10px;
+                padding: 10px;
+                min-height: auto;
+            }
+            .ems-grid-img{
+                position: relative;
+                top: inherit;
+                left: inherit;
+                width: inherit;
+                height: inherit;
+                margin-top: inherit;
+            }
+            .ems-grid-status{
+                margin-top: $reset;
+                margin-bottom: $reset;
+            }
+            .ems-grid-piece0{
+                text-align: right;
+            }
+        }
+        .bottom-step{
+            @include grid;
+            grid-template-columns: minmax(0,190px) 1fr;
+            grid-template-areas:
+            "LFT LF1 RGH";
+            grid-template-rows: minmax(0,auto);
+            padding-top: $small-20;
+            align-items: center;
+            .btnDefault{
+                max-width: inherit;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .btnSipariseDon{
+                margin-right: $small-20;
+                margin-top: $reset;
+                grid-area:LFT;
+                &:hover{
+                    border-color: $color-8;
+                }    
+            }
+            .btnIadeEt{
+                grid-area:LF1;
+                margin-top: $reset;
+                max-width: 170px;
+            }
+        }
+        .tumunuIptalEtContainer{
+            @include grid;
+            grid-template-columns: minmax(0,190px)  minmax(0,190px);
+            grid-template-rows: minmax(0,auto);
+            justify-content: end;
+            grid-gap: 20px;
+            grid-area:RGH;
+            max-width: inherit;
+            margin: $reset;
+            .btnDefault {
+                margin-top: $reset;
+            }
+        }
+    }
+}

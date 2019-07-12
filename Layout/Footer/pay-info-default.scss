@@ -1,0 +1,56 @@
+.grid-info-box {
+    .grid-info-box-boxes {
+        li {
+            text-align: center;
+            @include space(padding, all, 5px 5px);
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            min-height: 180px;
+            max-height: 180px;
+            >* {
+                display: block;
+            }
+
+            i {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                display: inline-block;
+                @include space(margin, top, $xs);
+                position: relative;
+            }
+
+            i,
+            i:before {
+                font-size: 40px;
+            }
+
+            i:before {
+                color: $vivid-orange;
+            }
+            .icon-return{
+                small{
+                    position: absolute;
+                    bottom: 13px;
+                    left: 8px;
+                    font-size: 12px;
+                    height: auto;
+                    line-height: 1;
+                    font-family: bold;
+                    color: $color-8;
+                }
+            }
+            .fm-r,
+            .fm-m {
+                @extend .m-t-10;
+            }
+
+            .fm-r {
+                color: #5a5a5a;
+                min-height: 50px;
+            }
+        }
+    }
+}

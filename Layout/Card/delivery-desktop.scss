@@ -1,0 +1,25 @@
+/*
+=========================================
+    Teslimat Desktop Layout
+*/
+.ems-page-default-order-delivery {
+    @include grid;
+    grid-template-columns:10px minmax(auto, 850px) 50px minmax(auto, 350px);
+    grid-template-rows: minmax(0, auto);
+    grid-template-areas: ". A . B";
+
+    .page-top-title {
+        width: 60%;
+    }
+}
+
+.ems-page-delivery-left {
+    grid-area: A;
+    padding: 50px 0 50px 0;
+}
+
+.ems-page-delivery-right {
+    grid-area: B;
+    padding-top: $small-30;
+    padding-bottom: $small-30;
+}

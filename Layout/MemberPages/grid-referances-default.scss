@@ -1,0 +1,127 @@
+/*Referances Page Title Visible*/
+.site-pages-member {
+    .ems-page-default-referances {
+        padding-top: $small-30;
+        padding-left: $small-20;
+        padding-right: $small-20;
+
+        .page-top-title {
+            display: block;
+
+            span.title {
+                display: block;
+                margin-bottom: $small-20;
+            }
+        }
+        .page-top-title-ref{
+            span.title {
+                margin-top: $small-20;
+             }
+         }
+    }
+}
+
+/*====================
+Grid Layout Default
+====================*/
+.site-pages-member {
+    .ems-grid-default-referances {
+        border: none;
+        .ems-grid-header {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background: $color-17;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 5px 0 0 5px;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                color: $color-22;
+                &:first-child{
+                    border-top: none;
+                }
+            }
+        }
+
+        .ems-grid-row {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 0 5px 5px 0;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                max-height: 47px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:first-child{
+                    border-top: none;
+                }
+            }
+            .ems-grid-use {
+
+                a.btnDefault {
+                    i {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: $small-5;
+                    }
+
+                    i.icon-check-small:before {
+                        font-size: $small-10;
+                    }
+
+                    i.icon-close-1:before {
+                        font-size: $small-10;
+                    }
+                }
+            }
+        }
+        .ems-grid-use {
+            >div {
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+            }
+            a.btnDefault {
+                background: none;
+                border-radius: 0;
+                border: none;
+                font-size: $small-14;
+                font-family: $regular;
+                padding: $reset;
+                text-align: center;
+                display: block;
+            }
+
+            a.btnUyeRefOnayla {
+                color: $color-31;
+            }
+
+            a.btnUyeRefReddet {
+                color: $color-37;
+            }
+        }
+    }
+
+    .ems-grid-default-referances-success {
+        .ems-grid-header {
+            .ems-grid-use {
+                span {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+}

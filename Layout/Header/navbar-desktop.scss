@@ -1,0 +1,56 @@
+.site-header {
+    .navbar-holder {
+        grid-template-columns:1fr minmax(auto, 170px) minmax(auto,720px) minmax(auto, 310px) 1fr;
+        grid-template-rows: minmax(0,auto);
+        grid-template-areas:
+        ". NON NON NON ."
+        ". LGO SCH MMB .";
+        align-items: center;
+        height: 100%;
+    }
+
+    .navbar-item-logo {
+        width: inherit;
+        grid-area: LGO;
+    }
+
+    .navbar-item-mini-member {
+        width: inherit;
+        grid-area: MMB;
+    }
+
+    .navbar-item-search {
+        grid-area: SCH;
+    }
+    .navbar-item-none{
+        grid-area: NON;
+    }
+    .navbar-item {
+        grid-template-columns: 1fr auto;
+        justify-items: right;
+        align-items: center;
+    }
+    .navbar-item-logo,
+    .navbar-item-mini-member{
+        @include space(padding, all, $reset);
+    }
+    .mod-mini-cart {
+        margin-left: 10px;
+    }
+    .xs-icons{
+        &.icon-mini-bag:before{
+            content:'\e91b';
+        }
+    }
+    .navbar-item-logo{
+        h1{
+            img{
+                height: 40px;
+            }
+            a{
+                @include space(padding, top, 15px);
+                @include space(padding, bottom, 15px);
+            }
+        }
+    }
+}

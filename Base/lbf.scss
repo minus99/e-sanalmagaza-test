@@ -1,0 +1,33 @@
+/*
+ * Language Before Field
+ ========================================================================== */
+
+/* Turkish */
+span[id$="lbfKUTU_URUN"] {
+    display: none;
+}
+
+.tr-TR {
+    //$lbf_EkleBtn            : "Ekle" !global;
+
+    //$Bundle Urun
+    .tableBagliUrun .sStylerWrp_checkbox .cStyler:before {
+        content: 'Ekle';
+    }
+
+    .tableBagliUrun .sStylerWrp_checkbox .cStyler.checked:before {
+        content: 'Eklendi';
+    }
+
+    .site-pages-member .ems-grid-default-favorites .ems-grid-row .ems-grid-piece-wrapper:after {
+        content:'Ad.';;
+    }
+     
+    //$Uye Favori Ekle Secim Text
+    .ems-grid-default-favorites .ems-grid-select .cStyler:before {
+        content: 'ÜRÜN SEÇ';
+    }
+    .ems-grid-default-favorites .ems-grid-select .cStyler.checked:before {
+        content: 'SEÇİLDİ';
+    }
+}

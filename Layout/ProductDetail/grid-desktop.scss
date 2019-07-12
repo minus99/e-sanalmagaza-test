@@ -1,0 +1,131 @@
+.site-pages-detailpage{
+    grid-template-areas:
+    ". A ."
+    "B B B"
+    ". C .";
+}
+.ems-prd-detail-inner{
+    @include grid;
+    grid-template-columns:1fr minmax(0,560px) 90px minmax(0,540px) 1fr;
+    grid-template-areas:
+    ". RW1 . RW2 ."
+    ". RW3 . RW2 ."
+    "RW4 RW4 RW4 RW4 RW4";
+}
+.inner-row-1{
+    grid-area:RW1;
+}
+.inner-row-2{
+    grid-area:RW2;
+}
+.inner-row-3{
+    grid-area:RW3;
+}
+.inner-row-4{
+    grid-area:RW4;
+}
+.site-pages-detailpage {
+    .navigasyon{display: block !important;}
+}
+.ems-prd-detail{
+    .inner-row-1{
+        @include space(padding, all, $reset);
+    }
+    .inner-row-2-holder{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 130px;
+    }
+}
+
+
+/*Template*/
+.ems-detail-prd-landing{
+    .cover{
+        background: $color-27;
+        height: 300px;
+        margin-bottom: 75px;
+        .logo{
+            max-width: 145px;
+            margin: 0;
+        }
+        .img{
+            @include Position(absolute, top 50% right 0);
+            max-width: 350px;
+            margin-top: -105px;
+            margin-left: inherit;
+            margin-right: 105px;
+        }
+        .name{
+            font-size: 32px;
+        }
+    }
+    .cover-inner{
+        @include grid;
+        grid-template-columns:minmax(0,145px) minmax(0,500px)  minmax(0,350px);
+        align-items: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        height: 100%;
+        grid-gap: 30px;
+    }
+    .text-container {
+        max-width: 856px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @include grid;
+        align-items: center;
+        grid-template-columns:1fr 1fr; 
+        > div{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+    .text-container.right-top{
+        grid-template-areas:
+        "B A";
+        .img{
+            grid-area: A;
+            margin-top: 0;
+        }
+        .text{
+            grid-area: B;
+        }
+    }
+    .text-container.single-to{
+        grid-template-columns:1fr; 
+        .img{
+            margin-top: 0;
+        }
+    }
+    .using-select{
+        padding: 0;
+        .title{
+            margin-bottom: 0;
+        }
+    }
+    .using-select-ul{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        li{
+            display: table-cell;
+            vertical-align: middle;
+            width: 33.333%;
+            text-align: center;
+            padding-bottom: 0;
+        }
+        i{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p{
+            width: 100%;
+            display: block;
+        }
+    }
+}

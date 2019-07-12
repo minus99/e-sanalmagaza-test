@@ -1,0 +1,35 @@
+.ems-page-default-message-detail{
+    padding-top: $reset;
+    padding-left: $reset;
+    padding-right: $reset;
+    .page-top-title{
+        display: none;
+    }
+    .ems-message-detail-form{
+        max-width: 680px;
+    }
+    .msgDtListBtn{
+        @include grid;
+        grid-template-columns: minmax(0,220px) minmax(0,220px);
+        grid-gap: 20px;
+        justify-content: flex-start;
+        text-align: left;
+        .btnDefault {
+            max-width: 220px;
+        }
+        .btnMesajCozuldu{
+            margin-top: $reset;
+        }
+    }
+}
+
+/*
+Message Send
+===============================
+*/
+.pageMesajGonder{
+    .ems-form-inner{
+        padding-left: $reset;
+        padding-right: $reset;
+    }
+}

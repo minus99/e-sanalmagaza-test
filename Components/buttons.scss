@@ -1,0 +1,223 @@
+// Name:            Button
+// Description:     Styles for buttons
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$default-font-size:                     15px;
+$default-font-weight:                   600;
+$default-line-height:                   18px;
+$default-border-radius:                 5px;
+$alternate-border-radius:               3px;
+$default-padding:                       11px 5px;
+
+$big-font-size:                         16px;
+$big-font-weight:                       bold;
+$big-letter-spacing:                    .5px;
+$big-line-height:                       23px;
+$normal-padding:                        12px 5px;
+$big-padding:                           16px 5px;
+
+
+
+/* Style modifiers
+ ========================================================================== */
+/*
+ * Default
+ */
+
+.btnDefault{
+    font-family: $bold;
+    border-radius: $alternate-border-radius;
+    font-size: $default-font-size;
+    padding: $default-padding;
+    background: $vivid-orange;
+    color: $white;
+    text-align: center;
+    border: 2px solid transparent;
+}
+span.btnsepeteAt{
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+}
+/* Primary */
+.btn-primary{
+    background: $color-13;
+    color: $white;
+}
+
+.btn-primary-alternate{
+    background: $color-14;
+    color: $white;
+}
+
+/* Primary Light */
+ .btn-primary-light{
+    font-size: $default-font-size;
+    border: 2px solid $pinkish-grey;
+    color: $very-dark-gray;
+    background: $white;
+}
+
+/* Secondary */
+.btn-secondary{
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+/* Secondary Dark */
+.btn-secondary-dark{
+    font-family: $bold;
+    background: $doveGray;
+    border-radius: $default-border-radius;
+    color: $white;
+    padding: $big-padding;
+    font-size: $big-font-size;
+    text-align: center;
+}
+/* Alternative */
+.btn-alternative{
+    background: $white;
+    color: $very-dark-gray;
+    font-size: $default-font-size;
+}
+
+/* Inactive */
+.btn-inactive{
+    display: inline-block;
+    span{
+        font-family: $regular;
+        font-size: $small-15;
+        text-decoration:underline;
+        color: $very-dark-gray;
+        @include space(padding, all, $small $reset);
+    }
+}
+
+
+/* Big Type */
+.btn-big{
+    max-width: 240px;
+    @include space(margin, left, auto);
+    @include space(margin, right, auto);
+}
+
+/* Extend Butons */
+.btnSubMenuLink{
+    min-width: 170px;
+    @extend .btn-alternative; 
+    @include space(padding, top, 11px);
+    @include space(padding, bottom, 11px);
+}
+
+/*Counter Button*/
+.counter-btn {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    text-align: center;
+    display: block;
+    right: 10px;
+    span{display: none;}
+    &.top-btn,
+    &.bottom-btn{
+        &:after{
+            font-size: 9px;
+            font-family:'icomoon';
+            color: $vivid-orange;
+        }
+    }
+    &.bottom-btn{
+        bottom: 10px;
+        &:after{
+            content:'\e928';
+        }
+    }
+    &.top-btn{
+        top: 10px;
+        &:after{
+            content:'\e929';
+        }
+    }
+}
+
+/*Absolute Button*/
+.btn-absolute, .btn-fixed{
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    > i{
+        line-height: 32px;
+        &:before{
+            font-size: 16px;
+        }
+    }
+    .icon-close-ellips{
+        &:before{
+            color: $dark-gray;
+        }
+    }
+}
+.btn-absolute{
+    @include Position(absolute, top 50%);
+    @include space(margin, top, -16px);
+}
+.btn-fixed{
+    @include Position(fixed, top 15px right 15px);
+    z-index: 2;
+}
+.btn-absolute-left{
+    left: 15px;
+}
+.btn-absolute-right{
+    right: 15px;
+}
+
+.btn-absolute-free{
+    width: auto;
+    height: auto;
+}
+
+.btn-mobile-close{
+    i{
+        &:before{
+            content:'\e90e';
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+    a.btnDefault{
+        @include transition(all .2s ease);
+        &:hover{
+            background: $color-9;
+        }
+    }
+    .btnBannerDefault,
+    .btn-primary-light,
+    .btnSubMenuLink{
+        @include transition(all .2s ease);
+    }
+
+    a.btn-primary-light{
+        &:hover{
+            background: none;
+            border-color: $color-8;
+        }
+    }
+    .btnBannerDefault, .btnSubMenuLink{
+        &:hover{
+            background: #E9E9E9;
+        }
+    }
+}

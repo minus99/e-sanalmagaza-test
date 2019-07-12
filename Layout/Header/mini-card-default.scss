@@ -1,0 +1,314 @@
+// Static:       Mini Cart 
+// ========================================================================
+.mod-mini-cart {
+    display: none;
+    .ems-cart-info {
+        position: relative;
+        cursor: $cursor-pointer;
+
+        >span[id$="lbfKUTU_SEPET"] {
+            display: block;
+        }
+
+        span[id$="lblUrunAdet"] {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 37px;
+            display: inline-block;
+            font-family: $regular;
+            font-size: $small-14;
+            color: $white;
+        }
+    }
+
+    &-body {
+        @include Position(fixed, top 0 right 0);
+        width: 0;
+        background: transparent;
+        height: 100vh;
+        font-size: 0;
+        overflow: hidden;
+        z-index: 21;
+        transition: width 333ms ease-in;
+        &-inner{
+            @include Position(absolute, top 0 left 0);
+            width: 350px;
+            height: 100%;
+            @include setTransform(translateX(350px));
+            transition: transform 333ms ease-in;
+            background: #fff;
+        }
+    }
+    &-img{
+        @include m-auto;
+        @include space(margin, top, 45px);
+        width: 230px;
+        height: 230px;
+        background: url(/images/frontend/card-empty.png) center center no-repeat;
+    }
+    &-title{
+        > span{
+            @extend .b-el;
+            background: $vivid-orange;
+            @include Position(relative, null);
+            @include space(padding, all, 23px);
+            color: $white;
+            text-align: left;
+        }
+        > span[id$="lblKuponKodBilgi"]{display: none;}
+        .ems-mini-cart-close{
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            @include Position(absolute, top 20px right 30px);
+            z-index: 1;
+            cursor: pointer;
+        }
+        .icon-close-ellips{
+            line-height: 30px;
+            color: $white;
+            &:before{font-size: $small-16;}
+        }
+    }
+    &-col-products{
+        @include Position(absolute, top 70px left 0);
+        width: 350px;
+        height: calc(100% - 220px);
+        overflow-y: auto;
+    }
+    &-col-label{
+        > span{
+            width: 50%;
+            @extend .ib-el;
+            vertical-align: middle;
+            &:first-child{
+                text-align: left;
+                > *{
+                    @extend .ib-el;
+                }
+                .fs-13{color: $light-grey;}
+                .fs-20{color: $very-dark-gray; margin-right: $small-5;}
+            }
+            &:last-child{
+                @extend .fs-20;
+                font-family: $bold;
+                text-align: right;
+                &:after{
+                    content:'TL';
+                    @extend .fs-20;
+                    font-family: $bold;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    &-col-link{
+        position: relative;
+        > a{
+            @extend .b-el;
+            @extend .btn-secondary-dark;
+            line-height:$default-line-height; 
+        }
+        .click-stop{
+            display: none;
+            @include Position(absolute, top 0 left 0);
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: none;
+        }
+    }
+    &-col-total{
+        @include Position(absolute, bottom 0 left 0);
+        @include space(padding, all, $large);
+        width: 100%;
+        background: $very-light-gray;
+        z-index: 1;
+    }
+    .kutuSepet_icerik{
+        > .ems-col{
+            display: table;
+            width: 100%;
+            @include space(padding, all, 15px 20px);
+            border-bottom: 1px solid $pinkish-grey;
+        }
+    }
+    .cart-prd-left,
+    .cart-prd-right{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .cart-prd-left{
+        width: 85px;
+    }
+    .cart-prd-price-left{
+        > div{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .discount{
+        margin-right: $small-10;
+        background: $color-8;
+        border-radius: 3px;
+        color: $white;
+        font-size: $small-14;
+        font-family: $bold;
+        width: 23px;
+        padding: 3px;
+        text-align: left;
+        &:before{
+            content:'%';
+            display: block;
+        }
+        &:empty{
+            display: none;
+        }
+    }
+    .cart-prd-right{
+        width: calc(100% - 85px);
+        padding-left: 10px;
+        position: relative;
+        > div{
+            &:empty{display: none;}
+        }
+    }
+    .iControl{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        > *{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            font-size: $small-12;
+            color: $black;
+            margin-right: 10px;
+        }
+        a{
+            display: block;
+            width: 12px;
+            height: 12px;
+            text-align: center;
+            line-height: 12px;
+            i{
+                display: inline-block;
+                line-height: 10px;
+                &:before{
+                    color: $black;
+                    font-size: 6px;
+                }
+            }
+        }
+    }
+    .cart-prd-price{
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        margin-top: $small-5;
+        > div{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .first,
+        .last{
+            &:empty{
+                display: none;
+            }
+            &:before{
+                content:'₺';
+            }
+        }
+        .first{
+            font-family: $regular;
+            font-size: 12px;
+            color: $black;
+            text-decoration: line-through;
+        }
+        .last{
+            font-family: $bold;
+            font-size: $small-16;
+            color: $black;
+        }
+    }
+    .cart-prd-price-left{
+        width: 55%;
+    }
+    .cart-subscriber{
+        border: 1px solid $color-18;
+        border-radius: 3px;
+        text-align: left;
+        @include space(padding, all, $small-5);
+        &:empty{
+            display: none;
+        }
+        > span{
+            display: block;
+            font-size: $small-12;
+            color: $color-18;
+        }
+    }
+    .prdItem{
+        display: block;
+        @include space(padding, right, 50px);
+        font-size: 12px;
+        line-height: 16px;
+        color: $black;
+    }
+    .cart-prd-remove{
+        @include Position(absolute, top 0 right 0);
+        >a{
+            @include space(padding, left, $xs);
+            @include space(padding, right, $xs);
+            span{
+                font-size: $small-11;
+                color: $very-dark-g;
+                display: none;
+            }
+            i{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            i:before{
+                font-size: $small-9;
+                color: $very-dark-g;
+            }
+        }
+    }
+    .kutuSepet_urunYok{
+        > span{
+            max-width: 230px;
+            @include m-auto;
+            text-align: center;
+            display: block;
+            .fs-18{color: $dustyGray; display: block; margin-top: 25px;}
+        }
+    }
+    &.opened{
+        .mod-mini-cart-body{
+            width: 350px;
+            font-size: inherit;
+            overflow: visible;
+        }
+        .mod-mini-cart-body-inner{
+            transform: translateX(0);
+        }
+    }
+}
+
+body.basket-full{
+    .mod-mini-cart-col-link > a{
+        background: $vivid-orange;
+    }
+}
+body.basket-empty{
+    .mod-mini-cart-col-link{
+        .click-stop{
+            display: block;
+        }
+    }
+}

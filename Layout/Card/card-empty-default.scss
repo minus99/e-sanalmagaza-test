@@ -1,0 +1,26 @@
+.card-error{
+    display: table;
+    width: 100%;
+}
+.card-error-img{
+    width: 230px;
+    height: 230px;
+    background:url(/images/frontend/card-empty.png) center center no-repeat;
+    @include space(margin, left, auto);
+    @include space(margin, right, auto);
+}
+.card-error-text{
+    
+    p{
+        font-family: $bold;
+        font-size: $small-18;
+        color: $color-25;
+        text-align: center;
+    }
+    a.btnDefault {
+        display: none;
+        width: 100%;
+        max-width: 170px;
+        margin-top: 20px;
+    }
+}

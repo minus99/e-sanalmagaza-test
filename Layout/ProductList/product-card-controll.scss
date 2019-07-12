@@ -1,0 +1,15 @@
+.dortlu{
+    .ems-prd-list{
+        .emosInfinite{
+            grid-template-columns:repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+    }
+    .urunListe_pnlIndirimOran > span{
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.grid-colmn-view{display: none;}

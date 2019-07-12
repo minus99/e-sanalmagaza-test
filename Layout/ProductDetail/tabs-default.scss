@@ -1,0 +1,98 @@
+.ems-tab-detail-product{
+    @include space(margin, top, 15px);
+    .ems-tab-inner{
+        background: $color-17;
+    }
+}
+.product-tab-head {
+    @include table-cell;
+    table-layout: fixed;
+    li{
+        min-width: 50%;
+        border-top: 3px solid transparent;
+        background: $white;
+        position: relative;
+        cursor: pointer;
+        &:after{
+            font-family:'icomoon';
+            content:'\e90a';
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 26px;
+            text-align: center;
+            @include Position(absolute, top 50% right 15px);
+            @include space(margin, top, -16px);
+            color: $color-10;
+            display: none;
+        }
+        a{
+            &:empty{display: none;}
+        }
+        &.selected{
+            border-top: 3px solid $color-8;
+            border-left: 1px solid $color-4;
+            border-right: 1px solid $color-4;
+            background: $color-17;
+            &:after{
+                content:'\e909';
+                color: $color-19;
+            }
+            &:before{
+                content:'';
+                width: 100%;
+                height: 1px;
+                background: none;
+                @include Position(absolute, bottom -1px left 0);
+                z-index: 2;
+                background: #F5F5F5;
+                border-left: 1px solid $color-4;
+            }
+        }
+    }
+    li.tab-2{display: none;}
+    li.tab-2.selected{
+        border-top-color: $color-18;
+    }
+    .tab-btn{
+        @include space(padding, all, $small $small $small $large);
+        min-height: 50px;
+    }
+}
+.ems-tab-detail-product.abone-active{
+    .product-tab-head{
+        li{
+            &:after{
+                display: inline-block;
+            }
+            &.tab-2{
+                display: table-cell;
+            }
+        }
+    }
+}
+.ems-tab-detail-product.ems-no-subscriptions{
+    .product-tab-head li:after{display: none;}
+}
+
+.product-tab-wrap{
+    border-radius:3px;
+    border: 1px solid $color-4;
+    @include space(padding, all, $small $small $large $small);
+
+    li.tab-2{
+        .ems-detail-favorites .btnFavoriEkle{
+            width: 100%;
+            padding-top: $small-10;
+        }
+    }
+}
+
+.icon-info-detail{
+    vertical-align: middle;
+    @include space(margin, right, $xMedium);
+    &:before{
+        font-size: 20px;
+        color: #1f1f1f;
+    }
+}

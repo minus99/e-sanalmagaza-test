@@ -1,0 +1,270 @@
+/* ===========================
+    Hizli erisim sayfası
+===========================*/
+
+.site-pages-listsearch .pageArama,
+.site-pages-listsearch .tableArama,
+.site-pages-listsearch .tableTitleArama,
+.site-pages-listsearch .tblBtnAraIptal{
+    display: none;
+}
+
+.ems-prd-list-sort-products {
+    >span {
+        display: block;
+        font-size: $small-15;
+        @include space(padding, all, 16px 60px 16px $xxlarge);
+        @include Position(relative, null);
+        background: none;
+        border-bottom: 1px solid $color-6;
+        border-radius: 0;
+        color: $color-21;
+        &:after {
+            font-family: 'icomoon';
+            content: '\e902';
+            @include Position(absolute, top 15px right 30px);
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 21px;
+            background: $color-1;
+            color: $white;
+            border-radius: 100%;
+            font-size: 8px;
+            font-weight: normal;
+            display: block;
+        }
+        small{
+            font-size: $small-13;
+            color: $color-10;
+            float: right;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            max-width: 120px;
+            width: 40%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: right;
+            white-space: nowrap;
+            &:empty{display: none;}
+        }
+    }
+    ul{
+        position: relative;
+        top: inherit;
+        left: inherit;
+        @include space(padding, all, $small $xxlarge $small $xxlarge);
+        width: 100%;
+        display: none;
+        li{
+            a{
+                display: block;
+                font-size: $small-15;
+                color: $very-dark-g;
+                @include space(padding, all, 9px 15px 9px 30px);
+                @include Position(relative, null);
+                &:before{
+                    content:'';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    margin-top: -9px;
+                    width: 17px;
+                    height: 17px;
+                    line-height: 18px;
+                    text-align: center;
+                    border-radius: 3px;
+                    border: 1px solid #252424;
+                }
+            }
+            &.selected{
+                a{
+                    &:before{
+                        font-family:'icomoon';
+                        content:'\e90b';
+                        border-radius: 3px;
+                        background: $vivid-orange;
+                        border:none;
+                        color: $white;
+                        font-size: $small-10;
+                    }
+                }
+            }
+        }
+    }
+    &.activeted{
+        > span{
+            &:after{
+                content: '\e905';
+            }
+        }
+    }
+}
+
+.grid-colmn{
+    &-filter-wrapper{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 20;
+        right: 0;
+        display: none;
+        @include transition(transform .2s ease);
+        @include setTransform(translateX(100%));
+    }
+    &-filter{
+        @include Position(absolute, top 60px left 0);
+        width: 100%;
+        height: calc(100% - 150px);
+        overflow-y: auto;
+    }
+    &-btnAll{
+        @include Position(absolute, left 0 bottom 0);
+        width: 100%;
+        .btnAllResult {
+            @include space(padding, top, 16px);
+            @include space(padding, bottom, 16px);
+        }
+    }
+}
+
+.ems-prd-list-view{
+    border-bottom: 1px solid $color-6;
+    > span{
+        border: none;
+        display: block;
+        font-size: $small-15;
+        color: $color-1;
+        @include space(padding, all, 16px 60px 16px $xxlarge);
+        text-align: right;
+        color: #9b9b9b;
+        @include Position(relative, null);
+        height: 50px;
+        i{display: none;}
+        &:before{
+            content:'Görünüm';
+            font-size: $small-15;
+            color: $color-21;
+            float: left;
+        }
+        &:after{
+            font-family: 'icomoon';
+            content: '\e902';
+            @include Position(absolute, top 15px right 30px);
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 21px;
+            background: $very-dark-gray;
+            color: $white;
+            border-radius: 100%;
+            font-size: 8px;
+            font-weight: normal;
+        }
+    }
+    ul{
+        display: none;
+        width: 100%;
+        @include space(padding, all, $small $large $large $large);
+    }   
+    li{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    li a{
+        display: block;
+        @include space(padding, all, $small);
+    }
+    li span{
+        font-size: $small-15;
+    }
+    li{
+        i{
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            @include space(margin, right, $xs);
+            &:before{
+                font-size: 16px;
+            }
+        }
+    }
+    li.selected{
+        a{
+            border-color:$color-8;
+        }
+        span {
+            color: $color-8;
+        }
+        i:before{
+            color: $color-8;
+        }
+    }
+    .tekli, 
+    .ikili {
+        @include space(padding, right, $small);
+        @include space(padding, left, $small);
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        a{
+            border-radius: 3px;
+            border: 1px solid $color-6;
+            height: 55px;
+            line-height: 35px;
+        }
+    }
+    
+    &.activeted{
+        > span{
+            &:after{
+                content: '\e905';
+            }
+        }
+    }
+}
+
+.filter-popup-ready{
+    @include mobi-body-render;
+    .grid-colmn-filter-wrapper{
+        display: block;        
+    }
+}
+.filter-popup-animate{
+    .grid-colmn-filter-wrapper{
+        @include setTransform(translateX(0));
+    }
+}
+
+.number-records{
+    display: none;
+    color: $color-3;
+    @include space(padding, all, 17px $xMedium 16px $xMedium);
+}
+
+.product-list-error{
+    max-width: 800px;
+    @include space(margin, top, 100px);
+    @include space(margin, left, auto);
+    @include space(margin, right, auto);
+    @include space(margin, bottom, 100px);
+    text-align: center;
+    p{
+        font-family: $bold;
+        font-size: $small-20;
+        @include space(margin, top, 50px);
+    }
+}
+.product-list-error-img{
+    width: auto;
+    height: 294px;
+    background: url(/images/frontend/no-product.png) center center no-repeat;
+    @include space(margin, left, auto);
+    @include space(margin, right, auto);
+}

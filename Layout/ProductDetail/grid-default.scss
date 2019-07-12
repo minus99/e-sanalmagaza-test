@@ -1,0 +1,104 @@
+.ems-prd-detail{
+    .inner-row-1{
+        @include space(padding, all, $large);
+    }
+}
+
+/*Template*/
+.ems-detail-prd-landing{
+    .cover{
+        background: $color-27;
+        height: 250px;
+        margin-bottom: 200px;
+        position: relative;
+        .logo{
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 75px;
+            margin-top: 25px;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+        .img{
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .name{
+            font-size: 18px;
+            font-family: $medium;
+        }
+    }
+    .text{
+        padding: $small-20;
+        span{
+            font-family: $medium;
+            font-size: $small-24;
+            color: $color-1;
+        }
+        p{
+            line-height: 20px;
+            font-size: 18px;
+            color: $color-1;
+            margin-top: 15px;
+        }
+        ul{
+            margin-top: 15px;
+        }
+        ul li{
+            line-height: 20px;
+            font-size: 18px;
+            color: $color-1;
+        }
+    }
+    .text-container.right-top{
+        .img{
+            margin-top: 30px;
+        }
+    }
+    .text-container.single-to{
+        .img{
+            margin-top: 30px;
+        }
+    }
+    .using-select{
+        width: 100%;
+        max-width: 810px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 30px;
+        .title{
+            font-family: $medium;
+            font-size: $small-24;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    .using-select-ul{
+
+        li{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+        }
+        p{
+            font-size: $small-18;     
+            width: 65%;  
+            display: inline-block;
+            vertical-align: middle;
+        }
+        i{
+            display: inline-block;
+            vertical-align: middle;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            &:before{
+                color: $color-1;
+                font-size: 50px;
+            }
+        }
+    }
+}

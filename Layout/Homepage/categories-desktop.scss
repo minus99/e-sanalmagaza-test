@@ -1,0 +1,62 @@
+.ems-tab-cat {
+    @include space(margin, top, 80px);
+
+    .navigation-js {
+        .swiper-slide {
+            width: 16.666%;
+
+            >a {
+                font-size: $small-15;
+
+                span,
+                i:before {
+                    @include transition(all .2s ease);
+                }
+
+                &:hover {
+
+                    span,
+                    i:before {
+                        color: $vivid-orange;
+                    }
+                }
+
+                i {
+                    @include space(margin, left, $reset);
+                    @include space(margin, right, $xs);
+
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+
+                    &.icon-all:before {
+                        font-size: 22px;
+                    }
+
+                    &.icon-health:before {
+                        font-size: 27px;
+                    }
+
+                    &.icon-kid:before {
+                        font-size: 30px;
+                    }
+
+                    &.icon-personal-care:before,
+                    &.icon-stationery:before {
+                        font-size: 33px;
+                    }
+
+                    &.icon-food:before {
+                        font-size: 38px;
+                    }
+                }
+
+                i,
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

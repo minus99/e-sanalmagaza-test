@@ -1,0 +1,14 @@
+.widget-campaign {
+    .hp-img-inner {
+        @include mt-100;
+    }
+    .grid-banner-box-text{
+        top:60px;
+        bottom: inherit;
+        width: 85%;
+    }
+    .btnBannerDefault{
+        max-width: 160px;
+        @include space(margin, top, $xxlarge);
+    }
+}

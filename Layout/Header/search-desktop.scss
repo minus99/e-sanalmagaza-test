@@ -1,0 +1,268 @@
+.mod-mini-search {
+    @include space(padding, top, 12px);
+    @include space(padding, bottom, 12px);
+
+    &-body {
+        position: relative;
+        height: inherit;
+        overflow: visible;
+        background: inherit;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        top: 0;
+        max-width: 940px;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        display: block;
+
+        .ems-search-header {
+            background: none;
+        }
+    }
+
+    .ems-form-inner {
+        width: inherit;
+        @include space(padding, left, $reset);
+    }
+
+    .ems-field {
+        @include space(padding, all, $reset);
+
+        input {
+            border: none;
+        }
+    }
+
+    .ems-field.submit {
+        top: 7px;
+        right: 10px;
+        .btnArama{
+            &:hover{
+                background: none;
+            }
+        }
+    }
+    
+    .ems-search-body {
+        border-top: 2px solid $color-6;
+        top: 42px;
+        @include space(padding, all, $xxlarge $large);
+        border-radius: 0 0 3px 3px;
+    }
+}
+
+.ems-page-home {
+    .mod-mini-search-header {
+        display: none;
+    }
+}
+
+.searchSuggestDiv {
+    top: 42px;
+    border-radius: 0 0 3px 3px;
+    position: absolute !important;
+    height: auto;
+    overflow-y: inherit;
+    padding-bottom: $reset;
+}
+
+.searchSuggestDivHolder {
+    @include grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas:
+        "COU CAT"
+        "PRD BRN"
+        "BTN ."; 
+    background: $very-light-gray;
+    overflow-x:inherit;
+    overflow-y: inherit;
+
+    /*Webkit scrolling*/
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+    ::-webkit-scrollbar-track {
+        background: $pinkish-grey;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $very-dark-gray;
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: $very-dark-gray;
+    }
+
+    h3 {
+        font-family: $regular;
+        font-size: $small-15;
+        color: $black;
+        @include space(margin, bottom, $xs);
+        @include space(padding, all, $reset);
+        background: none;
+    }
+
+    .prd,
+    .cat,
+    .brand {
+        @include space(padding, all, $xxlarge);
+    }
+
+    .prd,
+    .dvTumunuGoster {
+        background: $white;
+    }
+
+    .cat,
+    .wordSearch {
+        .suggest_link {
+            >a {
+                @include transition(all .2s ease);
+
+                &:hover {
+                    color: $color-8;
+                }
+            }
+        }
+    }
+
+    .prd {
+        grid-area: PRD;
+        max-height: 345px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        @include space(padding, top, $small-5);
+        @include space(padding, bottom, $small-5);
+        grid-row-start: 2;
+        grid-row-end: span 3;
+    }
+
+    .cat {
+        grid-area: CAT;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+    }
+    .prdCount{
+        grid-area: COU;
+        padding-bottom: $small-15;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+    }
+    .brand {
+        grid-area: BRN;
+        padding-top: 0;
+        grid-row-start: 3;
+        grid-row-end: span 4;
+        .spnBrand{
+            a{
+                display: inline-block;
+                font-size: $small-13;
+                color: $very-dark-g;
+                @include space(padding, all, $xSmall $reset);
+                @include transition(all .2s ease);
+                border-top: none;
+                &:hover {
+                    color: $color-8;
+                }
+            }
+        }
+    }
+    .dvTumunuGoster {
+        grid-area: BTN;
+        grid-row-start: 5;
+        grid-row-end: span 5;
+    }
+
+    .wordSearch {
+        display: none;
+    }
+
+    .sHolder {
+        .suggest_link {
+            >a {
+                display: inline-block;
+                font-size: $small-13;
+                color: $very-dark-g;
+                @include space(padding, all, $xSmall $reset);
+                border-top: none;
+            }
+        }
+    }
+
+    .sHolder table tr {
+        @include space(padding, top, $small);
+        @include space(padding, left, $reset);
+        @include space(padding, right, $reset);
+        @include space(padding, bottom, $small);
+        grid-template-columns: 80px 1fr minmax(0,auto) 1fr 1fr;
+        grid-template-areas:
+        "THI TD2 TD4 TD6 TD8"
+        "THI TD2 TD4 TD5 TD8";
+        align-items: center;
+        border-bottom-width:2px; 
+
+        td.suggest_urnsname_con {
+            span {
+                @include space(margin, bottom, $reset);
+                min-height: inherit;
+                max-height: inherit;
+                overflow: visible;
+                padding-left: $small-10;
+                padding-right: $small-15;
+            }
+        }
+        td.suggest_urnprice_con{
+            align-self: flex-end;
+        }
+        td.suggest_urnnormalprice_con{
+            align-self: flex-start;
+        }
+        td{
+            .suggest_urnsubscriptionprice{
+                position: relative;
+                bottom: inherit;
+                right: inherit;
+            }
+        }
+    }
+
+    .sHolder table tr td.suggest_urnsname_con {
+        span{
+            margin-right: $reset;
+            padding-left: $reset;
+        }
+    }
+
+    .dvTumunuGoster {
+        @include space(padding, bottom, $xxlarge);
+        position: relative;
+        bottom: 0;
+        .btnArama{
+            @include space(margin, top, $xxlarge);
+            &:hover{
+                border-color: $color-8;
+            }
+        }
+    }
+}
+
+/* Body search keyup animation
+=================================== */
+body {
+    &.search-focused {
+        .mod-mini-search {
+            &-body{
+                width: 50%;
+                @include Position(absolute, top 12px);
+            }
+            .ems-search-body{display: block;}
+        }
+
+        .vailSearch {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &.search-ready {
+        @include mobi-body-reset;
+    }
+}

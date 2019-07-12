@@ -1,0 +1,127 @@
+/*===========================
+Description : Corporate Lef Menu
+*===========================*/
+
+.kutuSolMenuTree{
+    .kutuHeaderSolMenuTree{
+        display: none;
+    }
+    .kutuBodyDefault {
+        display: block;
+    }
+}
+
+.left-menu-title{
+    background: $color-17;
+    font-family: $medium;
+    font-size: $small-18;
+    color: $very-dark-g;
+    @include space(padding, all, 11px 12px);
+    pointer-events: none;
+}
+
+.kutuSolMenuTree {
+    height: 100%;
+    position: relative;
+    display: block;
+    
+    .title{
+        display: block;
+        background: $color-17;
+        font-family: $medium;
+        font-size: $small-18;
+        color: $very-dark-g;
+        @include space(padding, all, 11px 12px);
+        pointer-events: none;
+    }
+}
+.kutuBodySolMenuTree{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    li.sev2{
+        > a{
+            display: block;
+            background: $color-17;
+            font-family: $medium;
+            font-size: $small-18;
+            color: $very-dark-g;
+            @include space(padding, all, 11px 12px);
+            pointer-events: none;
+        }
+        > ul{
+            @include space(padding, top, 10px);
+            @include space(padding, bottom, 10px);
+        }
+    }
+    li.sev3{
+        > a{
+            display: block;
+            font-family: $medium;
+            font-size: $small-16;
+            @include space(padding, all, 7px 35px 7px 12px);
+            @include transition(all .2s ease);
+            position: relative;
+            &:hover{
+                color: $color-8;
+            }
+        }
+    }
+    li.sev3.act {
+        > a{
+            color: $color-8;
+            &:after{
+                font-family: 'icomoon';
+                content:'\e929';
+                @include Position(absolute, top 50% right 0);
+                @include setTransform(rotate(90deg));
+                @include space(margin, top, -16px);
+                font-size: 10px;
+                color: $color-8;
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                line-height: 35px;
+            }
+        }
+    }
+}
+
+.markaMenu{
+    ul {
+        @include space(padding, top, 10px);
+        @include space(padding, bottom, 10px);
+        li{
+            a{
+                position: relative;
+                display: block;
+                font-family: $medium;
+                font-size: $small-16;
+                padding: 7px 35px 7px 12px;
+                @include transition(all 0.2s ease);
+                &:hover{
+                    color: $color-8;
+                }
+            }
+            &.selected {
+                a{
+                    color: $color-8;
+
+                    &:after{
+                        font-family: 'icomoon';
+                        content:'\e929';
+                        @include Position(absolute, top 50% right 0);
+                        @include setTransform(rotate(90deg));
+                        @include space(margin, top, -16px);
+                        font-size: 10px;
+                        color: $color-8;
+                        width: 32px;
+                        height: 32px;
+                        text-align: center;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

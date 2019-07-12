@@ -1,0 +1,91 @@
+/* Description : Address Form Hidden Object
+ ===================================== */
+ .site-pages-member{
+    .same-address {
+        display: none;
+    }
+}
+
+/* Description : Address Form Empty
+ ===================================== */
+ .site-pages-member{
+    .ems-page-default-address {
+        .ems-address-form{
+            div[id$="plhAdresYokLabel1"]{                
+                border:none;
+                background: none;
+                margin: 0;
+                padding: 0;
+                > span{
+                    min-height: 250px;
+                    padding: 40px 0 0 0;
+                    display: block;
+                    color: $black;
+                    font-size: 22px;
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid $alto;
+                    &:before{
+                        content:'';
+                        background: url(/images/frontend/adress-empty.svg) center center no-repeat;
+                        display: block;
+                        width: 200px;
+                        height: 200px;
+                        margin: 0 auto;
+                    }
+                }
+                > span:empty{display: none;}
+            }
+        }
+    }
+ }
+
+ /* Description : Form Row List 
+ ===================================== */
+ .site-pages-member{
+     /*Add New Button*/
+    .add-new-address{
+        width: 100%;
+        padding:$small-10 $small-20;
+    }
+    /*Grid Row*/
+    .ems-grid-default-address{
+        @include space(margin, top, $reset);
+        border: none;
+        border-radius: 0;
+        max-width: inherit;
+        max-height: 240px;
+        .ems-grid-adress-row{
+            margin-left: $small-20;
+            margin-right: $small-20;
+        }
+    }
+    .ems-address-buttons{
+        a.btnDefault{
+            @include space(padding, left, $small-5);
+            @include space(padding, right, $small-5);
+        }
+    }
+    .ems-grid-address{
+        font-size: $small-15;
+    }
+    .ems-grid-address-select{display: none;}
+    /*Add New Address*/
+    .ems-page-new-address{
+        max-width: 100%;
+        @include space(margin, all, $reset);
+
+        /*Default Title Show*/
+        .page-top-title{
+            display: block;
+        }
+
+        .back-to-card{
+            display: inline-block;
+            @include space(margin, bottom, $reset);
+            @include Position(fixed, top 0 left 0);
+            z-index: 35;
+            display: block;
+            width: 100%;
+        }
+    }
+ }

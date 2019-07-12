@@ -1,0 +1,60 @@
+.ems-tab-sss{
+    .content-js{
+        > li{
+            width: auto;
+            height: auto;
+            font-size: inherit;
+            overflow: visible;
+            visibility: visible;
+            opacity: 1;
+            transition: none;
+            border-radius: $small-5;
+            border: 1px solid $color-6;
+            margin-bottom: $small-10;
+            padding: 7px 10px 7px 20px;
+            > a.title{
+                display: block;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                padding-right: 40px;
+                position: relative;
+                font-family: $medium;
+                color: black;
+                font-size: 16px;
+                &:after{
+                    font-family:'icomoon';  
+                    content:'\e90c';
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    margin-top: -15px;
+                    font-size: 10px;
+                    color: black;
+                    line-height: 30px;
+                    font-weight: normal;
+                }
+            }
+            .text-container{
+                display: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 16px;
+                color: $color-24;
+                line-height: 22px;
+            }
+            &.selected{
+                > a.title{
+                    &:after{
+                        content:'\e91c';
+                    }
+                }
+                .text-container{
+                    display: block;
+                }
+            }
+        }
+    }
+}

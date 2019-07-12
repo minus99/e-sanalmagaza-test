@@ -1,0 +1,123 @@
+.ems-page-cart {
+    .navbar-item-cart{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 60px;
+        height: 55px;
+        text-align: center;
+        .icon-mb-card{
+            @include Position(absolute, top 50% right 0 left 0);
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-top: -12px;
+            margin-left: auto;
+            margin-right: auto;
+            &:before{
+                content:'\e91b';
+                font-size: $small-24;
+                color: $color-8;
+            }
+            small{
+                @include Position(absolute, top 8px right 0 left 0);
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 14px;
+                color: #fff;
+                font-family: $regular;
+            }
+        }
+    }
+}
+
+.ems-cart-top {
+    background: $color-8;
+    display: none;
+    &-inner {
+        max-width: 1200px;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        @include space(padding, top, $small);
+        @include space(padding, bottom, $small);
+
+        >div {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+        .logo{
+            padding-left: $small-10;
+        }
+    }
+
+    .user-info {
+        background: none;
+        display: block;
+        float: right;
+        padding: $reset;
+        > a{
+            color: $white;
+            font-family: $medium;
+            font-size: $small-15;
+            position: relative;
+            padding: $small-10 40px $small-10 0;
+            &:after {
+                content: '\e91a';
+                font-family: 'icomoon';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                margin-top: -16px;
+                font-size: $small-16;
+                color: $white;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.grid-info-box-card {
+    display: none;
+    @include space(margin, left, $reset !important);
+    @include space(margin, right, $reset !important);
+}
+
+.cart-section-left {
+    @include space(padding, top, $small);
+}
+
+.ems-grid-default-cart {
+    @include space(margin, top, $large);
+}
+
+.page-card-title{
+    &:empty{display: none;}
+}
+
+.ems-page-cart {
+    .btnAlisverisDevam {
+        text-decoration: underline;
+        background: none;
+        font-family: $regular;
+        color: $color-1;
+        font-size: $small-15;
+        margin-top: $small-10;
+        margin-left: $small-15;
+    }
+}

@@ -1,0 +1,17 @@
+.mod-mini-cart{
+    display: block;
+    @include space(padding, top, $large);
+    @include space(padding, bottom, $large);
+    .ems-cart-info{
+        span[id$="lblUrunAdet"] {
+            font-family: $regular;
+            color: $vivid-orange;
+        }
+    }
+}
+body.anaBody.mini-cart-ready{
+    .vailCart{
+        opacity: 1;
+        visibility: visible;
+    }
+}

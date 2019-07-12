@@ -1,0 +1,80 @@
+.urunKiyaslamaOzellik_ozellikAd {
+    @include space(padding, left, $xMedium);
+    @include space(padding, right, 50px);
+    color: $color-1;
+    &:before {
+        content: '';
+        @include Position(absolute, top 50% right 0);
+        width: 1px;
+        height: 32px;
+        background: #d5d6dc;
+        margin-top: -16px;
+    }
+    &:after{
+        right: 20px;
+    }
+    .mobile-element{
+        font-size: $small-13;
+    }
+}
+.urunKiyaslamaOzellik_ozellik.activeted{
+    .urunKiyaslamaOzellik_ozellikAd{
+        background: $white;
+        &:before{display: none;}
+    }
+}
+
+.kutuBodyOzellikFiltre {
+    >table {
+        >tbody {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+
+            >tr {
+                display: table-cell;
+                vertical-align: middle;
+                min-width: 50%;
+                border-bottom: none;
+                >td {
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.urunKiyaslamaOzellik_ozellik {
+
+    .urunKiyaslamaOzellik_ozellikIcerik {
+        >table {
+            width: 100%;
+            tbody{
+                @include space(padding, left, $xs);
+                @include space(padding, right, $xs);
+            }
+        }
+
+        @include Position(absolute, top 50px left 0);
+        z-index: 2;
+        width: $width100;
+        background: $white;
+
+        a.urunKiyaslamaOzellik {
+            color: $very-dark-gray;
+            @include space(padding, top, 7px);
+            @include space(padding, bottom, 7px);
+        }
+    }
+}
+
+.pnlUrunKiyasSecim{
+    .urunKiyaslamaOzellik_secimler{
+        display: inline-block;
+    }
+    .urunKiyaslamaOzellik_tumunuTemizle{
+        display: inline-block !important;
+        text-align: left;
+    }
+}

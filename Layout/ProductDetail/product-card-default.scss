@@ -1,0 +1,752 @@
+.urunDetay {
+
+    .pnlSepetGrup,
+    .urunDetay_btnStokHaberci {
+        @include space(padding, left, $small);
+        @include space(padding, right, $small);
+        @include space(padding, top, $small);
+    }
+
+    .yorumOrtalamaPuan {
+        @include space(margin, top, 8px);
+        @include space(margin, left, $large);
+    }
+}
+
+.ems-detail-new {
+    span {
+        display: inline-block;
+        background: $color-15;
+        @include space(padding, all, $xs);
+        @include space(margin, bottom, $small);
+        font-size: $small-13;
+        letter-spacing: 0.5px;
+        border-radius: 3px;
+        @include space(margin, left, $large);
+    }
+}
+
+.ems-detail-brand {
+    a {
+        @include space(margin, bottom, $small);
+        @include space(margin, left, $large);
+        color: $color-16;
+    }
+}
+
+.ems-detail-comment-lbl,
+.ems-prd-detail-btn {
+    display: none;
+}
+
+.ems-detail-price {
+    @include table-cell;
+    width: auto;
+
+    .ems-detail-price-right {
+        text-align: left;
+    }
+}
+
+.urunDetay_KazancOran {
+    border-radius: 3px;
+    min-width: 35px;
+    background: $vivid-pink;
+    font-family: $bold;
+    font-size: $small-18;
+    color: $white;
+    display: inline-block;
+    @include space(padding, all, $xs $xSmall);
+    @include space(margin, right, $small);
+}
+
+.urunDetay_satisFiyatIkFiyat {
+    font-size: $small-16;
+    text-decoration: line-through;
+
+    &:before {
+        content: '₺';
+    }
+
+    &:empty {
+        display: none;
+    }
+}
+
+.urunDetay_satisFiyat {
+    font-size: $small-18;
+    font-family: $bold;
+
+    &:before {
+        content: '₺';
+    }
+
+    &:empty {
+        display: none;
+    }
+}
+
+.urunDetay_btnSepeteAt,
+.urunDetay_btnStokHaberci {
+    table {
+        display: table !important;
+        width: 100%;
+    }
+}
+
+.urunDetay_btnSepeteAt,
+.urunDetay_btnStokHaberci {
+
+    a.btnsepeteAt,
+    a.btnStokHaberci {
+        display: block;
+        font-size: $small-17;
+        @include space(padding, top, $small-13);
+        @include space(padding, bottom, $small-13);
+    }
+    a.btnStokHaberci{
+        background: #5a5a5a;
+    }
+}
+
+.urunDetay_btnSepeteAt {
+    display: inline-block;
+    vertical-align: middle;
+    width: 78%;
+
+    span.btnsepeteAt {
+        padding: 0;
+        font-size: inherit;
+        background: none;
+    }
+}
+
+.urunDetay_btnSepeteAt {
+    a.btnsepeteAt {
+        border-radius: 0 3px 3px 0;
+    }
+}
+
+.urunDetay_urunAdet {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 22%;
+    max-width: 110px;
+
+    input:not([type="checkbox"]):not([type="radio"]) {
+        font-family: $bold;
+        height: 50px;
+        font-size: $small-15;
+        color: $color-8;
+        border-color: $color-8;
+        border-radius: 3px 0 0 3px;
+        border-width: 1px;
+    }
+
+    >span,
+    .counter-drp {
+        display: none;
+    }
+}
+
+.ems-detail-desc {
+    @include space(margin, top, $xMedium);
+    display: none;
+
+    &:empty {
+        display: none;
+    }
+
+    >div {
+        border-top: 1px solid #dddddd;
+        font-size: $small-15;
+        
+        &:first-child {
+            border-top: none;
+        }
+    }
+    table{
+        width: 100%;
+        tbody tr{
+            border-top: 1px solid #dddddd;
+            @include space(margin, top, $small-20);
+            display: block;
+            border-radius: 3px;
+            border: 1px solid #dddddd;
+            &:empty{display: none;}
+            td{
+                @include space(padding, all, $small-15 $small-20);
+                font-size: $small-15;
+                display: block;
+                &:empty{
+                    &:before{
+                        content:'-';
+                    }
+                }
+                &:first-child{
+                    background: #f5f5f5;
+                    font-family: $medium;
+                    border-bottom: 1px solid #dddddd;
+                }
+            }
+        }
+    }
+}
+
+.ems-prd-detail-label {
+    display: block;
+    position: relative;
+
+    &:after {
+        font-family: 'icomoon';
+        content: '\e90c';
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        @include Position(absolute, top 0 right 0);
+        font-size: $small-10;
+        color: $color-10;
+    }
+
+    span {
+        display: block;
+
+        &:empty {
+            display: none;
+        }
+    }
+}
+
+.ems-prd-desc-wrapper {
+    @include space(padding, all, $large $large $reset $large);
+
+    &.opened {
+        .ems-detail-desc {
+            display: block;
+            &:empty{display: none;}
+        }
+
+        .ems-prd-detail-label {
+            &:after {
+                content: '\e91c';
+            }
+        }
+    }
+}
+
+.ems-detail-favorites {
+    .btnFavoriEkle {
+        font-family: $regular;
+        font-size: $small-13;
+        color: $color-1;
+        background: none;
+        @include space(padding, all, $reset);
+        @include space(margin, bottom, $xMedium);
+        border: none;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:before {
+            font-family: 'icomoon';
+            content: "\e915";
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: $small-22;
+            color: $color-1;
+            @include space(margin, right, $xs);
+        }
+
+        &.selected {
+            color: $color-8;
+
+            &:before {
+                content: '\e933';
+                color: $color-8;
+            }
+        }
+    }
+
+    .btnFavoriEkleAbone {
+        &.selected {
+            color: $color-18;
+
+            &:before {
+                color: $color-18;
+            }
+        }
+    }
+}
+
+/*Group Product*/
+.ems-prd-detail-group {
+    .sStylerWrp_select,
+    .prd-list-group {
+        display: none;
+    }
+}
+
+.listeUrunDetayGrup_listeBaslik {
+    display: none;
+}
+
+.UrunListeGrup_listeUrunDetayGrup {
+    ul {
+        display: table;
+        width: 100%;
+        padding-left: $small-10;
+        margin-bottom: $small-20;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: $small-10; 
+            .urunGrup_urunTipi,
+            .prdName,
+            .URN_RESIM,
+            .BRM_SPR_AD {
+                display: none;
+            }
+            .URN_AD {
+                display: inline-block;
+                border-radius: 5px;
+                border: 1px solid $color-4;
+                margin-top: $small-10;
+                padding: $small-8 $small-10;
+                text-align: center;
+                cursor: pointer;
+                font-size: $small-14;
+                color: $color-24;
+                &:empty{display: none;}
+            }
+
+            &.selected {
+                .URN_AD {
+                    border-color: $color-8;
+                }
+            }
+        }
+    }
+}
+
+.grid-triple-left {
+    .ems-detail-product-type {
+        @include table-cell;
+        width: auto;
+        >div {
+            &:empty{
+                display: none;
+            }
+        }
+        .ems-prd-types-2{
+            > span{
+                @include space(margin, left, $small-10);
+            }
+        }
+    }
+}
+
+.grid-triple-bts {
+    @include space(margin, top, 15px);
+    @include space(padding, left, $small);
+    @include space(padding, right, $small);
+}
+
+.ems-detail-name {
+    h1 {
+        @include space(margin, left, $large);
+        display: block;
+    }
+}
+
+/*Product Type*/
+.ems-detail-product-type {
+    >div>span {
+        display: none;
+        background: $white;
+        border-radius: 5px;
+        font-size: $small-13;
+        color: $color-1;
+        position: relative;
+        min-width: 100px;
+        max-width: 120px;
+        min-height: 60px;
+        vertical-align: top;
+        @include space(padding, all, $small-15 $small-10 $small-15 45px);
+
+        &:before {
+            font-family: 'icomoon';
+            content: '\e924';
+            @extend .icon-32x32;
+            font-size: 21px;
+            @include Position(absolute, top 50% left 10px);
+            margin-top: -16px;
+        }
+    }
+    .ems-prd-types-2{
+        > span{
+            &:before{
+                content: '\e913';
+            }
+        }
+    }
+
+    &:empty {
+        display: none;
+    }
+
+    .urunDetay_urunStokUyari {
+        &:empty {
+            display: none;
+        }
+    }
+    .urunDetay_satisKoliLbl{
+        background: $white;
+        border-radius: 5px;
+        font-size: $small-13;
+        color: $color-1;
+        position: relative;
+        min-width: 125px;
+        max-width: 125px;
+        min-height: 40px;
+        @include space(padding, all, $small-15 $small-10 $small-15 45px);
+        @include space(margin, left, $small-10);
+        &:before {
+            font-family: 'icomoon';
+            content: '\e934';
+            @extend .icon-32x32;
+            font-size: 21px;
+            @include Position(absolute, top 50% left 10px);
+            margin-top: -16px;
+        }
+    }
+    .urunDetay_satisKoliLbl,
+    .urunDetay_satisKoli{
+        &:empty{display: none;}
+    }
+    .urunDetay_lbfSatisFiyatKoliAdet{
+        font-size: $small-13;
+        &:empty{display: none;}
+    }
+    .urunDetay_satisKoli{
+        display: none;
+    }
+    .urunDetay_satisFiyatKoliAdet{
+        display: block;
+        font-family: $bold;
+        font-size: $small-13;
+        &:before{
+            content:'₺';
+            font-family: $bold;
+            font-size: $small-13;
+        }
+        &:empty{display: none;}
+    }
+}
+
+.ems-prd-detail {
+    &.ayni-gun-kargo {
+        .urunDetay_urunStokUyari {
+            display: inline-block;
+        }
+    }
+
+    &.tukendi {
+        .urunDetay_urunStokUyari {
+            display: inline-block;
+        }
+        .urunDetay_urunStokUyari{display: none !important;}
+    }
+
+    &.spr38 {
+        .ems-detail-product-type span.spr38 {
+            display: inline-block;
+        }
+    }
+
+    &.spr39 {
+        .ems-detail-product-type span.spr39 {
+            display: inline-block;
+        }
+    }
+
+    &.spr40 {
+        .ems-detail-product-type span.spr40 {
+            display: inline-block;
+        }
+    }
+
+    &.spr41 {
+        .ems-detail-product-type span.spr41 {
+            display: inline-block;
+
+            &:before {
+                content: '\e913';
+            }
+        }
+    }
+
+    &.spr42 {
+        .ems-detail-product-type span.spr42 {
+            display: inline-block;
+        }
+    }
+
+    &.spr43 {
+        .ems-detail-product-type span.spr43 {
+            display: inline-block;
+        }
+    }
+
+    &.spr44 {
+        .ems-detail-product-type span.spr44 {
+            display: inline-block;
+        }
+    }
+
+    &.spr45 {
+        .ems-detail-product-type span.spr45 {
+            display: inline-block;
+        }
+    }
+}
+
+.ems-prd-detail {
+    div.spr46 {
+        display: none;
+        background: $color-15;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        border-radius: 3px;
+        margin-left: 20px;
+    }
+}
+
+.ems-prd-detail.spr46 {
+    .ems-detail-new {
+        display: none;
+    }
+
+    div.spr46 {
+        display: inline-block;
+    }
+}
+
+.ems-detail-promotion {
+    .promosyonBilgi {
+
+        span.promo {
+            font-size: $small-13;
+            border-radius: 5px;
+            color: $color-1;
+            position: relative;
+            min-height: 50px;
+            background: $white;
+            border-radius: 5px;
+            @include space(padding, all, 10px 5px 5px 45px);
+            max-height: inherit;
+            overflow: visible;
+            width: 100%;
+            max-width: 150px;
+            display: inline-block;
+            &:empty{display: none;}
+
+            &:before {
+                font-family: 'icomoon';
+                content: '\e913';
+                @extend .icon-32x32;
+                font-size: 23px;
+                @include Position(absolute, top 50% left 10px);
+                margin-top: -16px;
+            }
+        }
+    }
+}
+
+.urunDetay_btnAboneOl.emos_invisible{
+    display: block;
+}
+
+.urunDetay_btnAboneOl {
+    >span {
+        display: block;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &:empty {
+        display: none;
+    }
+}
+
+.ems-detail-subscriber-lbl {
+    font-size: $small-16;
+    color: $black;
+    display: block;
+}
+
+.ems-detail-subscriber-price-normal {
+    font-size: $small-16;
+    text-decoration: line-through;
+    display: none !important;
+}
+
+.ems-detail-subscriber-price {
+    font-family: $bold;
+    font-size: $small-18;
+    color: $color-18;
+
+    &:before {
+        content: '₺';
+    }
+}
+
+.ems-detail-subscriber-price-discount{
+    > span{
+        font-family: $regular;
+        font-size: 22px;
+        display: block;
+        margin-top: 5px;
+        &:empty{
+            display: none;
+        }
+        &:before {
+            content: '₺';
+            font-size: 20px;
+        }
+    }
+}
+
+.ems-subscriptions-clone {
+    display: none;
+}
+
+.ems-detail-subscriber-holder {
+    @include space(padding, all, $large);
+    background: $white;
+}
+
+.ems-detail-subscriber-ttl {
+    color: $color-26;
+    font-size: $small-16;
+}
+
+.abonelikSureItem {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $small-10;
+
+    a {
+        display: block;
+        @include space(padding, all, 9px 15px);
+        @include space(margin, top, $small);
+        border: 1px solid $color-4;
+        border-radius: 5px;
+        font-family: $regular;
+        font-size: $small-14;
+        color: $color-24;
+
+    }
+
+    &.selected {
+        a {
+            border-color: $color-18;
+            color: $color-18;
+            font-family: $bold;
+        }
+    }
+}
+.abonelikPeriyotList.emos_invisible {
+    display: inline-block;
+}
+.abonelikPeriyotItem.emos_invisible{
+    display: inline-block;
+}
+.abonelikPeriyotItem {
+    position: relative;
+    vertical-align: middle;
+    @include space(padding, all, 9px 15px);
+    @include space(margin, top, $small);
+    @include space(margin, right, $small);
+    border: 1px solid $color-4;
+    border-radius: 5px;
+    cursor: pointer;
+    .sStylerWrp_radio {
+        display: block;
+    }
+
+    .rStyler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        transition: none;
+        &.checked{
+            background: none;
+            border-radius: 0;
+            &:before{
+                display: none;
+            }
+        }
+    }
+
+    span {
+        font-family: $regular;
+        color: $color-24;
+        font-size: $small-14;
+    }
+
+    &.selected {
+        border-color: $color-18;
+
+        span {
+            color: $color-18;
+            font-family: $bold;
+        }
+    }
+
+    &.activated {
+        display: inline-block !important;
+    }
+}
+
+.btnAbonelikSepeteAt {
+    display: block;
+    font-size: $small-17;
+    @include space(margin, top, $large);
+    @include space(padding, top, $small-15);
+    @include space(padding, bottom, $small-15);
+    background: $color-18;
+}
+span.btnAbonelikSepeteAt{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+}
+
+.ems-detail-desc-2 {
+    @include space(margin, top, 40px);
+
+    &:empty {
+        display: none;
+    }
+}
+
+.texture-popup-vail,
+.all-pp-texture {
+    display: none;
+}

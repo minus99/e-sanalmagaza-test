@@ -1,0 +1,83 @@
+/*
+=========================================
+    Description: Ödeme Product grid and Delivery Address Default
+*/
+
+.ems-cart-payment-trigger,
+.payment-cart-open-trigger{
+    display: block;
+    padding: $small-17 $small-30 $small-17 $small-10;
+    position: relative;
+    border-top:2px solid $color-30;
+    &:after{
+        font-family: 'icomoon';
+        content:'\e90c';
+        position: absolute;
+        top: 50%;
+        right: $small-10;
+        width: $small-20;;
+        height: $small-20;
+        text-align: center;
+        margin-top: -10px;
+        line-height: $small-20;
+        font-size: $small-10;
+        color: $color-10;
+    }
+}
+
+.ems-cart-payment-wrapper{
+    margin-top: $small-20;
+}
+
+.ems-grid-payment-wrapper{
+    .ems-grid-default-cart{
+        display: none;
+        margin-top: $reset;
+        margin-bottom: $small-10;
+        border-top: none;
+        .ems-grid-row{
+            border-bottom: none;
+        }
+        .ems-grid-piece{
+            &:after{
+                content:'Adet';
+            }
+        }
+        .ems-grid-add-remove{display: none;}
+        .ems-grid-subscriptions .abonelikUrun{
+            border: none;
+            text-align: left;
+            *{
+                font-size: $small-13;
+            }
+        }
+    }
+}
+.ems-grid-payment-wrapper.opened{
+    .ems-grid-default-cart{
+        display: block;
+    }   
+    .payment-cart-open-trigger{
+        &:after{
+            content:'\e91c';
+        }
+    }
+}
+
+.ems-cart-pay-adress{
+    .ems-cart-pay-inner{
+        display: none;
+        padding-left: $small-10;
+        padding-right: $small-10;
+    }
+}
+.ems-cart-pay-adress.opened{
+    .ems-cart-pay-inner{
+        display: block;
+    }
+    .ems-cart-payment-trigger{
+        &:after{
+            content:'\e91c';
+        }
+    }
+}

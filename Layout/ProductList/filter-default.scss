@@ -1,0 +1,173 @@
+.kutuOzellikFiltre {
+    position: relative;
+}
+
+.kutuHeaderOzellikFiltre,
+.urunKiyaslamaOzellik_temizle,
+.ayiracOzellik {
+    display: none;
+}
+
+.urunKiyaslamaOzellik_ozellikAd {
+    font-size: $small-15;
+    @include space(padding, all, 16px 60px 16px $xxlarge);
+    @include Position(relative, null);
+    cursor: pointer;
+    color: $color-21;
+    &:after {
+        font-family: 'icomoon';
+        content: '\e902';
+        @include Position(absolute, top 15px right 30px);
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 21px;
+        background: $very-dark-gray;
+        color: $white;
+        border-radius: 100%;
+        font-size: 8px;
+        font-weight: normal;
+        display: block;
+    }
+    .mobile-element {
+        color: #9b9b9b;
+        font-size: $small-15;
+        float: right;
+        @include space(padding, top, 2px);
+        @include space(padding, bottom, 2px);
+        max-width: 60px;
+        width: 40%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: right;
+        white-space: nowrap;
+    }
+}
+
+.urunKiyaslamaOzellik_ozellik.activeted{
+    .urunKiyaslamaOzellik_ozellikAd {
+        &:after{
+            content: '\e905';
+        }
+    }
+}
+
+.urunKiyaslamaOzellik_ozellik {
+
+    .urunKiyaslamaOzellik_ozellikIcerik {
+        display: none;
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+        ::-webkit-scrollbar-track {
+            background: $pinkish-grey;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: $very-dark-gray;
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: $very-dark-gray;
+        }
+        @include space(padding, all, $small);
+        >table {
+            width: 100%;
+            overflow-x: hidden;
+            max-height: 270px;
+            display: block;
+            tbody{
+                display:block;
+                @include space(padding, left, $large);
+                @include space(padding, right, $large);
+                tr, tr td{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.urunKiyaslamaOzellik_ozellikIcerik{
+    a.urunKiyaslamaOzellik{
+        display: block;
+        font-size: $small-15;
+        color: $very-dark-g;
+        @include space(padding, all, 9px 15px 9px 30px);
+        @include Position(relative, null);
+        &:before{
+            content:'';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -9px;
+            width: 17px;
+            height: 17px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 3px;
+            border: 1px solid #252424;
+        }
+        &.link_selected{
+            &:before{
+                font-family:'icomoon';
+                content:'\e90b';
+                border-radius: 3px;
+                background: $vivid-orange;
+                border:none;
+                color: $white;
+                font-size: $small-10;
+            }
+        }
+    }
+}
+
+.kutuBodyOzellikFiltre {
+    >table {
+        width: 100%;
+        >tbody {
+            >tr{
+                border-bottom: 1px solid $color-6;
+            }
+            >tr.mobiOpened {
+                .urunKiyaslamaOzellik_ozellikIcerik{
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+
+.pnlUrunKiyasSecim{
+    .urunKiyaslamaOzellik_secimler{
+        display:block;
+        vertical-align: middle;
+        text-align: left;
+    }
+    .urunKiyaslamaOzellik_tumunuTemizle{
+        display: block !important;
+        vertical-align: bottom;
+        text-align: center;
+        a{
+            display: inline-block;
+            @include space(padding, top, 8px);
+            @include space(padding, bottom, 9px);
+            @include space(margin, top, $small);
+            @include space(margin, left, $small);
+            text-decoration: underline;
+            color: $color-3;
+            font-size: $small-12;
+        }
+    }
+}
+
+
+.mobile-filter-btn {
+    @include space(padding, all, $large $small);
+    background: $very-light-gray;
+    .mobile-filter-clear{
+        a{
+            padding: 6px 0;
+            color: #9b9b9b;
+            text-decoration: underline;
+        }
+    }
+}

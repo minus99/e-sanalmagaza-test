@@ -1,0 +1,85 @@
+.kutuKategori{
+    @include Position(relative, null);
+    height: 100%;
+    @include space(padding, top, $xxlarge);
+}
+.kutuBodyKategori{
+    display: block;
+    position: -webkit-sticky;
+    top: 120px;
+    position: sticky;
+}
+.menuKategori{
+    li{
+        b{display: none;}
+        @include Position(relative, null);
+        a{
+            display: block;
+        }
+    }
+    > li{
+        > a{
+            font-family: $medium;
+            font-size: $small-18;
+            color: $very-dark-g;
+            background: $very-light-gray;
+            border-radius: $alternate-border-radius;
+            @include space(padding, all, 11px 12px);
+        }
+        > ul{
+            @include space(padding, top, $small);
+            @include space(padding, bottom, $small);
+            > li{
+                &.sub-items{
+                    > b{
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        @include Position(absolute, top 3px right 0);
+                        text-align: center;
+                        z-index: 1;
+                        cursor: pointer;
+                        &:before{
+                            font-family: 'icomoon';
+                            content:'\e90c';
+                            line-height: 32px;
+                            color: $dark-gray;
+                            font-size: $small-10;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                &.sub-items.opened{
+                    > b{
+                        &:before{
+                            content:'\e91c';
+                        }
+                    }
+                }
+                > a{
+                    font-family: $medium;
+                    font-size: $small-16;
+                    @include space(padding, all, 9px 35px 9px 12px);
+                    @include transition(all .2s ease);
+                    &:hover, &.active{
+                        color: $vivid-orange;
+                    }
+                }
+                > ul {
+                    display: none;
+                    > li{
+                        a{
+                            @include space(padding, all, 7px 10px 7px 25px);
+                            font-size: $small-15;
+                            color: $very-dark-g;
+                            @include transition(all .2s ease);
+                            &:hover, &.active{
+                                color: $vivid-orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

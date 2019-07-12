@@ -1,0 +1,70 @@
+/*===========================
+Description: Grid Subscriptions Default
+===========================*/
+.site-pages-member {
+
+    /*Page Layout Space*/
+    .ems-page-default-abonelik{
+        padding: $small-30 $small-20 $reset $small-20;
+    }
+    .ems-grid-default-subscriptions{
+        .ems-grid-header {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background: $color-17;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 5px 0 0 5px;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                color: $color-22;
+                &:first-child{
+                    border-top: none;
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+        }
+        .ems-grid-row{
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 0 5px 5px 0;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                max-height: 47px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:first-child{
+                    border-top: none;
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+            .ems-grid-use{
+                a{
+                    text-decoration: underline;
+                    font-size: $small-14;
+                    color: #999999;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/* Zoom Main Slider */
+.ems-prd-zoom{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    .cloud-zoom{
+        position: relative;
+        .color-palatte-img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            &.active-img{
+                z-index: 1;
+            }
+        }
+    }
+    
+    .swiper-pagination{
+        position: initial;
+        margin-top: 20px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        background: #F5F5F5;
+        i:before{
+            color: $color-1;
+        }
+    }
+
+    .sticky-thumb{display: none;}
+}
+
+/* Zoom Big Slider */
+.zoom-gallery {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    overflow: hidden;
+    z-index: 2001;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    display: none;
+}

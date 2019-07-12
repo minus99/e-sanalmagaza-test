@@ -1,0 +1,46 @@
+.ems-cart-agreement{
+    @include grid;
+    grid-template-columns: 1fr 30px 1fr;
+    grid-template-areas: "AA . BB";
+    grid-template-rows: minmax(0,auto);
+    border-top:1px solid $color-30;
+    margin-top:$small-40;
+    padding-top:$small-10;
+    .siparisOnaySozlesme {
+        grid-area:AA;
+    }
+    .onBilgilendirmeForm {
+        grid-area:BB;
+    }
+}
+
+.onBilgilendirmeFormMetin,
+.siparisOnaySozlesmeMetin{
+    display: block;
+    margin-left: $reset;
+    margin-right: $reset;
+    margin-bottom: $reset;
+}
+
+.ems-cart-agreement{
+    .tableTitleSiparisOnaySatisSozlesme,
+    .tableTitleSiparisOnBilgilendirmeForm{
+        &:after{
+            display: none;
+        }
+        span{
+            border-top: none;
+            padding-left: $reset;
+            padding-right: $reset;
+        }
+    }
+    .ems-cart-agreement-mobile{display: none;}
+}
+
+.ems-page-payment-right{
+    .pageSiparisOnay_lbfOnBilgilendirmeForm{
+        margin-top: $small-15;
+    }
+    .pageSiparisOnay_lbfOnBilgilendirmeForm,
+    .pageSiparisOnay_lbfSatisSozlesme{display: block;}
+}

@@ -1,0 +1,124 @@
+/*
+=========================================
+    Description: Ödeme Desktop Layout
+*/
+.ems-page-default-order-payment {
+    @include grid;
+    grid-template-columns:10px minmax(auto, 850px) minmax(20px, 50px) minmax(300px, 350px);
+    grid-template-rows: minmax(0, auto);
+    grid-template-areas: ". A . B";
+
+    .cart-section-left{
+        /*Webkit scrolling*/
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+        ::-webkit-scrollbar-track {
+            background: $pinkish-grey;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: $very-dark-gray;
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: $very-dark-gray;
+        }
+    }
+    .cart-section-left-inner{
+        max-height: 240px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: $small-30;
+    }
+    .cart-section-right{
+        height: 95%;
+    }
+}
+
+.ems-page-payment-left{
+    grid-area: A;
+    padding: 45px $reset 45px $reset;
+}
+.ems-page-payment-right{
+    grid-area: B;
+    padding-top: 25px;
+    padding-bottom: 25px;   
+}
+
+
+/*Ödeme Secenek*/
+.ems-pay-credit-cart,
+.ems-pay-other{
+    padding-left: $reset;
+    padding-right: $reset;
+}
+
+.ems-pay-credit-cart{
+    > div{
+        @include grid;
+        grid-template-columns: 1fr 10px 1fr;
+        grid-template-areas:
+        "TBL . CRT"
+        "IZY . CRT"
+        "INT . CRT"
+        "TBC . CRT";
+        align-items: flex-start;
+        padding-bottom: $small-10;
+    }
+    .ems-card-wrapper{
+        grid-area: CRT;
+        margin-top: $small-25;
+        display: block;
+    }
+    .tableOdemeBilgiKrediKarti{
+        grid-area: TBL;
+    }
+    .izy-mainContainer {
+        grid-area: IZY;
+        max-width: 330px;
+    }
+    .izy-saveCreditCard{
+        grid-area: TBC;
+    }
+    .pageOdemeBilgi_odemeTaksit{
+        grid-area: INT;
+    }
+}
+
+/*Kredi Kart*/
+.tableOdemeBilgiKrediKarti{
+    max-width: 330px;
+}
+
+.ems-grid-payment-wrapper{
+    grid-area:SPT;
+}
+.ems-cart-pay-adress{
+    grid-area:ADR;
+}
+
+/******
+    IzyPay Payment
+******/
+.izy-dvCardList {
+    max-width: 330px;
+}
+
+.izyCard.cardItem{
+    .lnkDeleteIyziPayCard{
+        @include transition(all .2s ease);
+        &:hover{
+            border-color: $color-8;
+            color: $color-8;
+        }
+    }
+}
+
+/*Adress*/
+.ems-cart-pay-inner {
+    .ems-delivery-address {
+
+        &.right{
+            margin-bottom: $reset;
+        }
+    }
+}

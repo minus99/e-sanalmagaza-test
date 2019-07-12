@@ -1,0 +1,27 @@
+//
+// Static:       Dropdown
+//
+// ========================================================================
+
+.dropdown{
+    position: relative;
+    > span{
+        box-shadow: none;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+    }
+    ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    &.opened{
+        >ul {
+            display: block;
+        }
+    }
+}

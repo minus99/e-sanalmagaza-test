@@ -1,0 +1,263 @@
+/* Description : Page Member Hidden Objects
+ ===================================== */
+
+ .kutuBosluk{display: none;}
+
+ .site-pages-member{
+    .page-top-desc{
+        display: none;
+    }
+    .page-top-title{
+        display: none;
+    }
+    span[id$="lbfURN_KDVDAHIL"],
+    span[id$="lbfURN_ILKKDVDAHIL"],
+    span.pb1 {
+        display: none;
+    }
+
+    /*Member Pages Empty Message reset div*/
+    div[id$="plhFavoriKayitYok"],
+    div[id$="plhSiparisYokLabel"],
+    div[id$="plhAbonelikKayitYokLabel"],
+    div[id$="plhFavoriGrupKayitYokLabel"],
+    span[id$="lbfKAYITYOK_FIYATHABERCI"]>.ems-message,
+    span[id$="lbfKAYITYOK_STOKHABERCI"]>.ems-message,
+    span[id$="lbfUYM_KAYITYOK_MESAJ"]>.ems-message,
+    .ems-page-coupon-empty{
+        background: none; 
+        border-radius: 0;
+        border:none;
+        font-family: $bold;
+        font-size: $small-18;
+        color: $color-25;
+        margin-top: 0;
+        padding: $small-40 $small-10;
+        text-align: center;
+        &:before{
+            display: none;
+        }
+    }
+
+    /*Member Pages Message*/
+    .ems-page-favorites-empty,
+    .ems-page-order-empty,
+    .ems-page-coupon-empty,
+    .ems-page-follow-list-empty,
+    .ems-page-message-empty,
+    .ems-page-abonelik-empty{
+        display: none;
+        .img{
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: $small-20;
+        }
+        img{
+            width: auto;
+        }
+        .big-text-favorite{
+            display: block;
+        }
+    }
+
+    /*Member Pages Message*/
+    
+    /*Favorites*/
+    .ems-page-default-favorites-empty,
+    .ems-page-default-favorites-group-empty{
+        .ems-page-favorites-empty {
+            display: block;
+        }
+        .select-cfg{display: none;} 
+    }
+    /*Order*/
+    .ems-page-default-member-order-empty {
+        .ems-page-order-empty {
+            display: block;
+        }
+    }
+    /*Followed*/
+    .ems-page-default-follow-list-empty {
+        .ems-page-follow-list-empty {
+            display: block;
+        }
+    }
+    /*Coupon*/
+    .ems-page-default-coupon-empty{
+        .ems-page-coupon-empty{
+            display: block;
+        }
+    }
+    /*Message*/
+    .ems-page-default-message-empty{
+        .ems-page-message-empty{
+            display: block;
+        }
+    }
+    /*Abone*/
+    .ems-page-default-abonelik-empty{
+        .ems-page-abonelik-empty{
+            display: block;
+        }
+    }
+    .big-text-favorite{
+        font-size: $small-18;
+        line-height: 30px;
+        display: inline-block;
+    }
+    /*Mobile Back Button*/
+    .backToMember{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        display: none;
+        vertical-align: middle;
+        margin-right: $small-5;
+        i{
+            line-height: 30px;
+            &:before{
+                font-size: 13px;
+                color: #9B9B9B;
+            }
+        }
+    }
+    /**/
+    .mb-dark-back {
+        background: #f5f5f5;
+        text-align: center;
+        > a{
+            display: block;
+            padding: $small-19 $small-30;
+            position: relative;
+        }
+        i, span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            font-size: $small-18;
+        }
+        i{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            @include Position(absolute, top 50% left $small-10);
+            margin-top: -15px;
+            &:before{
+                font-size: 15px;
+                color: $color-1;
+            }
+        }
+    }
+}
+
+/*
+    Description : Page Mamber Grid Row Default
+=====================================
+*/
+ .site-pages-member{
+    .ems-grid-default{
+        
+        border-radius: 5px;
+        .ems-grid-header{
+            display: none;
+        }
+        .ems-grid-row{
+            > div{
+                font-size: $small-14;
+                color: black;
+            }
+            .discount{
+                > span  {
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: $color-8;
+                    border-radius: 3px;
+                    font-family: $bold;
+                    font-size: $small-14;
+                    color: $white;
+                    padding: 3px 5px;
+                    max-width: 25px;
+                    text-align: left;
+                    margin-right: $small-10;
+                    &:empty{
+                        display: none;
+                    }
+                }
+                &:empty{
+                    display: none;
+                }
+            }
+            .ems-grid-price-wrp{
+                display: inline-block;
+                vertical-align: middle;
+                > span{
+                    display: block;
+                    &:before {
+                        content: "₺";
+                    }
+                    &:empty{display: none;}
+                }
+            }
+            .ems-grid-price{
+                .first{
+                    font-family: $regular;
+                    font-size: $small-12;
+                    text-decoration: line-through;
+                }
+                .last{
+                    font-family: $bold;
+                    font-size: $small-16;
+                }
+            }
+            .ems-grid-remove{
+                text-align: center;
+                a.btnDefault{
+                    background: none;
+                    border: none;
+                    border-radius: 0;
+                    padding: $small-5;
+                    i{
+                        &:before{
+                            font-size: $small-8;
+                            color: $color-10;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+
+ .site-pages-member {
+
+    .urunPaging {
+        display: none;
+        table>tbody>tr>td {
+            width: auto;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        .urunPaging_pageNavigation a.firstPage,
+        .urunPaging_pageNavigation a.lastPage {
+            display: none !important;
+        }
+
+        .urunPaging_pageNavigation [id$="lblPaging"] {
+            margin-top: 20px;
+
+            &:empty {
+                display: none;
+            }
+        }
+
+        .tumunuGoster {
+            display: none !important;
+        }
+    }
+}

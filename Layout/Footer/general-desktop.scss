@@ -1,0 +1,58 @@
+.site-footer{
+    &-wrap{
+        @include space(padding, bottom, 80px);
+    }
+    &-logo{
+        @include space(padding, left, $reset);
+    }
+    &-inner{
+        @include grid;
+        grid-template-columns: 1fr minmax(0, 980px) minmax(0, 220px) 1fr;
+        grid-template-rows: minmax(0, auto);
+        grid-template-areas:
+        ". A A ."
+        ". B E ."
+        ". C D ."
+        ". F F ."
+        ". N N .";
+    }
+    .grid-row-c,
+    .grid-row-e{
+        @include column-reset;
+        text-align: inherit;
+    }
+    .grid-row-a{
+        grid-area: A;
+        margin-bottom: inherit;
+    }
+    .grid-row-b{
+        grid-area: B;
+    }
+    .grid-row-c{
+        grid-area: C;
+    }
+    .grid-row-d{
+        grid-area: D;
+    }
+    .grid-row-e{
+        grid-area: E;
+    }
+    .grid-row-f{
+        grid-area: F;
+    }
+    .grid-row-none{
+        grid-area: N;
+    }
+    &-support{
+        font-family: $bold;
+        font-size: $small-18;
+        @include space(margin, top, 80px);
+        text-align: right;
+    }
+    &-copyright{
+        text-align: right;
+        font-size: $small-16;
+        @include space(padding, top, $small);
+        @include space(padding, bottom, $small);
+    }
+}

@@ -1,0 +1,85 @@
+table{
+    border-collapse: collapse;
+}
+
+.tableOdemeTaksit{
+    width: 100%;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: $color-6;
+    margin-top: $small-5;
+    margin-bottom: $small-30;
+    tbody{
+        tr.tableTitleOdemeTaksit{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            min-height: auto;
+            td{
+                padding-bottom: 10px;
+                span{
+                    color: $color-1;
+                    opacity: .50;
+                    font-size: $small-13;
+                }
+            }
+        }
+        tr:nth-child(2){
+            border-top: 2px solid $color-6;
+        }
+        tr{
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            border-top: 1px solid $color-6;
+            border-right: 2px solid $color-6;
+            border-left: 2px solid $color-6;
+            min-height: 45px;
+            td{
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                width: 33.333%;
+                &:first-child{
+                    width: 50px;
+                }
+                .sStylerWrp_radio{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: $small-18;
+                    height: $small-18;
+                    text-align: center;
+                    line-height: $small-18;
+                    .rStyler{
+                        border: none;
+                        &:before{
+                            font-family: 'icomoon';
+                            content:'\e90a';
+                            color: $color-10;
+                            background: $white;
+                            font-size: $small-18;
+                            width: auto;
+                            height: auto;
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            transform: none;
+                        }
+                        &.checked{
+                            &:before{
+                                content:'\e909';
+                                color: $color-19;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pageOdemeBilgi_odemeTaksit{
+    img{display: none;}
+    .pageOdemeBilgi_lbfOdemeBankaKampanyaNot,
+    .btnBankaPromosyonUygula{display: none !important;}
+}

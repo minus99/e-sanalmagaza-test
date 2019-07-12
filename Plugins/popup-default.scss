@@ -1,0 +1,60 @@
+a.btnMinPpCl{
+    width: 32px !important;
+    height: 32px!important;
+    top: 20px!important;
+    right: 20px!important;
+    background: #fff!important;
+    line-height: 32px;
+    &:before{
+        font-family:'icomoon';
+        content:'\e90d';
+        font-size: 13px;
+        color: #9b9b9b;
+    }
+}
+
+/* ====================
+    Login Popup 
+==================== */
+.login-popup{
+    text-align: left;
+    img{
+        max-width: 224px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .minPpBdy{
+        padding: 20px;
+    }
+    h1{
+        font-family: $medium;
+        font-size: $small-27;
+        margin-top: 30px;
+    }
+    p{
+        font-family: $regular;
+        font-size: $small-18;
+        margin-top: 20px;
+        color: $color-1;
+    }
+}
+
+.mapPopup{
+    .jconfirm-title{
+        display: block;
+        margin-bottom: $small-20;
+    }
+    .jconfirm-type-default{
+        padding: $small-30 $small-40;
+    }
+    .fm-b{
+        margin-bottom: $small-10;
+    }
+    .fm-r {
+        max-width: 300px;
+    }
+}
+    
+.popup_3dOnay.type-iframe .jconfirm .jconfirm-box div.jconfirm-content-pane{height: 500px !important;}
+.popup_3dOnay.type-iframe .jconfirm .jconfirm-content{min-height: 500px !important;}

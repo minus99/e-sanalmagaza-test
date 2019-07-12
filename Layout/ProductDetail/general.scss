@@ -1,0 +1,37 @@
+.site-pages-detailpage{
+    .navigasyon {
+        display: none;
+        background: none;
+        > span{
+            &:first-child{
+                display: inline-block;
+                vertical-align: middle;
+                @include space(padding, left, $reset);
+                @include space(padding, right, $reset);
+            }
+        }
+        a, .nav-prd-name{
+            display: inline-block;
+            font-size: $small-12;
+            color: $color-3;
+            &:before{
+                font-size: $small-12;
+                color: $color-3;
+                @include space(margin, left, $xs);
+                @include space(margin, right, $xs);
+            }
+        }
+        a:hover{
+            color: $color-8;
+        }
+        .nav-prd-name{
+            margin-left: $reset;
+            &:before{
+                content:'/';
+                font-size: $small-12;
+                color: $color-3;
+                @include space(margin, left, $xs);
+            }
+        }
+    }
+}

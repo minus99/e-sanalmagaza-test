@@ -1,0 +1,77 @@
+.navigasyon {
+    background: $very-light-gray;
+    > span{
+        &:first-child{
+            display: block;
+            @include space(padding, all, $xMedium $large);
+            &:empty{display: none;}
+        }
+    }
+    a{
+        display: none;
+        font-size: $small-13;
+        color: $very-dark-g;
+        &.navigasyonSeviye1,
+        &.navigasyonSeviye2{display: inline-block;}
+        &:before{
+            content:'/';
+            font-size: $small-13;
+            color: $very-dark-g;
+        }
+        &:first-child{
+            &:before{display: none;}
+        }
+    }
+    span[id$="lblNAVIGATION_SEPERATOR"]{display: none;}
+}
+
+.pnlUrunKiyasSecim{
+    text-align: center;
+    .urunKiyaslamaOzellik_secimbaslik,
+    .urunKiyaslamaOzellik_UrunSayi{display: none;}
+}
+.urunKiyaslamaOzellik_secimler{
+    a{
+        width: auto;
+        max-width: 46%;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 15px;
+        border:1px solid $pinkish-grey;
+        @include space(padding, all, $xSmall $small);
+        @include space(margin, top, $small-10);
+        @include space(margin, right, 2%);
+        @include space(margin, left, 2%);
+        &:before{
+            font-family:'icomoon';
+            content:'\e90d';
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            background: $color-17;
+            color: $very-dark-g;
+            font-size: 8px;
+            border-radius: 100%;
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.grid-colmn {
+    &-mobile-filter{
+        @include Position(relative, null);
+        height: 45px;
+        background: $color-17;
+        .btn-filter{
+            @include Position(absolute, top 50% right $xMedium);
+            @include setTransform(translateY(-50%));
+            font-size: $small-13;
+            color: $very-dark-g;
+            text-decoration: underline;
+            @include space(padding, all, $xs);
+        }
+    }
+}

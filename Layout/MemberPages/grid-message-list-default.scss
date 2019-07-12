@@ -1,0 +1,123 @@
+/* =====================
+Description: Grid Default
+===================== */
+.site-pages-member {
+    .ems-page-default-message{
+        padding:0 $small-20 $small-20 $small-20;
+        .message-tablink{display: none;}
+        .page-top-title{display: none;}
+    }
+
+    /*Title Message*/
+    .page-top-title.page-top-title-2{
+        display: block;
+    }
+    .page-top-title.page-top-title-2>span {
+        display: none;
+    }
+
+    .add-new-message{ 
+        float: right;
+        a{
+            display: inline-block;
+            font-size: $small-15;
+            padding:20px 20px;
+            &:before{
+                font-family: 'icomoon';
+                content: '\e90c';
+                font-weight: normal;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 10px;
+                color: #9B9B9B;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/*====================
+Grid Row Layout Default
+====================*/
+.site-pages-member {
+    .ems-grid-default-message{
+        .ems-grid-header {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background: $color-17;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 5px 0 0 5px;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                color: $color-22;
+                &:first-child{
+                    border-top: none;
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+        }
+
+        .ems-grid-row{
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 0 5px 5px 0;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                max-height: 47px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:first-child{
+                    border-top: none;
+                }
+                &:empty{
+                    &:before{
+                        content: "-";
+                    }
+                }
+                .lnkMesajOku{   
+                    text-decoration: underline;
+                    &:empty{
+                        &:before{
+                            content: "-";
+                        }
+                    }
+                }
+                .lnkPopupMesajOku {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+/*Message Send*/
+.site-pages-member{
+    .pageMesajGonder{
+        .pageHeaderMesaj{display: none;}
+        .ems-page-alternate{
+            .page-top-title{display: none;}
+        }
+    }
+}

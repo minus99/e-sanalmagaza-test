@@ -1,0 +1,155 @@
+/*Sozlesme Forms*/
+.onBilgilendirmeFormMetin,
+.siparisOnaySozlesmeMetin {
+    display: none;
+    border-radius: 3px;
+    border: 1px solid $color-4;
+    padding: $small-15;
+    margin-left: $small-10;
+    margin-right: $small-10;
+    margin-bottom: $small-20;
+    
+    /*Webkit scrolling*/
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $pinkish-grey;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $very-dark-gray;
+    }
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: $very-dark-gray;
+    }
+}
+
+.pageSiparisOnay_lbfOnBilgilendirmeForm,
+.pageSiparisOnay_lbfSatisSozlesme{
+    display: none;
+}
+
+.ems-cart-agreement{
+    .tableTitleSiparisOnaySatisSozlesme{
+        span{
+            display: block;
+            padding: $small-17 $small-30 $small-17 $small-10;
+            border-top:2px solid $color-30;
+            font-family: $bold;
+            font-size: $small-20;
+        }
+    }
+    .tableTitleSiparisOnBilgilendirmeForm{
+        span{
+            display: block;
+            padding: $small-17 $small-30 $small-17 $small-10;
+            border-top:2px solid $color-30;
+            font-family: $bold;
+            font-size: $small-20;
+        }
+    }
+
+    .tableTitleSiparisOnaySatisSozlesme,
+    .tableTitleSiparisOnBilgilendirmeForm{
+        position: relative;
+        &:after{
+            font-family: 'icomoon';
+            content:'\e90c';
+            position: absolute;
+            top: 50%;
+            right: $small-10;
+            width: $small-20;;
+            height: $small-20;
+            text-align: center;
+            margin-top: -10px;
+            line-height: $small-20;
+            font-size: $small-10;
+            color: $color-10;
+        }
+    }
+    .ems-cart-agreement-mobile{
+        display: block;
+        border-top: 2px solid #bebebe;
+        padding-top: $small-10;
+        .pageSiparisOnay_lbfOnBilgilendirmeForm,
+        .pageSiparisOnay_lbfSatisSozlesme{
+            display: block;
+        }
+    }
+}
+
+.onBilgilendirmeFormMetin {
+    >span {
+        display: inline-block;
+        height: 340px !important;
+        max-height: 340px;
+        padding-right: $small-20;
+        overflow: inherit !important;
+        overflow-y: scroll !important;
+
+        * {
+            font-size: $small-13;
+        }
+    }
+}
+
+.siparisOnaySozlesmeMetin {
+    >span {
+        height: 340px !important;
+        display: inline-block;
+        max-height: 340px;
+        padding-right: $small-20;
+        overflow: inherit !important;
+        overflow-y: scroll !important;
+
+        * {
+            font-size: $small-13;
+        }
+    }
+}
+
+.pageSiparisOnay_chkSatisSozlesme,
+.pageSiparisOnay_chkOnBilgilendirmeForm{
+    @include space(padding, top, $small-10);
+    @include space(padding, bottom, $small-10);
+    @include space(padding, left, $small-30);
+    position: relative;
+    > span{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: $small-15;
+    }
+    .checkbox{
+        @include Position(absolute, top 50% left 0);
+        @include space(margin, top, -9px);
+    }
+    .btnSozlesme,
+    .btnOnbilgi{
+        text-decoration: underline;
+    }
+}
+
+.pageSiparisOnay_btnSatisSozlesmeOnizle,
+.pageSiparisOnay_btnOnBilgilendirmeFormOnizle {
+    display: none;
+}
+
+.siparisOnaySozlesme.opened,
+.onBilgilendirmeForm.opened{
+
+    .siparisOnaySozlesmeMetin,
+    .onBilgilendirmeFormMetin{display: block;}
+
+    .tableTitleSiparisOnaySatisSozlesme:after,
+    .tableTitleSiparisOnBilgilendirmeForm:after{
+        content:'\e91c';
+    }
+}
+
+.btnSatisSozlesmeOnizle,
+.btnOnBilgilendirmeFormOnizle {
+    @include btnReset;
+}

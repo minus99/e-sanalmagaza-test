@@ -1,0 +1,327 @@
+/*
+=========================================
+    Description: Teslimat Adres
+*/
+
+.add-new-address {
+    width: 50%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    &:empty{display: none;}
+}
+
+.deliveryAllAdress{
+    font-size: $small-14;
+    color: #535353;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    display: none;
+    &:empty{display: none;}
+}
+
+a.btnAdresEkle {
+    background: none;
+    color: $color-1;
+    font-size: $small-15;
+    font-family: $regular;
+    border: none;
+    padding: $reset;
+
+    &:hover {
+        background: none;
+    }
+    &:before{
+        font-family: 'icomoon';
+        content:'\e90c';
+        font-weight: normal;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        font-size: $small-10;
+        color: $color-10;   
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.ems-grid-default-address {
+    margin-top: $small-20;
+    max-height: 325px;
+    overflow: hidden;
+    &:empty {
+        display: none;
+    }
+
+    .ems-grid-adress-row {
+        border-radius: 3px;
+        border: 1px solid $color-4;
+        padding: $small-20;
+        position: relative;
+        margin-top: $small-20;
+        &:first-child{margin-top: $reset;}
+    }
+    &.opened{
+        max-height: inherit;
+        overflow: inherit;
+    }
+}
+
+.ems-grid-adress-row .adresTip2 {
+    display: none;
+}
+
+.ems-address-buttons,
+.ems-grid-address-name{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ems-grid-address-name {
+    font-family: $medium;
+    font-size: $small-15;
+    width: 50%;
+}
+
+.ems-grid-address {
+    margin-top: $small-10;
+    min-height: 34px;
+    max-height: 34px;
+    overflow: hidden;
+}
+
+
+.ems-grid-address-select {
+    a.btnDefault {
+        border-width: 1px;
+        border-color: $color-30;
+        background: none;
+        color: $color-1;
+        letter-spacing: 0.5px;
+        font-size: $small-13;
+        padding: 9px 2px;
+        width: 48%;
+        max-width: 160px;
+        margin-top: $small-10;
+
+        &:first-child {
+            margin-right: 2%;
+        }
+        &:last-child {
+            margin-left: 2%;
+        }
+
+        &.emos_selected {
+            background: rgba(0, 149, 15, 0.1);
+            border-color: $color-31;
+            color: $color-31;
+        }
+    }
+}
+
+.ems-address-buttons {
+    a.btnDefault {
+        background: none;
+        font-family: $regular;
+        color: $color-3;
+        font-size: $small-13;
+        text-decoration: underline;
+        padding: 3px;
+        border: none;
+    }
+}
+
+.dvFarkliFatAdrSec {
+    margin-top: $small-20;
+
+    &:empty {
+        display: none;
+    }
+
+    >span {
+        vertical-align: middle;
+        &:last-child{font-size: $small-15;}
+    }
+}
+
+.same-address{
+    &:empty{display: none;}
+}
+
+.ems-message-error-address{
+    width: auto;
+    max-width: 680px;
+    margin: $small-20;
+}
+
+/* =======================
+    New Adress
+==========================
+*/
+.ems-page-new-address {
+    .ems-form-inner{
+        padding: $small-20 $small-20 $small-30 $small-20;
+    }
+    .adresTip {
+        a{
+            text-align: center;
+            padding: $small-10 $small-20;
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+            display: inline-block;
+            margin-right: $small-15;
+            &.emos_selected{
+                border-color:$color-8;
+                color: $color-8;
+            }
+        }
+        a#lnkAdrTip_1{display: none;}
+    }
+    
+    .back-to-card{
+        display: block;
+        background: $color-17;
+        padding: $small-19 $small-15;
+        font-size: $small-18;
+        text-align: center;
+        position: relative;
+        .icon-arrow-left{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            margin-right: $small-5;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -15px;
+            &:before{
+                font-size: 18px;
+                color: $color-1;
+            }
+        }
+    }
+    .ems-field {
+        textarea {
+            height: 65px;
+        }
+        &.vergNoCheck,
+        &.vergCheck,
+        &.tcCheck,
+        &.tcCheck-2{
+            display: none;
+        }
+        &.tcCheck-2 {
+            .ems-form-obj{
+                display: inline-block;
+                vertical-align: middle;
+            }   
+            .ems-form-label{
+                margin-bottom: $reset;
+                display: inline-block;
+                vertical-align: middle;
+            } 
+        }
+    }
+    .ems-field.button{
+        text-align: center;
+        a.btnDefault{
+            width: 100%;
+            max-width: 240px;
+            margin-top: $small-20;
+        }
+        a.btnAdresIptal{
+            background: none;
+            color: $color-1;
+            border-color: $color-6;
+        }
+    }
+}
+
+.bireysel{
+    .ems-page-new-address{
+        .ems-field.tcCheck,
+        .ems-field.tcCheck-2 {
+            display: block;
+        }
+    }
+}
+
+.kurumsal{
+    .ems-page-new-address{
+        .ems-field.vergNoCheck,
+        .ems-field.vergCheck {
+            display: block;
+        }
+    }
+}
+
+/*Kargo*/
+.ems-cargo-tab{
+    margin-top: $small-30;
+}
+
+.divTeslimatKargo{
+    ul{
+        display: table;
+        width: auto;
+        &:empty{display: none;}
+        li{
+            display: table-cell;
+            vertical-align: middle;
+            min-width: 25%;
+            border: 1px solid $color-4;
+            border-radius: 3px;
+            position: relative;
+            padding: $small-35 $small-15 $small-35 125px;
+            text-align: center;
+            img{
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                max-width: 100px;
+                margin-top: -24px;
+            }
+            > span{
+                display: block;
+                &:empty{display: none;}
+            }
+            .kargoAdi{
+                font-family: $medium;
+                font-size: $small-15;
+            }
+            .fiyat{
+                font-family: $bold;
+                font-size: $small-16;
+                margin-top: $small-5;
+            }
+            .sStylerWrp_radio{
+                display: inline-block;
+                margin-top: $small-5;
+                .rStyler{
+                    width: $small-20;
+                    height: $small-20;
+                    display: inline-block;
+                    line-height: $small-20;
+                    text-align: center;
+                    &:before{
+                        font-family: 'icomoon';
+                        content:'\e90a';
+                        font-size: $small-20;
+                    }
+                }
+                .rStyler.checked{
+                    &:before{
+                        content:'\e909';
+                        color: $color-19;
+                    }
+                }
+            }
+        }
+    }
+}

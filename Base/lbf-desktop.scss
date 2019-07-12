@@ -1,0 +1,14 @@
+/*
+ * Language Before Field Desktop
+ ========================================================================== */
+
+.tr-TR {
+
+    //$Uye Favori Ekle Secim Text
+    .ems-grid-default-favorites .ems-grid-select .cStyler:before {
+        content: '';
+    }
+    .ems-grid-default-favorites .ems-grid-select .cStyler.checked:before {
+        content: '\e90b';;
+    }
+}

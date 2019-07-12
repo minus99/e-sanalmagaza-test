@@ -1,0 +1,111 @@
+/*
+    Description: Grid Default
+*/
+.site-pages-member {
+    .ems-grid-default-subscriptions-detail {
+        margin-top: $small-20;
+        .ems-grid-header {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background: $color-17;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 5px 0 0 5px;
+            > div{
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                color: $color-22;
+                &:first-child{
+                    border-top: none;
+                }
+            }
+        }
+
+        .ems-grid-row {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin-bottom: $small-20;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: $color-6;
+            border-radius: 0 5px 5px 0;
+
+            >div {
+                padding: 14px 10px;
+                border-top: 2px solid $color-6;
+                max-height: 47px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                &:first-child {
+                    border-top: none;
+                }
+
+                &:empty {
+                    &:before {
+                        content: "-";
+                    }
+                }
+            }
+        }
+    }
+
+    /*Grid Layout*/
+    .ems-page-default-subscriptions-detail {
+        padding: $small-20;
+
+        .subscriptions-desc {
+            display: none;
+        }
+        .inner-title{
+            margin-top: $small-30;
+        }
+        .border-line {
+            margin-top: $small-20;
+            height: 1px;
+            background: $color-38;
+        }
+
+        .bottom-step {
+            .btnDefault {
+                display: block;
+                margin-top: $small-30;
+                padding-left: $small-20;
+                padding-right: $small-20;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 260px;
+            }
+            .btnAbuIptalEt{
+                background: none;
+                border-color: #E7E7E7;
+                color: $color-1;
+            }
+        }
+
+        .dvAbonelikGuncelle {
+            .btnAbuGuncelle {
+                display: block;
+                max-width: 100%;
+                margin-top: $small-20;
+            }
+        }
+
+        .dvAbonelikGuncelleWrp {
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: $small-30;
+            .title{
+                font-size: $small-13;
+                color: #8E8E8E;
+                margin-top: $small-20;
+                margin-bottom: $small-10;
+            }
+        }
+    }
+}

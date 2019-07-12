@@ -1,0 +1,120 @@
+.ems-page-default-order-success{
+    padding-left: $small-30;
+    padding-right: $small-30;
+    padding-bottom: $small-30;
+}
+.pageSiparisSonuc_lbfSiparisKaydedilmedi{
+    > span{
+        display: block;
+    }
+}
+
+.pageDescSiparisSonucErr{
+    br{display: none;}
+}
+
+.ems-page-success-cover{
+    width: 100%;
+    max-width: 435px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pageSiparisSonuc_lbfSiparisKaydedilmedi{
+    .ems-page-success-cover{
+        max-width: 407px;
+    }
+}
+
+.ems-page-success-logo{
+    a{
+        display: block;
+        text-align: center;
+        padding: $small-30 $small-20;
+        img{max-width: 100px;}
+    }
+}
+.ems-page-success-text{
+    text-align: center;
+    margin-top: $small-15;
+    p{
+        font-size: $small-13;
+        line-height: 22px;
+        strong{
+            font-weight: normal;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.ems-page-success-back-buttons{
+    a.btnDefault {
+        width: 100%;
+        max-width: 240px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a.btnOdemeBilgiDon{
+        margin-top: $small-20;
+    }
+}
+
+a.btnSiparisSonucSepeteDon{
+    background: none;
+    border-color: $color-6;
+    color: $color-1;
+}
+
+/*Cart Error*/
+.pageErrorBolgeStok{
+    .uyari{
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.3;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px 10px 10px 40px;
+        border-radius: 3px;
+        margin-top: $small-20;
+        position: relative;
+        color: $alert-error-color;
+        background-color: $alert-error-background;
+        border-color: $alert-error-border;
+        &:before{
+            font-family:'icomoon';
+            content:'\e90d';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 10px;
+            color: $color-34;
+        }
+        &:empty{display: none;}
+    }
+    .urunYokBilgi{
+        .divStokYokUrun{
+            margin-top: $small-20;
+            margin-bottom: $small-20;
+            > div{
+                border-radius: 3px;
+                border: 1px solid #E7E7E7;
+                padding: $small-10;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: $small-10;
+                &:first-child{
+                    margin-left: $reset;
+                }
+            }
+        }
+    }
+}

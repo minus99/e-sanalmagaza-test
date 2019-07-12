@@ -1,0 +1,112 @@
+.ems-cart-top {
+    display: block;
+}
+
+.ems-page-cart {
+    padding-bottom: $small-40;
+    &-row-header {
+        border-bottom: 2px solid $color-17;
+        position: relative;
+    }
+
+    &-row-content {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .navbar-item-cart{
+        display: none;
+    }
+}
+
+/*
+=========================================
+    Sepet
+*/
+.ems-page-cart-step0 {
+    .ems-page-default-order-cart {
+        @include grid;
+        grid-template-columns:10px minmax(auto, 850px) minmax(auto, 350px);
+        grid-template-rows: minmax(0, auto);
+        grid-template-areas:
+            ". LFT RGH" 
+            ". SLD RGH";
+    }
+
+    .cart-section-left {
+        grid-area: LFT;
+    }
+    .cart-section-left-inner{
+        padding-right: 50px;
+    }
+    .cart-section-right {
+        grid-area: RGH;
+        z-index: 2;
+        padding-top: $small-25;
+    }
+    .swiper-container-card{
+        grid-area: SLD;
+    }
+}
+
+.ems-page-cart-step1 {
+    .ems-cart-summary-coupon {display: none;}
+}
+
+
+.cart-section-left {
+    @include space(padding, top, $xxlarge);
+    @include space(padding, bottom, 50px);
+}
+
+.cart-section-right {
+    position: relative;
+
+    .sticky-anim {
+        position: -webkit-sticky;
+        /* Safari */
+        position: sticky;
+        top: 0;
+        @include space(padding, all, $large);
+    }
+}
+
+.grid-info-box-card {
+    display: block;
+    border-top: 1px solid $gray;
+    @include space(padding, top, 40px);
+
+    ul {
+        max-width: 1200px;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+    }
+}
+
+.ems-page-cart {
+    .btnAlisverisDevam {
+        @include space(padding, left, $reset);
+        margin-top: $reset;
+        margin-left: $reset;
+
+        &:hover {
+            background: none;
+            color: $color-8;
+        }
+    }
+}
+
+/*Empty Layout*/
+.basket-empty{
+    .ems-page-cart-step0{
+        .ems-page-default-order-cart{
+            grid-template-columns: 1fr;
+            grid-template-areas: "LFT";
+        }
+        .cart-section-left-inner{
+            padding-right: 0;
+            display: table;
+            margin: 0 auto;
+        }
+    }
+}

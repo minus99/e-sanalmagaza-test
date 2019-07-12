@@ -1,0 +1,243 @@
+//-------------------------------------------//
+//----- BASE
+//-------------------------------------------//
+
+@import 'Base/variables';
+@import 'Base/mixins';
+@import 'Base/typography';
+@import 'Base/color-palette';
+@import 'Base/shared';
+@import 'Base/icons';
+@import 'Base/lbf';
+
+//-------------------------------------------//
+//----- PLUGINS
+//-------------------------------------------//
+@import 'Plugins/_import';
+
+//-------------------------------------------//
+//----- COMPONENTS
+//-------------------------------------------//
+@import 'Components/_import';
+
+//-------------------------------------------//
+//----- LAYOUTS
+//-------------------------------------------//
+
+
+// Header Static Default
+@import 'Layout/Static/aside-menu-default';
+
+// Header Default
+@import 'Layout/Header/navbar-default';
+@import 'Layout/Header/nav-menu-default';
+@import 'Layout/Header/mini-card-default';
+@import 'Layout/Header/mini-login-default';
+@import 'Layout/Header/search-default';
+
+// Swiper Default
+@import 'Components/swiper-default';
+
+// Home Page Default
+@import 'Layout/Homepage/grid-default';
+@import 'Layout/Homepage/homepage-banner-default';
+@import 'Layout/Homepage/bnr-featured-prd-default';
+@import 'Layout/Homepage/categories-default';
+
+// Pape List Default
+@import 'Layout/ProductList/grid-default';
+@import 'Layout/ProductList/filter-default';
+@import 'Layout/ProductList/menu-default';
+@import 'Layout/ProductList/product-card-default';
+@import 'Layout/ProductList/header-default';
+@import 'Layout/ProductList/footer';
+
+// Pape Detail Default
+@import 'Layout/ProductDetail/grid-default';
+@import 'Layout/ProductDetail/general';
+@import 'Layout/ProductDetail/zoom';
+@import 'Layout/ProductDetail/product-card-default';
+@import 'Layout/ProductDetail/tabs-default';
+@import 'Layout/ProductDetail/bundle-default';
+@import 'Layout/ProductDetail/comment-default';
+@import 'Layout/ProductDetail/widget-default';
+
+// Login Default
+@import 'Layout/Login/general-default';
+
+// Corporate Default
+@import 'Layout/Corporate/grid-default';
+@import 'Layout/Corporate/left-menu-default';
+@import 'Layout/Corporate/message-send-default';
+@import 'Layout/Corporate/sss-tab-default';
+
+// MemberPages Desktop
+@import 'Layout/MemberPages/grid-default';
+@import 'Layout/MemberPages/left-menu-default';
+@import 'Layout/MemberPages/address-info-form-default';
+@import 'Layout/MemberPages/address-list-default';
+@import 'Layout/MemberPages/grid-referances-default';
+@import 'Layout/MemberPages/grid-favorites-default';
+@import 'Layout/MemberPages/grid-favorites-group-default';
+@import 'Layout/MemberPages/grid-order-list-default';
+@import 'Layout/MemberPages/grid-order-detail-default';
+@import 'Layout/MemberPages/grid-order-cancel-default';
+@import 'Layout/MemberPages/grid-password-change-default';
+@import 'Layout/MemberPages/grid-stock-list-default';
+@import 'Layout/MemberPages/grid-message-list-default';
+@import 'Layout/MemberPages/grid-subscriptions-default';
+@import 'Layout/MemberPages/grid-coupon-list-default';
+@import 'Layout/MemberPages/grid-message-detail-default';
+@import 'Layout/MemberPages/grid-subscriptions-detail-default';
+
+// Corporate Brands
+@import 'Layout/Brands/swiper-default';
+@import 'Layout/Brands/general-default';
+
+// Landing Page
+@import 'Layout/LandingPage/grid-default';
+
+// Card
+@import 'Layout/Card/grid-default';
+@import 'Layout/Card/card-empty-default';
+@import 'Layout/Card/card-step-default';
+@import 'Layout/Card/product-grid-default';
+@import 'Layout/Card/card-summary-default';
+@import 'Layout/Card/delivery-default';
+@import 'Layout/Card/delivery-address-default';
+@import 'Layout/Card/delivery-gift-cart-default';
+@import 'Layout/Card/payment-default';
+@import 'Layout/Card/payment-tab-default';
+@import 'Layout/Card/payment-option-contract-default';
+@import 'Layout/Card/payment-product-grid-default';
+@import 'Layout/Card/installment-select-default';
+@import 'Layout/Card/widget-default';
+@import 'Layout/Card/card-error-default';
+
+// Footer Default
+@import 'Layout/Footer/general-default';
+@import 'Layout/Footer/pay-info-default';
+@import 'Layout/Footer/nav-menu-default';
+
+// 404
+@import 'Layout/ErrorPages/site-404-error-default';
+
+//-------------------------------------------//
+//----- Media Query
+//-------------------------------------------//
+
+ //@supports(grid-area: auto) {
+
+    @media screen and (min-width: $breakpoint-medium) {
+
+        //-------------------------------------------//
+        //----- BASE
+        //-------------------------------------------//
+        @import 'Base/lbf-desktop';
+
+        // Static Desktop
+        @import 'Layout/Static/general-grid';
+        @import 'Layout/Static/aside-menu-desktop';
+        
+        // Swiper Default
+        @import 'Components/swiper-desktop';
+
+        // Header Desktop
+        @import 'Layout/Header/navbar-desktop';
+        @import 'Layout/Header/nav-menu-desktop';
+        @import 'Layout/Header/mini-card-desktop';
+        @import 'Layout/Header/mini-login-desktop';
+        @import 'Layout/Header/search-desktop';
+
+        // Home Page Desktop
+        @import 'Layout/Homepage/grid-desktop';
+        @import 'Layout/Homepage/homepage-banner-desktop';
+        @import 'Layout/Homepage/bnr-featured-prd-desktop';
+        @import 'Layout/Homepage/categories-desktop';
+        
+        // Pape List Desktop
+        @import 'Layout/ProductList/grid-desktop';
+        @import 'Layout/ProductList/cover-desktop';
+        @import 'Layout/ProductList/menu-desktop';
+        @import 'Layout/ProductList/filter-desktop';
+        @import 'Layout/ProductList/product-card-desktop';
+        @import 'Layout/ProductList/header-desktop';
+        
+        // Pape Detail Desktop
+        @import 'Layout/ProductDetail/grid-desktop';
+        @import 'Layout/ProductDetail/product-card-desktop';
+        @import 'Layout/ProductDetail/tabs-desktop';
+        @import 'Layout/ProductDetail/bundle-desktop';
+        @import 'Layout/ProductDetail/comment-desktop';
+        @import 'Layout/ProductDetail/widget-desktop';
+        
+        // Login Desktop
+        @import 'Layout/Login/general-desktop';
+
+        // Corporate Desktop
+        @import 'Layout/Corporate/grid-desktop';
+        @import 'Layout/Corporate/left-menu-desktop';
+        @import 'Layout/Corporate/message-send-desktop';
+        @import 'Layout/Corporate/sss-tab-desktop';
+
+        // MemberPages Desktop
+        @import 'Layout/MemberPages/grid-desktop';
+        @import 'Layout/MemberPages/left-menu-desktop';
+        @import 'Layout/MemberPages/address-info-form-desktop';
+        @import 'Layout/MemberPages/address-list-desktop';
+        @import 'Layout/MemberPages/grid-referances-desktop';
+        @import 'Layout/MemberPages/grid-favorites-desktop';
+        @import 'Layout/MemberPages/grid-favorites-group-desktop';
+        @import 'Layout/MemberPages/grid-order-list-desktop';
+        @import 'Layout/MemberPages/grid-order-detail-desktop';
+        @import 'Layout/MemberPages/grid-order-cancel-desktop';
+        @import 'Layout/MemberPages/grid-password-change-desktop';
+        @import 'Layout/MemberPages/grid-stock-list-desktop';
+        @import 'Layout/MemberPages/grid-message-list-desktop';
+        @import 'Layout/MemberPages/grid-subscriptions-desktop';
+        @import 'Layout/MemberPages/grid-coupon-list-desktop';
+        @import 'Layout/MemberPages/grid-message-detail-desktop';
+        @import 'Layout/MemberPages/grid-subscriptions-detail-desktop';
+
+        // Corporate Brands
+        @import 'Layout/Brands/swiper-desktop';
+        @import 'Layout/Brands/general-desktop';
+        
+        // Landing Page
+        @import 'Layout/LandingPage/grid-desktop';
+
+        // Card
+        @import 'Layout/Card/grid-desktop';
+        @import 'Layout/Card/card-empty-desktop';
+        @import 'Layout/Card/card-step-desktop';
+        @import 'Layout/Card/product-grid-desktop';
+        @import 'Layout/Card/card-summary-desktop';
+        @import 'Layout/Card/delivery-desktop';
+        @import 'Layout/Card/delivery-address-desktop';
+        @import 'Layout/Card/delivery-gift-cart-desktop';
+        @import 'Layout/Card/payment-desktop';
+        @import 'Layout/Card/payment-tab-desktop';
+        @import 'Layout/Card/payment-option-contract-desktop';
+        @import 'Layout/Card/payment-product-grid-desktop';
+        @import 'Layout/Card/installment-select-desktop';
+        @import 'Layout/Card/widget-desktop';
+        @import 'Layout/Card/card-error-desktop';
+
+        // Footer Desktop
+        @import 'Layout/Footer/general-desktop';
+        @import 'Layout/Footer/pay-info-desktop';
+        @import 'Layout/Footer/nav-menu-desktop';
+
+        // 404
+        @import 'Layout/ErrorPages/site-404-error-desktop';
+
+    }
+    /*Akıştaki ara değer için verildi*/
+    @media only screen and (max-width: $siteContainerWidthFull) and (min-width: $defaultMaxWidth){
+        // Pape List Desktop
+        @import 'Layout/ProductList/product-card-controll';
+
+        // Header Search
+        @import 'Layout/Header/search-flow-setting';
+    }
+//}

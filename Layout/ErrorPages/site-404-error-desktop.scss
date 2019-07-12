@@ -1,0 +1,42 @@
+.ems-custom-error{
+    h1{
+        top:70px;
+        text-align: left;
+        img{
+            max-width: 147px;
+        }
+    }
+    &-wrapper{
+        text-align: left;
+    }
+    h2{
+        margin-bottom: 40px;
+        font-family: $bold;
+        font-size: $small-20;
+        margin-top: inherit;
+        margin-bottom: 40px;
+    }
+    .centered-align{
+        display: table;
+        width: auto;
+        margin: 5% auto 0 auto;
+        > *{
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    }
+    .btnDefault {
+        width: 46%;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 46%;
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        &:nth-child(2){margin-right: 2%; margin-top: inherit;}
+        &:nth-child(3){margin-left: 2%;}
+    }
+}

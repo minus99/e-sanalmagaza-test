@@ -1,0 +1,80 @@
+/*
+=========================================
+    Description: Ödeme Product grid and Delivery Address Desktop
+*/
+
+.ems-cart-payment-trigger,
+.payment-cart-open-trigger{
+    padding: $reset $reset $small-25 $reset;
+    border-top:none;
+    &:after{
+        display: none;
+    }
+}
+
+.ems-cart-payment-wrapper{
+    @include grid;
+    grid-template-columns:1fr 8% 1fr;
+    grid-template-rows: minmax(0, auto);
+    grid-template-areas: "SPT . ADR";
+    border-top:1px solid $color-30;
+    padding-top: $small-20;
+    margin-top: $small-15;
+}
+
+.ems-grid-payment-wrapper{
+    .ems-grid-default-cart{
+        display: block;
+    }
+    .ems-grid-header:first-child{display: none;}
+}
+
+/*Product card*/
+.ems-grid-payment-wrapper {
+    .ems-grid-default-cart {
+        .ems-grid-row{
+            grid-template-columns: 70px minmax(0,auto)1fr;
+            grid-template-areas:
+            "IMG NAM NAM"
+            "IMG PIC PRC"
+            ". SBR .";
+            padding-left: $reset;
+            padding-right: $reset;
+            border-bottom: 1px solid #E7E7E7;
+            align-items: center;
+            grid-gap: 5px;
+        }
+        .ems-grid-name a{
+            min-height: 36px;
+            margin-bottom: $small-5;
+        }
+        .ems-grid-img{
+            grid-area: IMG;
+        }
+        .ems-grid-name{
+            grid-area: NAM;
+        }
+        .ems-grid-price{
+            grid-area: PRC;
+        }
+        .ems-grid-piece{
+            grid-area: PIC;
+        }
+        .ems-grid-subscriptions{
+            grid-area: SBR;
+            text-align: right;
+        }
+        .ems-grid-price-total {
+            grid-area: TTL;
+            display: none;
+        }
+    }
+}
+
+.ems-cart-pay-adress{
+    .ems-cart-pay-inner{
+        display: block;
+        padding-left: $reset;
+        padding-right: $reset;
+    }
+}

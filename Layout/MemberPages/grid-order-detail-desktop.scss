@@ -1,0 +1,171 @@
+/*===========================
+    Description: Order Detail Grid Layout
+===========================*/
+.site-pages-member {
+    .ems-page-default-order-detail {
+        @include grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, auto);
+        grid-template-areas:
+        "CNC DSC"
+        "DTL DTL"
+        "TLL TLL"
+        "FLL FLL"
+        "DLV BLG"
+        "PYT PYT"
+        "BRD BRD"
+        "GRD PYM"
+        "BRR BRR"
+        "BTN BTN";
+        padding-left: $reset;
+
+        .order-cancel{
+            grid-area: CNC;
+        }
+        .page-top-desc{
+            grid-area: DSC;
+            justify-content: flex-end;
+            align-items: flex-start;
+            .lnkSipTekrarla{
+                @include transition(all .2s ease);
+                padding-top:$small-5;
+                padding-bottom:$small-5;
+                padding-right:$reset;
+                &:hover{
+                    color: $color-8;   
+                }
+            }
+        }
+        .order-sip-info{
+            grid-area: FLL;
+        }
+        .order-detail-info{
+            grid-area: DTL;
+        }
+        .border-line{
+            grid-area: BRD;
+        }
+        .inner-title{
+            grid-area: TLL;
+        }
+        .order-address-delivery{
+            grid-area: DLV;
+            margin-right: $small-10;
+        }
+        .order-address-billing{
+            grid-area: BLG;
+            margin-left: $small-10;
+        }
+        .inner-title-payment{
+            grid-area: PYT;
+        }
+        .order-detail-info-payment{
+            grid-area: PYM;
+            margin-left: 20px;
+            max-width: 300px;
+        }
+        .ems-order-detail-grid-md{
+            grid-area: GRD;
+        }
+        .ems-grid-default-order-products{
+            margin-right: 20px;
+        }
+        .bottom-step{
+            grid-area: BTN;
+            text-align: left;
+            .btnSipIptal,
+            .btnSipIade{
+                max-width: 190px;
+            }
+        }
+        .border-line-2{
+            display: block;
+            grid-area: BRR;
+        }
+
+        >.page-top-title>span {
+            padding-top: 10px;
+        }
+
+        .order-cancel {
+            position: inherit;
+            top: inherit;
+            left: inherit;
+            background: none;
+            z-index: inherit;
+            width: inherit;
+            padding: 0;
+            > a{
+                display: inline-block;
+                font-family: $medium;
+                padding-top: $reset;
+                padding-right: $reset;
+                padding-bottom: $reset;
+                &:before{
+                    font-size: $small-13;
+                    color: $color-10;
+                }
+            }
+        }
+        .ems-member-page-left {
+            display: block;
+        }
+        .order-address-billing{
+            padding-top: $small-20;
+        }
+        .inner-title {
+            margin-bottom: $small-30;
+        }
+        .inner-title-payment{
+            border-top:none;
+            padding-top: $reset;            
+        }
+        .border-line{
+            display: block;
+            border-top-width:1px;
+            margin-top: $small-10;
+        }
+        .border-line-2{
+            border-top-width:2px;
+            margin-top: $small-30;
+            margin-bottom: $reset;
+        }
+    }
+
+    .order-detail-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, auto);
+        grid-gap: $small-10;
+        padding-left: $small-10;
+        padding-right: $small-10;
+        margin-top: $small-20;
+        margin-bottom: $small-10;
+
+        >div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: minmax(0, auto);
+            grid-gap: 10px;
+
+            >div {
+                display: grid;
+                width: inherit;
+                align-items: center;
+                vertical-align: inherit;
+            }
+        }
+    }
+
+    .ems-grid-default-order-products {
+        border: none;
+        border-radius: 0;
+        .ems-grid-header:first-child{display: none;}
+        .ems-grid-row {
+            display: block;
+            position: relative;
+            padding: $small-10 $small-5 $small-10 100px;
+            min-height: 110px;
+        }
+    }
+}

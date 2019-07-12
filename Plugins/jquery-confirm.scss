@@ -1,0 +1,358 @@
+/* https://github.com/craftpip/jquery-confirm */
+/*!
+ * jquery-confirm v3.2.3 (http://craftpip.github.io/jquery-confirm/)
+ * Author: boniface pereira
+ * Website: www.craftpip.com
+ * Contact: hey@craftpip.com
+ *
+ * Copyright 2013-2017 jquery-confirm
+ * Licensed under MIT (https://github.com/craftpip/jquery-confirm/blob/master/LICENSE)
+ */
+ 
+ @-webkit-keyframes jconfirm-spin {
+     from {
+         -webkit-transform: rotate(0deg);
+         transform: rotate(0deg);
+     }
+
+     to {
+         -webkit-transform: rotate(360deg);
+         transform: rotate(360deg);
+     }
+ }
+
+ @keyframes jconfirm-spin {
+     from {
+         -webkit-transform: rotate(0deg);
+         transform: rotate(0deg);
+     }
+
+     to {
+         -webkit-transform: rotate(360deg);
+         transform: rotate(360deg);
+     }
+ }
+ .jconfirm .jconfirm-box.hilight.jconfirm-hilight-shake {
+    -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .jconfirm .jconfirm-box.hilight.jconfirm-hilight-glow {
+    -webkit-animation: glow 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            animation: glow 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  @-webkit-keyframes shake {
+    10%,
+    90% {
+      -webkit-transform: translate3d(-2px, 0, 0);
+              transform: translate3d(-2px, 0, 0);
+    }
+    20%,
+    80% {
+      -webkit-transform: translate3d(4px, 0, 0);
+              transform: translate3d(4px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translate3d(-8px, 0, 0);
+              transform: translate3d(-8px, 0, 0);
+    }
+    40%,
+    60% {
+      -webkit-transform: translate3d(8px, 0, 0);
+              transform: translate3d(8px, 0, 0);
+    }
+  }
+  @keyframes shake {
+    10%,
+    90% {
+      -webkit-transform: translate3d(-2px, 0, 0);
+              transform: translate3d(-2px, 0, 0);
+    }
+    20%,
+    80% {
+      -webkit-transform: translate3d(4px, 0, 0);
+              transform: translate3d(4px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translate3d(-8px, 0, 0);
+              transform: translate3d(-8px, 0, 0);
+    }
+    40%,
+    60% {
+      -webkit-transform: translate3d(8px, 0, 0);
+              transform: translate3d(8px, 0, 0);
+    }
+  }
+  @-webkit-keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 3px red;
+    }
+    50% {
+      box-shadow: 0 0 30px red;
+    }
+  }
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 3px red;
+    }
+    50% {
+      box-shadow: 0 0 30px red;
+    }
+  }
+  /*Transition rules*/
+  .jconfirm {
+    -webkit-perspective: 400px;
+            perspective: 400px;
+  }
+  .jconfirm .jconfirm-box {
+    opacity: 1;
+    -webkit-transition-property: all;
+            transition-property: all;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-top,
+  .jconfirm .jconfirm-box.jconfirm-animation-left,
+  .jconfirm .jconfirm-box.jconfirm-animation-right,
+  .jconfirm .jconfirm-box.jconfirm-animation-bottom,
+  .jconfirm .jconfirm-box.jconfirm-animation-opacity,
+  .jconfirm .jconfirm-box.jconfirm-animation-zoom,
+  .jconfirm .jconfirm-box.jconfirm-animation-scale,
+  .jconfirm .jconfirm-box.jconfirm-animation-none,
+  .jconfirm .jconfirm-box.jconfirm-animation-rotate,
+  .jconfirm .jconfirm-box.jconfirm-animation-rotatex,
+  .jconfirm .jconfirm-box.jconfirm-animation-rotatey,
+  .jconfirm .jconfirm-box.jconfirm-animation-scaley,
+  .jconfirm .jconfirm-box.jconfirm-animation-scalex {
+    opacity: 0;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-rotate {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-rotatex {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-rotatexr {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-rotatey {
+    -webkit-transform: rotatey(90deg);
+        -ms-transform: rotatey(90deg);
+            transform: rotatey(90deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-rotateyr {
+    -webkit-transform: rotatey(-90deg);
+        -ms-transform: rotatey(-90deg);
+            transform: rotatey(-90deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-scaley {
+    -webkit-transform: scaley(1.5);
+        -ms-transform: scaley(1.5);
+            transform: scaley(1.5);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-scalex {
+    -webkit-transform: scalex(1.5);
+        -ms-transform: scalex(1.5);
+            transform: scalex(1.5);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-top {
+    -webkit-transform: translate(0px, -100px);
+        -ms-transform: translate(0px, -100px);
+            transform: translate(0px, -100px);
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-left {
+    -webkit-transform: translate(-100px, 0px);
+        -ms-transform: translate(-100px, 0px);
+            transform: translate(-100px, 0px);
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-right {
+    -webkit-transform: translate(100px, 0px);
+        -ms-transform: translate(100px, 0px);
+            transform: translate(100px, 0px);
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-bottom {
+    -webkit-transform: translate(0px, 100px);
+        -ms-transform: translate(0px, 100px);
+            transform: translate(0px, 100px);
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-zoom {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-scale {
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  .jconfirm .jconfirm-box.jconfirm-animation-none {
+    visibility: hidden;
+  }
+
+body[class*=jconfirm-no-scroll-] {
+    overflow: hidden!important;
+}
+.jconfirm{
+    -webkit-perspective: 400px;
+    perspective: 400px;
+}
+.jconfirm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999999;
+    font-family: inherit;
+    overflow: hidden;
+}
+.jconfirm .jconfirm-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: opacity .4s;
+            transition: opacity .4s;
+  }
+  .jconfirm .jconfirm-bg.jconfirm-bg-h {
+    opacity: 0 !important;
+  }
+.jconfirm-closeIcon{
+    width: 32px;
+    height: 32px;
+    background: url(/images/frontend/jconfirm-close.svg) center center no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    cursor: pointer;
+}
+.jconfirm .jconfirm-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+}
+.jconfirm.jconfirm-dark .jconfirm-bg{
+    background-color: rgba(63,67,79,0.4);
+    opacity: .5;
+}
+.jconfirm .jconfirm-scrollpane{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-perspective-origin: center;
+    perspective-origin: center;
+}
+.container, .container-fluid{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.jconfirm-box-container{
+    margin: 0 auto;
+    background: #fff;
+}
+.jconfirm .jconfirm-box{
+    background: white;
+    position: relative;
+    outline: 0;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    -webkit-transition-property: all;
+    transition-property: all;
+    margin-bottom: 0 !important;
+}
+.jconfirm .jconfirm-box.jconfirm-type-animated{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.jconfirm .jconfirm-content{
+  height: 450px !important;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane{
+    height: auto;
+    -webkit-transition: height .4s ease-in;
+    transition: height .4s ease-in;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.minPpIframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Abonelik Popup*/
+
+.popup_abonelikleAl .jconfirm-content{
+    min-height: 450px !important;
+}
+.popup_abonelikleAl .minPpIframe{
+    height: 450px !important;
+}
+
+.popup_3dOnay.type-iframe .jconfirm .jconfirm-box div.jconfirm-content-pane{height: 500px !important;}
+.popup_3dOnay.type-iframe .jconfirm .jconfirm-content{min-height: 500px !important;}
+
+//@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+        .popup_abonelikleAl .jconfirm-box-container{
+            max-width: 1050px !important;
+        }
+        .popup_abonelikleAl .jconfirm-content{
+            min-height: 585px !important;
+        }
+
+        .popup_abonelikleAl .minPpIframe{
+            height: 585px !important;
+        }
+    }
+//}

@@ -1,0 +1,44 @@
+.ems-gift-tab{
+    background: $color-17;
+    border-radius: 3px;
+    padding: $small-20;
+    margin-top: $small-20;
+    display: none;
+}
+.ems-delivery-tab-header{
+    display: none;
+}
+.ems-delivery-wrp.packet{
+    > span{
+        font-size: $small-15;
+        vertical-align: middle;
+    }
+}
+/*Selected Wrap Visible*/
+.ems-delivery-wrp.gift{
+    display: none;
+}
+.ems-gift-tab.selected{
+    .ems-delivery-wrp.gift{
+        display: block;
+    }
+}
+.hediyePktAciklama{
+    span{
+        display: block;
+        font-size: $small-15;
+        margin-top: $small-15;
+        margin-bottom: $small-20;
+    }
+}
+.ems-delivery-wrp.note{
+    > span{
+        font-size: $small-13;
+        color: $color-26;
+        display: block;
+        margin-bottom: $small-10;
+    }
+    textarea{
+        height: 80px;
+    }
+}

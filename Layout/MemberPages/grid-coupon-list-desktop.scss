@@ -1,0 +1,73 @@
+.site-pages-member {
+    .ems-page-default-coupon {
+        padding: $reset;
+        .btn-holder-1{
+            .btnDefault {
+                padding-top: 11px;
+                padding-bottom: 11px;
+                width: auto;
+                max-width: 130px;
+                &.btnKuponAcikKuponlar{
+                    margin-right: $small-10;
+                }
+                &.btnKuponKapanan{
+                    margin-left: $small-10;
+                }
+                &:hover{
+                    color: $color-8;
+                    border-color: $color-8;
+                }
+            }
+        }   
+    }
+
+    .ems-grid-default-coupons{
+        .ems-grid-header{
+            background: none;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius:0;
+            > div{
+               padding: $reset;
+               border-top: none;
+           }
+        }
+        .ems-grid-header:first-child {
+            @include grid;
+            grid-template-columns: 1fr .5fr 1fr 1fr .5fr;
+            grid-template-rows: minmax(0, auto);
+            >div {
+                &.ems-grid-img,
+                &.ems-grid-remove {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .ems-grid-row{
+            @include grid;
+            grid-template-columns: 1fr .5fr 1fr 1fr .5fr;
+            min-height: 55px;
+            width: 100%;
+            margin-bottom: $reset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius:0; 
+            > div{
+                border-top: none;
+                padding: $reset;
+            }
+            .ems-grid-date{
+                color: #000000;
+            }
+            .ems-grid-order-no{
+                font-weight: normal;
+            }
+        }
+    }
+}

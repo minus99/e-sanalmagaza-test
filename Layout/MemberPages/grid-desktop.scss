@@ -1,0 +1,103 @@
+.site-pages-member{
+    .ems-page-default{
+        position: relative;
+    }
+    /* Pages Right Right Layout Space*/
+    .ems-member-page-right{
+        padding-right: 120px;
+    }
+    /*Pages Title*/
+    .page-top-title, .pageHeaderSifremiUnuttum{
+        display: block;
+        padding-top: $small-12;
+        padding-bottom: $small-12;
+        margin-bottom: $small-10;
+    }
+    
+    /*Pages Title Alternate*/
+    .page-top-title-alternate {
+        display: block;
+        padding-top: $small-12;
+        padding-bottom: $small-12;
+        margin-bottom: $small-10;
+    }
+
+    /*Member Pages Empty Message reset div*/
+    div[id$="plhFavoriKayitYok"],
+    div[id$="plhSiparisYokLabel"],
+    div[id$="plhAbonelikKayitYokLabel"],
+    div[id$="plhFavoriGrupKayitYokLabel"],
+    span[id$="lbfKAYITYOK_FIYATHABERCI"]>.ems-message,
+    span[id$="lbfKAYITYOK_STOKHABERCI"]>.ems-message,
+    span[id$="lbfUYM_KAYITYOK_MESAJ"]>.ems-message,
+    .ems-page-coupon-empty{
+        font-size: $small-24;
+        text-align: left;
+        padding-left:$reset;
+        padding-right:$reset;
+    }
+    /*Member Pages Message*/
+    .ems-page-favorites-empty,
+    .ems-page-order-empty,
+    .ems-page-coupon-empty,
+    .ems-page-follow-list-empty,
+    .ems-page-message-empty,
+    .ems-page-abonelik-empty{
+        .img{
+            margin-right: $small-50;
+        }
+        .big-text-favorite{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .big-text-favorite{
+        font-size: $small-24;
+    }
+    /*Member Back Button*/
+    .backToMember{
+        display: inline-block;
+    }
+    .backToMemberMsg{
+        display: none;
+    }
+}
+
+
+/*
+    Description : Page Mamber Grid Row Desktop
+=====================================
+*/
+.site-pages-member{
+    .ems-grid-default{
+        border: 1px solid $color-6;
+        border-radius: 3px; 
+       .ems-grid-header{
+           display: none;
+           @include space(padding, all, $small-8 $small-20);
+           border-bottom:1px solid $color-6;
+           > div{
+               font-family: $regular;
+               font-size: $small-12;
+               color: $color-36;
+           }
+       }
+       .ems-grid-header:first-child{
+           @include grid;
+       }
+       .ems-grid-row{
+           @include grid;
+           align-items: center;
+           @include space(padding, all, $small-10 $small-20);
+           border-bottom:1px solid $color-6;
+           min-height: 50px;
+       }
+       .ems-grid-row:last-child{
+           border-bottom:none;
+       }
+   }    
+}
+
+.ems-member-page-left {
+    position: relative;
+}

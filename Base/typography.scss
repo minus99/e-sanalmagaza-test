@@ -1,0 +1,17 @@
+/* Icomoon
+ =================================== */
+@include fontFace('icomoon', '/styles/fonts/icomoon/icomoon', normal, normal);
+
+
+/* Font Family
+ =================================== */
+@include fontFace('regular', '/styles/fonts/roboto/roboto-regular', 400, normal);
+@include fontFace('medium', '/styles/fonts/roboto/roboto-medium', 500, normal);
+@include fontFace('bold', '/styles/fonts/roboto/roboto-bold', 600, normal);
+
+
+/* Font variables
+=================================== */
+$regular:                                        'regular';
+$medium:                                         'medium';
+$bold:                                           'bold';
