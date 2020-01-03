@@ -268,18 +268,19 @@ a.btnAdresEkle {
 
 .divTeslimatKargo{
     ul{
-        display: table;
-        width: auto;
         &:empty{display: none;}
         li{
-            display: table-cell;
-            vertical-align: middle;
-            min-width: 25%;
+            display: block;
+            min-width: 100%;
             border: 1px solid $color-4;
             border-radius: 3px;
             position: relative;
             padding: $small-35 $small-15 $small-35 125px;
             text-align: center;
+            margin-top: 10px;
+            &:first-child{
+                margin-top: 0;
+            }
             img{
                 position: absolute;
                 left: 10px;
@@ -310,15 +311,8 @@ a.btnAdresEkle {
                     line-height: $small-20;
                     text-align: center;
                     &:before{
-                        font-family: 'icomoon';
-                        content:'\e90a';
-                        font-size: $small-20;
-                    }
-                }
-                .rStyler.checked{
-                    &:before{
-                        content:'\e909';
-                        color: $color-19;
+                        display: inline-table;
+                        font-size: $small-10;
                     }
                 }
             }

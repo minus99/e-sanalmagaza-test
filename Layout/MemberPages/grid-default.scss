@@ -21,6 +21,7 @@
     div[id$="plhSiparisYokLabel"],
     div[id$="plhAbonelikKayitYokLabel"],
     div[id$="plhFavoriGrupKayitYokLabel"],
+    div[id$="plhIadeYokLabel"],
     span[id$="lbfKAYITYOK_FIYATHABERCI"]>.ems-message,
     span[id$="lbfKAYITYOK_STOKHABERCI"]>.ems-message,
     span[id$="lbfUYM_KAYITYOK_MESAJ"]>.ems-message,
@@ -45,7 +46,8 @@
     .ems-page-coupon-empty,
     .ems-page-follow-list-empty,
     .ems-page-message-empty,
-    .ems-page-abonelik-empty{
+    .ems-page-abonelik-empty,
+    .ems-page-iade-empty{
         display: none;
         .img{
             display: inline-block;

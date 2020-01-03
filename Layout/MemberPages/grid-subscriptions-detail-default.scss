@@ -59,9 +59,81 @@
     /*Grid Layout*/
     .ems-page-default-subscriptions-detail {
         padding: $small-20;
-
+        .address-list,
+        .product-list ul li,
+        .Abukod,
+        .page-top-title{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        .order-detail-product{
+            ul{
+                position: relative;
+                top: 0;
+                li{
+                    align-items: center;
+                    border-width: 1px 1px 1px 1px;
+                    border-style: solid;
+                    border-color: #E7E7E7;
+                    padding: 10px;
+                    margin-top: -1px;
+                    .product-image{
+                        margin-right: 20px;
+                    }
+                    &:first-child{
+                        margin-top: 10px;
+                    }
+                    &.selected{
+                        border-color: $color-8;
+                    }
+                }
+            }
+        }
+        .address-list{
+            justify-content: space-between;
+            > div{
+                width: calc(50% - 10px);
+                border: 1px solid #E7E7E7;
+                padding:30px 10px;
+                > span{
+                    display: block;
+                }
+            }
+        }
+        .Abukod{
+            padding: 10px 0;
+            .sprt{
+                margin-right: 10px;
+                display: inline-block;
+                &:before{
+                    content:'|';
+                    padding-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .order-detail-info{
+            margin-bottom: 30px;
+        }
+        .ems-grid-default-address{
+            padding-top: 30px;
+        }
+        .ems-grid-address-select{
+            display: block;
+        }
         .subscriptions-desc {
             display: none;
+        }
+        .page-top-title{
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 0;
+            .btnAbuGuncelle {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
         .inner-title{
             margin-top: $small-30;
@@ -71,7 +143,6 @@
             height: 1px;
             background: $color-38;
         }
-
         .bottom-step {
             .btnDefault {
                 display: block;

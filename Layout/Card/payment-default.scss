@@ -47,14 +47,16 @@
         display: block;
     }
 }
-
 /*Ödeme Secenek*/
 .ems-pay-transfer,
-.ems-pay-point,
 .ems-pay-money-code{
     display: none;
 }
-
+.pageOdemeBilgi_chkKrediKartiBonusPara{
+    span.checkbox{
+        vertical-align: middle;
+    }
+}
 .ems-pay-credit-cart {
     padding-left: $small-10;
     padding-right: $small-10;

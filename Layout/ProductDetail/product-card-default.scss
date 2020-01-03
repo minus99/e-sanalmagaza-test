@@ -605,9 +605,13 @@
     font-family: $bold;
     font-size: $small-18;
     color: $color-18;
-
-    &:before {
-        content: '₺';
+    span[id$="lblAbonelikFiyat"]{
+        &:before {
+            content: '₺';
+        }
+        &:empty{
+            display: none;
+        }
     }
 }
 

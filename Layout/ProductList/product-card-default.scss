@@ -105,15 +105,28 @@
 }
 
 .urunListe_brutFiyat,
-.urunListe_satisFiyat,
-.urunListe_aboneFiyat.emos_invisible {
+.urunListe_satisFiyat {
     &:before {
         content: '₺';
         margin-right: -3px;
     }
-
     &:empty {
         display: none;
+    }
+}
+.urunListe_aboneFiyat{
+    .pb1{
+        order: -1;
+        display: inline-block;
+        text-indent: -999em;
+        width: 12px;
+        position: relative;
+        &:before{
+            content: '₺';
+            text-indent: 0;
+            position: absolute;
+            left: 0;
+        }
     }
 }
 
@@ -129,7 +142,7 @@
 }
 
 .urunListe_aboneFiyat.emos_invisible {
-    display: block !important;
+    display: inline-flex !important;
     font-size: $small-13;
     font-family: $bold;
     color: $color-18;

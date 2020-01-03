@@ -227,7 +227,8 @@
 
         >li {
             @include grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content 1fr;
 
             >a {
                 @include space(padding, left, $reset);
@@ -242,6 +243,10 @@
     }
 
     .level-3 {
+        >ul[data-level="4"]{
+            @include grid;
+            grid-template-columns: 50% 50%;
+        }
         >ul>li {
             >a {
                 display: block;

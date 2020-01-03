@@ -55,6 +55,83 @@ a.btnMinPpCl{
         max-width: 300px;
     }
 }
-    
+/**/
+.bulten-chk-pp{
+    a.btnMinPpCl{
+        text-align: center;
+        top:10px !important;
+        right:10px !important;
+    }
+}
+.takipPpIcr{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 340px;
+    padding: 5px 30px;
+    .i-mg{
+        width: 160px;
+        img{max-width: 141px;}
+    }
+    .t-txt{
+        width: calc(100% - 160px);
+        > span{
+            font-family: $bold;
+            font-size: 18px;
+        }
+        p{
+            margin-top: 20px;
+            font-size: 15px;
+            color: #000;
+            line-height: 19px;
+        }
+    }
+    .takip-btn{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        margin-top: 40px;
+        > a{
+            width: 50%;
+            max-width: 170px;
+        }
+        a.btnDefaultBultenReset{
+            background: none;
+            span{
+                font-size: 15px;
+                color: #1f1f1f;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.mobileVer, .ems-mobile{
+    .takipPpIcr{
+        padding: 20px;
+        text-align: center;
+        .i-mg, .t-txt{
+            width: 100%;
+        }
+        .t-txt{
+            margin-top: 15px;
+            > span{
+                font-size: 16px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        .takip-btn{
+            margin-top: 20px;
+        }
+    }
+}
+
 .popup_3dOnay.type-iframe .jconfirm .jconfirm-box div.jconfirm-content-pane{height: 500px !important;}
 .popup_3dOnay.type-iframe .jconfirm .jconfirm-content{min-height: 500px !important;}
