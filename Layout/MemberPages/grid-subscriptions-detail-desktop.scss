@@ -18,7 +18,7 @@
         }
         .ems-grid-header:first-child {
             @include grid;
-            grid-template-columns: repeat(5,1fr);
+            grid-template-columns: repeat(6,1fr);
             grid-template-rows: minmax(0, auto);
             >div {
                 &.ems-grid-img,
@@ -31,7 +31,7 @@
         }
         .ems-grid-row{
             display: grid; 
-            grid-template-columns: repeat(5,1fr);
+            grid-template-columns: repeat(6,1fr);
             min-height: 55px;
             width: 100%;
             margin-bottom: $reset;
