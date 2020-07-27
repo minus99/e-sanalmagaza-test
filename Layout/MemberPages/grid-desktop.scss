@@ -103,3 +103,72 @@
 .ems-member-page-left {
     position: relative;
 }
+
+/* Gift Card */
+.ems-page-gift-card {
+    max-width: 1200px;
+    margin: 50px auto 100px auto;
+    padding:0;
+}
+.gift-card-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.gift-card-top-img{
+    margin-bottom: 0;
+}
+.gift-card-top-img,
+.gift-card-top-title {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.gift-card-top span,
+.gift-card-top p{
+    padding-left: 30px;
+    text-align: left;
+}
+.gift-card-top span{
+    font-size: 40px;
+    line-height: 45px;
+}
+.gift-card-top p{
+    font-size: 20px;
+    line-height: 30px;
+}
+.gift-card-note{
+    margin-top: 65px;
+}
+/* Gift Kart Üye Sayfası */
+.ems-page-member-gift-card {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    padding: 0;
+}
+.ems-page-member-gift-card .page-top-img {
+    width: 300px;
+    margin-right: 40px;
+    margin-bottom: 0;
+}
+.ems-page-member-gift-card-wrp{
+    width: calc(100% - 300px);
+}
+.ems-page-member-gift-card #plhOdemeCekiKartSeriNo {
+    max-width: none;
+}
+.ems-page-member-gift-card .button {
+    width: 50%;
+    display: inline-block;
+    &:nth-child(2){
+        padding-right: 5px;
+    }
+    &:nth-child(3){
+        padding-left: 5px;
+    }
+}

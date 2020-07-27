@@ -263,3 +263,162 @@
         }
     }
 }
+
+
+/* Gift Card */
+.ems-page-gift-card{
+    padding: 20px;
+}
+.gift-card-top span,
+.gift-card-top p{
+    text-align: center;
+}
+.gift-card-top span {
+    font-size: 22px;
+    line-height: 25px;
+    font-family: "medium";
+    display: block;
+    margin-bottom: 20px;
+}
+.gift-card-top p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    display: block;
+}
+.gift-card-top-img {
+    margin-bottom: 20px;
+    position: relative;
+}
+.gift-card-top .gift-card-price {
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.gift-card-top .gift-card-price span {
+    margin: 0;
+    padding: 0;
+}
+.gift-card-note {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "medium";
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}  
+.urunCekAd {
+    display: none;
+}  
+.giftCardList {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+}
+.giftCardList .urunCekFiyat {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 5px;
+    .pb1{
+        display: inline-flex;
+        vertical-align: middle;
+        margin-left: 2px;
+    }
+}
+.giftCardList .urunCekFiyat:hover {
+    color: #f8991d;
+}
+.giftCardItem.selected .urunCekFiyat {
+    color: #f8991d;
+    border-color: #f8991d;
+}
+.giftCardInfoContainer {
+    display: inline-block;
+    width: 100%;
+}
+.odemeCekiSatis {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.odemeCekiSatis .urunDetay_btnSepeteAt{
+    width: 100%;
+}
+.odemeCekiSatis .ems-page-default {
+      padding: 0;
+}
+.odemeCekiSatis .btnsepeteAt {
+      max-width: 400px;
+      margin: 30px auto 0 auto;
+}
+.gift-card-list-somebody {
+    margin: 10px auto  20px auto;
+    text-align: center;
+}
+.gift-card-list-somebody span[id$="lbfOCK_HEDIYEET_FL"] {
+      display: inline-flex;
+      vertical-align: top;
+}
+
+/* Gift Kart Üye Sayfası */
+.ems-page-member-gift-card {
+    display: block !important;
+    padding: 20px;
+}
+.ems-page-member-gift-card .page-top-img {
+    margin-bottom: 20px;
+}
+.ems-page-member-gift-card .page-top-title {
+    font-size: 30px;
+}
+.ems-page-member-gift-card .page-top-desc {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+.ems-page-member-gift-card .ems-field {
+    margin-bottom: 20px;
+}
+.ems-page-member-gift-card .button {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.ems-page-member-gift-card .button a {
+    padding: 10px 17px;
+    border: 2px solid #f8991d;
+    background: transparent;
+    border-radius: 3px;
+    width: 100%;
+    display: block;
+}
+.ems-page-member-gift-card .button a:hover {
+    color: #fff;
+    background: #f8991d;
+}
+.ems-page-member-gift-card .button .lnkSatinAl {
+    background: #f8991d;
+    color: #fff;
+}
+.ems-page-member-gift-card .ems-form-obj {
+    margin-bottom: 0 !important; 
+}
+.ems-page-member-gift-card .ems-form-obj#plhOdemeCekiSorguSonuc {
+    max-width: none !important;
+    line-height: 20px;
+}

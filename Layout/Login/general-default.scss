@@ -94,12 +94,7 @@
         position: relative;
         .sStylerWrp_checkbox{position: relative;}
         .checkbox{
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
+            display: none;
         }
         input.sCheckbox{
             display: block !important;

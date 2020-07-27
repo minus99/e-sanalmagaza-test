@@ -96,3 +96,28 @@
         color: #1f1f1f;
     }
 }
+
+.abonelikPaketiIcerik {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    li{
+        width:calc(50% - 10px);
+        a{
+            display: block;
+            padding:20px 40px; 
+            text-align: center;
+            font-family: medium;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #dddddd;
+            background: #fff;
+            transition: all .2s ease;
+            &:hover,&.selected{
+                border-color: #E20972;
+            }
+        }   
+    }
+}

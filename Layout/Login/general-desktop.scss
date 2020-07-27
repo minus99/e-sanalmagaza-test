@@ -3,19 +3,29 @@
     grid-template-columns: 1fr minmax(auto, 400px) 4% minmax(auto, 680px) 1fr;
     grid-template-areas:
     ". A A A ."
-    ". . . B ."
+    ". D . B ."
     ". D . C ."
-    ". D . . .";
+    ". D . . ."
+    "DD DD DD DD DD";
+    grid-template-rows:max-content;
     @include space(padding, top, $small-50);
     @include space(padding, left, $small);
     @include space(padding, right, $small);
     @include space(padding, bottom, 50px);
-    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &:after{
+        content: '';
+        width: 100%;
+        min-height: 35px;
+        background: #fef0eb;
+        grid-area:DD;
+    }
     .logo{
-        height: 50px;
+        height: 60px;
+        margin-bottom: 50px;
     }
     .login-title{
-        transform: translateY(-40px);
         max-width: 625px;
         position: relative;
         z-index: 2;
@@ -46,12 +56,6 @@
         .ems-login-tab{
             text-align: right;
         }
-    }
-    .swiper-container{
-        @include space(margin, top, -45px);
-    }
-    .ems-page-member-login{
-        @include space(margin, top, -85px);
     }
     .member-login-body{
         @include space(padding, left, $small);
